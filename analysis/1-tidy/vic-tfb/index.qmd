@@ -1,0 +1,180 @@
+---
+title: Untitled
+subtitle: A slightly longer title
+format:
+  360-analysis-html: default
+author: James Goldie
+date: last-modified
+code-fold: true
+---
+
+```{r}
+#| label: setup
+
+library(tidyverse)
+library(janitor)
+library(themes360info)
+library(here)
+```
+
+```{r}
+#| label: load
+
+here("data", "vic-tfb.tsv") |>
+  read_tsv() |>
+  clean_names() ->
+tfb
+```
+
+It looks like there's just one row with a revocation:
+
+```{r}
+#| label: tidy
+
+tfb |> filter(!is.na(revoked_district_s))
+```
+
+And it doesn't seem to intersect with other declarations, so I think we can safely remove it and proceed with the date-time ranges used in the declarations.
+
+Many declarations are for several areas, so we're going to split them where are either commas or the word "and" (except where they happen inside parentheses, as `Central (includes Melbourne and Geelong)` is a single area).
+
+```{r}
+#| label: lengthen
+
+tfb |>
+ filter(!is.na(declared_district_s)) |>
+ select(area = declared_district_s, dt = declared_date_and_time) |>
+ separate_longer_delim(area, stringr::regex(", | and (?!\\S+[\\)])")) ->
+tfb_long
+```
+
+We're also going to split the start and end dates, and we're going to turn the state-wide TFBs into ones for every district:
+
+```{r}
+#| label: 
+
+tfb_long |>
+  pull(area) |>
+  unique() |>
+  discard(~ .x == "the whole State of Victoria") ->
+districts
+
+# turn the state wide declarations into individual ones per district
+tfb_long |>
+  filter(area == "the whole State of Victoria") |>
+  rowwise() |>
+  reframe(
+    area = districts,
+    dt = dt) ->
+tfb_statewide
+
+# merge them back in, replacing the statewide declarations
+tfb_long |>
+  filter(area != "the whole State of Victoria") |>
+  bind_rows(tfb_statewide) |>
+  # then extract start and end dates and times
+  separate(dt, c("dt_start", "dt_end"), sep = " - ") |>
+  mutate(
+    dt_start = dmy_hm(dt_start, tz = "Australia/Melbourne"),
+    dt_end = dmy_hm(dt_end, tz = "Australia/Melbourne")) ->
+tfb_datetime
+```
+
+To make the visual simpler, let's focus on the days on which TFBs happened and ignore partial days.
+
+:::{.callout-note}
+Sometimes the run it to 23:59, and sometimes they run it to 00:00 or 00:01 the following day. In the latter case, we'll remove the new day from the interval.
+:::
+
+```{r}
+#| label: check-times
+
+tfb_datetime |>
+  select(area, dt_start) |>
+  mutate(
+    hour = hour(dt_start),
+    min = minute(dt_start),
+    hourmin = paste(hour, min, sep = ":")) |>
+  pull(hourmin) |>
+  table()
+
+tfb_datetime |>
+  select(area, dt_end) |>
+  mutate(
+    hour = hour(dt_end),
+    min = minute(dt_end),
+    hourmin = paste(hour, min, sep = ":")) |>
+  pull(hourmin) |>
+  table()
+```
+
+```{r}
+#| label: get-days
+
+tfb_datetime |>
+  mutate(
+    date_start = as_date(dt_start),
+    date_end = as_date(dt_end),
+    # if dt_end is 00:00, remove a day
+    date_end = if_else(
+      hour(dt_end) == 0 & minute(dt_end) %in% 0:1,
+      date_end - 1,
+      date_end)) |>
+  # create sequence of days within intervals
+  rowwise() |>
+  reframe(
+    area = area,
+    date = seq(date_start, date_end, by = "day")) ->
+tfb_sequences
+```
+
+```{r}
+#| label: visualise
+
+season_plot <-
+  tfb_sequences |>
+  mutate(
+    year = year(date),
+    season = ymd(paste("2022", month(date), mday(date), sep = "-"))) |>
+  ggplot() +
+    aes(x = season, y = year) +
+    geom_tile(fill = "red") +
+    facet_wrap(vars(area)) +
+    scale_x_date(
+      labels = scales::label_date(format = "%b"),
+      date_breaks = "3 months",
+      expand = expansion(0)) +
+    theme_360() +
+    labs(x = NULL, y = NULL, title = "Total Fire Bans")
+
+save_360plot(season_plot, "season_plot.png")
+```
+
+Let's look at the number of Total Fire Ban days each year:
+
+```{r}
+#| label: num-tfb-days
+
+tfb_sequences |>
+  # shift dates back six months before calculating
+  mutate(
+    date = date - months(6),
+    year = year(date)) |>
+  group_by(area, year) |>
+  summarise(
+    n_days = n()) |>
+  ungroup() ->
+tfb_lengths
+
+length_plot <- ggplot(tfb_lengths) +
+  aes(x = year, y = n_days) +
+  geom_col(fill = "gold") +
+  geom_smooth(method = "lm", colour = "red") +
+  facet_wrap(vars(area)) +
+  theme_360() +
+  labs(
+    x = NULL, y = NULL,
+    title = "Number of Total Fire Ban days")
+
+save_360plot(length_plot, "length_plot.png")
+```
