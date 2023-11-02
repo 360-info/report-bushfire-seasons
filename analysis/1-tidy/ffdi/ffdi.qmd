@@ -1,0 +1,183 @@
+---
+title: Untitled
+subtitle: A slightly longer title
+format:
+  360-analysis-html: default
+author: James Goldie
+date: last-modified
+code-fold: true
+---
+
+## (Never mind) Manual FFDI calculation
+
+~~Let's try calculating FFDI using Jacob Arndt's [`kbdi-ffdi`](https://github.com/subond/kbdi-ffdi) Python package.~~
+
+~~We'll use Sale (station 085072) as a test case before we look at anything bigger. It has solid temperature and rainfall records back to the 1950s.~~
+
+~~`kbdi-ffdi` can theoretically also work with NetCDF files, but for CSVs it requires four columns:~~
+
+- ~~`rain` in mm~~
+- ~~`temp` in °C~~
+- ~~`relhum` as a percentage~~
+- ~~`wind` in kph~~
+
+## ERA5 FFDI slicing
+
+```{r}
+#| label: setup
+
+library(tidyverse)
+library(here)
+library(sf)
+library(terra)
+library(exactextractr)
+```
+
+```{r}
+#| label: field-avg-fn
+
+calc_field_avgs <- function(raster_path, boundaries) {
+
+  # read grid in with terra
+  ffdi_raster <- rast(raster_path)
+
+  # link ffdi layer names to time dimension values
+  tibble(
+    name = ffdi_raster |> names() |> str_remove("mean."),
+    dt = ffdi_raster |> time() |> as_date()) |>
+    filter(str_detect(name, "fdimrk")) ->
+  test_times
+
+  # isolate ffdi values and join to dates
+  # calculate mean ffdi
+  boundaries |>
+    mutate(avg_ffdi = exact_extract(ffdi_raster, testbounds, fun = "mean")) |>
+    select(DIST_NO, DIST_NAME, STATE_CODE, avg_ffdi) |>
+    st_drop_geometry() |>
+    unnest(avg_ffdi) |>
+    pivot_longer(-c(DIST_NO, DIST_NAME, STATE_CODE)) |>
+    mutate(name = str_remove(name, "mean.")) |>
+    filter(str_detect(name, "fdimrk")) |>
+    left_join(test_times, join_by(name), relationship = "many-to-one") ->
+  test_ffdi
+
+}
+```
+
+```{r}
+#| label: run-files
+
+here("data", "aus-firedistricts", "IDM00007.shp") |>
+  read_sf() ->
+fire_regions
+
+# calculate ffdi across all the fire regions for each netcdf
+here("data", "copernicus-firedanger", "australia") |>
+  list.files(pattern = glob2rx("*.nc"), full.names = TRUE) |>
+  tibble(path = _) |>
+  mutate(ffdi_df = map(path, calc_field_avgs, fire_regions)) ->
+ffdi_fireregions
+
+# unnest and write out to disk
+ffdi_fireregions |>
+  select(ffdi_df) |>
+  unnest(ffdi_df) |>
+  select(-name) |>
+  write_csv(here("data", "ffdi-fireregions.csv")) ->
+ffdi_fireregions_tidy 
+```
+
+Let's do some preliminary analysis of Northern Country, north of Melbourne:
+
+```{r}
+#| label: visualise
+
+ffdi_fireregions_tidy |>
+  filter(DIST_NAME == "New England") |>
+  filter(dt < as_date("2023-07-01")) |>
+  filter(month(dt) %in% c(10:12, 1:3)) |>
+  mutate(
+    dt_mod = dt - months(6),
+    year_mod = year(dt_mod)) |>
+  group_by(year_mod) |>
+  summarise(
+    `FFDI average` = mean(value, na.rm = TRUE),
+    `FFDI max` = max(value, na.rm = TRUE),
+    `FFDI 95th pct` = quantile(value, 0.95)) |>
+  ungroup() |>
+  pivot_longer(starts_with("FFDI ")) |>
+  ggplot() +
+    aes(x = year_mod, y = value, colour = name, group = name) +
+    geom_line(alpha = 0.5) +
+    geom_point(size = 1.5, alpha = 0.75) +
+    geom_smooth() +
+  theme_minimal() +
+  scale_colour_manual(values = c(
+      "FFDI average" = "orange",
+      "FFDI 95th pct" = "red",
+      "FFDI max" = "black")) +
+  theme(
+    legend.position = "top",
+    legend.direction = "horizontal") +
+  labs(x = NULL, y = NULL, name = NULL,
+    title = "Forest Fire Danger, October to March",
+    subtitle = "New England (NSW)")
+```
+
+```{r}
+#| label: vis-season
+
+ffdi_fireregions_tidy |>
+  filter(DIST_NAME == "Mallee") |>
+  mutate(
+    year = year(dt),
+    season = ymd(paste("2022", month(dt), mday(dt), sep = "-"))) |>
+  ggplot() +
+    aes(x = season, y = year, fill = value) +
+    geom_tile() +
+    scale_x_date(
+      labels = scales::label_date(format = "%b"),
+      date_breaks = "3 months",
+      expand = expansion(0)) +
+    scale_y_reverse() +
+    scale_fill_fermenter(palette = "YlOrRd", direction = 1,
+      breaks = c(0, 10, 20, 30, 40, 50, 60, 70, 80)
+      # trans = "log"
+      ) +
+    theme_minimal() +
+    theme(
+      legend.direction = "horizontal",
+      legend.position = "top") +
+    labs(x = NULL, y = NULL,
+      title = "Forest Fire Danger",
+      subtitle = "Mallee (VIC)")
+  
+```
+
+It's hard to see trends in quantiles much. But what about frequency? The [2022 State of the Climate](http://www.bom.gov.au/state-of-the-climate/australias-changing-climate.shtml) looked at the number of days exceeding the 90th percentile for a place.
+
+```{r}
+#| label: vis-frequency
+
+ffdi_fireregions_tidy |>
+  filter(DIST_NAME == "Mallee") |>
+  mutate(
+    dt_mod = dt - months(6),
+    year_mod = year(dt_mod)) |>
+  group_by(DIST_NAME) |>
+  mutate(
+    pct_90 = quantile(value, 0.9),
+    gte_90 = value > pct_90) |>
+  filter(gte_90) |>
+  group_by(DIST_NAME, year_mod) |>
+  summarise(ndays_gte_90pct = n()) |>
+  ungroup() |>
+  ggplot() +
+    aes(x = year_mod, y = ndays_gte_90pct) +
+    geom_col() +
+    geom_smooth(se = FALSE, colour = "red") +
+    theme_minimal() +
+    labs(x = NULL, y = NULL,
+      title = "Number of days exceeding 90th percentile of FFDI",
+      subtitle = "Mallee (VIC)")
+```

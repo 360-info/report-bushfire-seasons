@@ -166,15 +166,15 @@ tfb_sequences |>
   ungroup() ->
 tfb_lengths
 
-length_plot <- ggplot(tfb_lengths) +
+sum_plot <- ggplot(tfb_lengths) +
   aes(x = year, y = n_days) +
   geom_col(fill = "gold") +
-  geom_smooth(method = "lm", colour = "red") +
+  geom_smooth(method = "lm", colour = "red", se = FALSE) +
   facet_wrap(vars(area)) +
   theme_360() +
   labs(
     x = NULL, y = NULL,
     title = "Number of Total Fire Ban days")
 
-save_360plot(length_plot, "length_plot.png")
+save_360plot(sum_plot, "sum_plot.png")
 ```
