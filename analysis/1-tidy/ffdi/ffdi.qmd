@@ -55,10 +55,10 @@ calc_field_avgs <- function(raster_path, boundaries) {
   # calculate mean ffdis, then tidy and join to dates
   boundaries |>
     mutate(avg_ffdi = exact_extract(ffdi_raster, testbounds, fun = "mean")) |>
-    select(DIST_NO, DIST_NAME, STATE_CODE, avg_ffdi) |>
+    select(DIST_NO, slug, DIST_NAME, STATE_CODE, avg_ffdi) |>
     st_drop_geometry() |>
     unnest(avg_ffdi) |>
-    pivot_longer(-c(DIST_NO, DIST_NAME, STATE_CODE)) |>
+    pivot_longer(-c(DIST_NO, slug, DIST_NAME, STATE_CODE)) |>
     mutate(name = str_remove(name, "mean.")) |>
     filter(str_detect(name, "fdimrk")) |>
     left_join(layer_dts, join_by(name), relationship = "many-to-one")
@@ -70,8 +70,10 @@ calc_field_avgs <- function(raster_path, boundaries) {
 #| label: run-files
 
 here("data", "aus-firedistricts", "IDM00007.shp") |>
-  read_sf() ->
+  read_sf() |>
+  mutate(slug = janitor::make_clean_names(DIST_NAME)) ->
 fire_regions
+
 
 # calculate ffdi across all the fire regions for each netcdf
 here("data", "copernicus-firedanger", "australia") |>
@@ -90,7 +92,7 @@ ffdi_fireregions |>
 ffdi_fireregions_tidy 
 ```
 
-Let's do some preliminary analysis of Northern Country, north of Melbourne:
+Let's do some preliminary analysis of a sample area:
 
 ```{r}
 #| label: visualise
@@ -201,44 +203,50 @@ Let's do a seasonal take on this:
 #| label: vis-frequency-seasonal
 
 ffdi_fireregions_tidy |>
-  filter(DIST_NAME == "New England") |>
-  filter(dt < as_date("2020-01-01")) |>
+  filter(between(dt, as_date("1970-01-01"), as_date("2020-01-01"))) |>
   arrange(dt) |>
   mutate(
     month = factor(month.abb[month(dt)], levels = month.abb),
     year = year(dt),
-    decade = factor(paste0(floor(year / 10) * 10, "s"))) |>
+    decade = factor(paste0(floor(year / 10) * 10, "s")),
+    then_or_now = case_match(year,
+      1970:1994 ~ "1970_1994",
+      1995:2020 ~ "1995_2019")) |>
   # calculate days over 90th percentile
-  group_by(DIST_NAME) |>
+  group_by(DIST_NO, DIST_NAME, slug) |>
   mutate(pct_90 = quantile(value, 0.9)) |>
-  group_by(DIST_NAME, month, decade) |>
+  group_by(DIST_NO, DIST_NAME, slug, month, then_or_now) |>
   summarise(
     n_gte_90 = sum(value > pct_90, na.rm = TRUE),
     p_gte_90 = n_gte_90 / n()) |>
-  ungroup() ->
+  ungroup() |>
+  pivot_wider(
+    id_cols = c(DIST_NO, DIST_NAME, slug, month),
+    names_from = then_or_now,
+    values_from = c(n_gte_90, p_gte_90)) |>
+  write_csv(here("data", "ffdi-firegions-seasonal-thenandnow.csv")) ->
 seasonal_highdanger_days
 
-seasonal_highdanger_days |>
-  group_by(DIST_NAME, month) |>
-  summarise(
-    min_days = min(p_gte_90, na.rm = TRUE),
-    max_days = max(p_gte_90, na.rm = TRUE)) |>
-  ungroup() ->
-seasonal_highdanger_ranges
-
-ggplot(seasonal_highdanger_days) +
-  aes(x = month, colour = decade) +
-  # vertical arrow lines for each month
-  geom_linerange(
-    aes(ymin = min_days, ymax = max_days),
-    data = seasonal_highdanger_ranges,
-    colour = "lightgrey"
-  ) +
-  # geom_line() +
+# test the graphic out for new england
+ggplot(filter(seasonal_highdanger_days, DIST_NAME == "New England")) +
+  aes(x = month) +
   geom_point(
-    aes(y = p_gte_90),
-    size = 2) +
-  scale_colour_brewer(palette = "OrRd") +
+    aes(y = p_gte_90_1970_1994),
+    fill = "gold", colour = "black", shape = 21, size = 3.5) +
+  geom_point(
+    aes(y = p_gte_90_1995_2019),
+    fill = "red", colour = "black", shape = 21, size = 3.5) +
+  # arrows between then and now 
+  geom_segment(
+    aes(
+      xend = month,
+      y = p_gte_90_1970_1994 + 0.015,
+      yend = p_gte_90_1995_2019 - 0.015),
+    data = filter(seasonal_highdanger_days,
+      month %in% month.abb[c(1:4, 10:12)]),
+    colour = "orange",
+    arrow = grid::arrow(length = unit(0.1, "cm"), type = "closed")
+    ) +
   scale_y_continuous(labels = scales::label_percent()) +
   theme_minimal() +
   theme(
@@ -247,8 +255,8 @@ ggplot(seasonal_highdanger_days) +
   ) +
   labs(
     x = NULL, y = NULL,
-    title = "Percentage of days in top 10% of fire danger",
-    subtitle = "New England (NSW)"
-  )
-
+    title = "Percentage of days in top 10% of fire danger: 1970-1994 vs. 1995-2019",
+    subtitle = "New England (NSW)")
 ```
+
+This looks great, but it might actually work better as an interactive for distributing across many areas!
