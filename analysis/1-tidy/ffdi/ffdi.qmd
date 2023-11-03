@@ -23,6 +23,8 @@ code-fold: true
 
 ## ERA5 FFDI slicing
 
+
+
 ```{r}
 #| label: setup
 
@@ -32,6 +34,8 @@ library(sf)
 library(terra)
 library(exactextractr)
 ```
+
+Here's the function we'll use to get field averages for a set of `{sf}` polygon `boundaries` over each day of a `raster_path`:
 
 ```{r}
 #| label: field-avg-fn
@@ -46,10 +50,9 @@ calc_field_avgs <- function(raster_path, boundaries) {
     name = ffdi_raster |> names() |> str_remove("mean."),
     dt = ffdi_raster |> time() |> as_date()) |>
     filter(str_detect(name, "fdimrk")) ->
-  test_times
+  layer_dts
 
-  # isolate ffdi values and join to dates
-  # calculate mean ffdi
+  # calculate mean ffdis, then tidy and join to dates
   boundaries |>
     mutate(avg_ffdi = exact_extract(ffdi_raster, testbounds, fun = "mean")) |>
     select(DIST_NO, DIST_NAME, STATE_CODE, avg_ffdi) |>
@@ -58,8 +61,7 @@ calc_field_avgs <- function(raster_path, boundaries) {
     pivot_longer(-c(DIST_NO, DIST_NAME, STATE_CODE)) |>
     mutate(name = str_remove(name, "mean.")) |>
     filter(str_detect(name, "fdimrk")) |>
-    left_join(test_times, join_by(name), relationship = "many-to-one") ->
-  test_ffdi
+    left_join(layer_dts, join_by(name), relationship = "many-to-one")
 
 }
 ```
@@ -83,6 +85,7 @@ ffdi_fireregions |>
   select(ffdi_df) |>
   unnest(ffdi_df) |>
   select(-name) |>
+  filter(dt > as_date("1969-06-30")) |>
   write_csv(here("data", "ffdi-fireregions.csv")) ->
 ffdi_fireregions_tidy 
 ```
@@ -95,7 +98,7 @@ Let's do some preliminary analysis of Northern Country, north of Melbourne:
 ffdi_fireregions_tidy |>
   filter(DIST_NAME == "New England") |>
   filter(dt < as_date("2023-07-01")) |>
-  filter(month(dt) %in% c(10:12, 1:3)) |>
+  # filter(month(dt) %in% c(10:12, 1:3)) |>
   mutate(
     dt_mod = dt - months(6),
     year_mod = year(dt_mod)) |>
@@ -103,24 +106,24 @@ ffdi_fireregions_tidy |>
   summarise(
     `FFDI average` = mean(value, na.rm = TRUE),
     `FFDI max` = max(value, na.rm = TRUE),
-    `FFDI 95th pct` = quantile(value, 0.95)) |>
+    `FFDI 90th pct` = quantile(value, 0.90)) |>
   ungroup() |>
   pivot_longer(starts_with("FFDI ")) |>
   ggplot() +
     aes(x = year_mod, y = value, colour = name, group = name) +
     geom_line(alpha = 0.5) +
     geom_point(size = 1.5, alpha = 0.75) +
-    geom_smooth() +
+    geom_smooth(method = "lm", se = FALSE) +
   theme_minimal() +
   scale_colour_manual(values = c(
       "FFDI average" = "orange",
-      "FFDI 95th pct" = "red",
+      "FFDI 90th pct" = "red",
       "FFDI max" = "black")) +
   theme(
     legend.position = "top",
     legend.direction = "horizontal") +
   labs(x = NULL, y = NULL, name = NULL,
-    title = "Forest Fire Danger, October to March",
+    title = "Forest Fire Danger, July to June",
     subtitle = "New England (NSW)")
 ```
 
@@ -128,7 +131,7 @@ ffdi_fireregions_tidy |>
 #| label: vis-season
 
 ffdi_fireregions_tidy |>
-  filter(DIST_NAME == "Mallee") |>
+  filter(DIST_NAME == "New England") |>
   mutate(
     year = year(dt),
     season = ymd(paste("2022", month(dt), mday(dt), sep = "-"))) |>
@@ -140,27 +143,37 @@ ffdi_fireregions_tidy |>
       date_breaks = "3 months",
       expand = expansion(0)) +
     scale_y_reverse() +
-    scale_fill_fermenter(palette = "YlOrRd", direction = 1,
-      breaks = c(0, 10, 20, 30, 40, 50, 60, 70, 80)
-      # trans = "log"
-      ) +
+    scale_fill_stepsn(
+      breaks = seq(0, 100, by = 10),
+      colours = c(
+        "white",
+        "white",
+        "green",
+        "yellow",
+        "yellow",
+        "orange",
+        "orange",
+        "red",
+        "red",
+        "firebrick",
+        "firebrick")) +
     theme_minimal() +
     theme(
       legend.direction = "horizontal",
       legend.position = "top") +
     labs(x = NULL, y = NULL,
       title = "Forest Fire Danger",
-      subtitle = "Mallee (VIC)")
+      subtitle = "New England (NSW)")
   
 ```
 
-It's hard to see trends in quantiles much. But what about frequency? The [2022 State of the Climate](http://www.bom.gov.au/state-of-the-climate/australias-changing-climate.shtml) looked at the number of days exceeding the 90th percentile for a place.
+What about frequency? The [2022 State of the Climate](http://www.bom.gov.au/state-of-the-climate/australias-changing-climate.shtml) looked at the number of days exceeding the 90th percentile for a place.
 
 ```{r}
 #| label: vis-frequency
 
 ffdi_fireregions_tidy |>
-  filter(DIST_NAME == "Mallee") |>
+  filter(DIST_NAME == "New England") |>
   mutate(
     dt_mod = dt - months(6),
     year_mod = year(dt_mod)) |>
@@ -175,9 +188,67 @@ ffdi_fireregions_tidy |>
   ggplot() +
     aes(x = year_mod, y = ndays_gte_90pct) +
     geom_col() +
-    geom_smooth(se = FALSE, colour = "red") +
+    geom_smooth(method = "lm", se = FALSE, colour = "red") +
     theme_minimal() +
     labs(x = NULL, y = NULL,
-      title = "Number of days exceeding 90th percentile of FFDI",
-      subtitle = "Mallee (VIC)")
+      title = "Number of days exceeding 95th percentile of FFDI",
+      subtitle = "New England (NSW)")
+```
+
+Let's do a seasonal take on this:
+
+```{r}
+#| label: vis-frequency-seasonal
+
+ffdi_fireregions_tidy |>
+  filter(DIST_NAME == "New England") |>
+  filter(dt < as_date("2020-01-01")) |>
+  arrange(dt) |>
+  mutate(
+    month = factor(month.abb[month(dt)], levels = month.abb),
+    year = year(dt),
+    decade = factor(paste0(floor(year / 10) * 10, "s"))) |>
+  # calculate days over 90th percentile
+  group_by(DIST_NAME) |>
+  mutate(pct_90 = quantile(value, 0.9)) |>
+  group_by(DIST_NAME, month, decade) |>
+  summarise(
+    n_gte_90 = sum(value > pct_90, na.rm = TRUE),
+    p_gte_90 = n_gte_90 / n()) |>
+  ungroup() ->
+seasonal_highdanger_days
+
+seasonal_highdanger_days |>
+  group_by(DIST_NAME, month) |>
+  summarise(
+    min_days = min(p_gte_90, na.rm = TRUE),
+    max_days = max(p_gte_90, na.rm = TRUE)) |>
+  ungroup() ->
+seasonal_highdanger_ranges
+
+ggplot(seasonal_highdanger_days) +
+  aes(x = month, colour = decade) +
+  # vertical arrow lines for each month
+  geom_linerange(
+    aes(ymin = min_days, ymax = max_days),
+    data = seasonal_highdanger_ranges,
+    colour = "lightgrey"
+  ) +
+  # geom_line() +
+  geom_point(
+    aes(y = p_gte_90),
+    size = 2) +
+  scale_colour_brewer(palette = "OrRd") +
+  scale_y_continuous(labels = scales::label_percent()) +
+  theme_minimal() +
+  theme(
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank(),
+  ) +
+  labs(
+    x = NULL, y = NULL,
+    title = "Percentage of days in top 10% of fire danger",
+    subtitle = "New England (NSW)"
+  )
+
 ```
