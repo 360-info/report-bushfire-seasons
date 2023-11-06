@@ -54,7 +54,7 @@ calc_field_avgs <- function(raster_path, boundaries) {
 
   # calculate mean ffdis, then tidy and join to dates
   boundaries |>
-    mutate(avg_ffdi = exact_extract(ffdi_raster, testbounds, fun = "mean")) |>
+    mutate(avg_ffdi = exact_extract(ffdi_raster, boundaries, fun = "mean")) |>
     select(DIST_NO, slug, DIST_NAME, STATE_CODE, avg_ffdi) |>
     st_drop_geometry() |>
     unnest(avg_ffdi) |>
@@ -73,7 +73,6 @@ here("data", "aus-firedistricts", "IDM00007.shp") |>
   read_sf() |>
   mutate(slug = janitor::make_clean_names(DIST_NAME)) ->
 fire_regions
-
 
 # calculate ffdi across all the fire regions for each netcdf
 here("data", "copernicus-firedanger", "australia") |>
@@ -215,11 +214,13 @@ ffdi_fireregions_tidy |>
   # calculate days over 90th percentile
   group_by(DIST_NO, DIST_NAME, slug) |>
   mutate(pct_90 = quantile(value, 0.9)) |>
+  ungroup() |>
   group_by(DIST_NO, DIST_NAME, slug, month, then_or_now) |>
   summarise(
     n_gte_90 = sum(value > pct_90, na.rm = TRUE),
     p_gte_90 = n_gte_90 / n()) |>
   ungroup() |>
+  glimpse() |>
   pivot_wider(
     id_cols = c(DIST_NO, DIST_NAME, slug, month),
     names_from = then_or_now,

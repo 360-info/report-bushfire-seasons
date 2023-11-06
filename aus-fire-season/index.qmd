@@ -1,0 +1,89 @@
+---
+title: Untitled
+format:
+  360-embed-html: default
+360embed:
+  before: |
+    &lt;iframe allow=&quot;fullscreen&quot; allowfullscreen=&quot;true&quot; src=&quot;
+  # uncomment and modify this line for production
+  # url: https://feb2023.360info-heatmaps-narclim.pages.dev/news/
+  after: |
+    &quot; title=&quot;Interactive: future heat&quot; style=&quot;width:100%; height:500px; border:none; background-color: white;&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
+---
+
+{{< include _popup-buttons.qmd >}}
+
+```{ojs}
+//| label: load-data
+import { aq, op } from "@uwdata/arquero"
+seasons = aq.loadCSV("/data/ffdi-firegions-seasonal-thenandnow.csv", {
+  parse: {
+    DIST_NO: Number,
+    DIST_NAME: String,
+    slug: String,
+    month: String,
+    n_gte_90_1970_1994: Number,
+    n_gte_90_1995_2019: Number,
+    p_gte_90_1970_1994: Number,
+    p_gte_90_1995_2019: Number
+  }
+})
+```
+
+```{ojs}
+//| label: pick-region
+
+regionMap = seasons
+  .select("DIST_NAME", "slug")
+  .dedupe("DIST_NAME", "slug")
+  .orderby("DIST_NAME")
+  .derive({ map: d => [d.DIST_NAME, d.slug]})
+  .array("map")
+viewof regionSelect = Inputs.select(new Map(regionMap))
+
+filteredData = seasons
+  .params({regionSelect: regionSelect})
+  .filter(d => d.slug == regionSelect)
+```
+
+```{ojs}
+Inputs.table(filteredData)
+```
+
+```{ojs}
+//| label: plot
+Plot = import("https://esm.run/@observablehq/plot")
+
+Plot.plot({
+  marks: [
+    // Plot.dot(filteredData, {
+    //   x: "month",
+    //   y: "p_gte_90_1970_1994",
+    //   fill: "gold",
+    //   // tip: true
+    // }),
+    // Plot.dot(filteredData, {
+    //   x: "month",
+    //   y: "p_gte_90_1995_2019",
+    //   fill: "red",
+    //   // tip: true
+    // }),
+    Plot.arrow(filteredData, {
+      x: "month",
+      y1: "p_gte_90_1995_2019",
+      y2: "p_gte_90_1995_2019",
+      fill: "black",
+      stroke: "orange",
+      strokeWidth: 2
+    })
+  ],
+  x: {
+    domain: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep",
+      "Oct", "Nov", "Dec"]
+  }
+})
+
+
+```
+
+{{< include _popup-dialogs.qmd >}}
