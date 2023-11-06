@@ -85,6 +85,19 @@ Plot.legend({
 Plot.plot({
   marks: [
     Plot.ruleY([0]),
+    Plot.areaY(filteredData, {
+      x: "month",
+      y: "navg_then",
+      fill: "gold",
+      fillOpacity: 0.2
+    }),
+    Plot.areaY(filteredData, {
+      x: "month",
+      y1: "navg_then",
+      y2: "navg_now",
+      fill: "#dd0000",
+      fillOpacity: 0.3
+    }),
     Plot.dot(filteredData, {
       x: "month",
       y: "navg_then",
@@ -102,7 +115,8 @@ Plot.plot({
       y1: "navg_then",
       y2: "navg_now",
       inset: 10,
-      stroke: d => d.navg_now > d.navg_then ? "orange" : "lightblue",
+      stroke: d => d.navg_now > d.navg_then ? "firebrick" : "navy",
+      strokeWidth: 2
     }),
     Plot.tip(filteredData, Plot.pointer({
       x: "month",
@@ -127,7 +141,8 @@ Plot.plot({
   x: {
     label: null,
     domain: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep",
-      "Oct", "Nov", "Dec"]
+      "Oct", "Nov", "Dec"],
+    padding: 0
   },
   y: {
     label: "Average days per year",
