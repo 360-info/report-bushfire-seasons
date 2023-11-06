@@ -8,22 +8,7 @@ date: last-modified
 code-fold: true
 ---
 
-## (Never mind) Manual FFDI calculation
-
-~~Let's try calculating FFDI using Jacob Arndt's [`kbdi-ffdi`](https://github.com/subond/kbdi-ffdi) Python package.~~
-
-~~We'll use Sale (station 085072) as a test case before we look at anything bigger. It has solid temperature and rainfall records back to the 1950s.~~
-
-~~`kbdi-ffdi` can theoretically also work with NetCDF files, but for CSVs it requires four columns:~~
-
-- ~~`rain` in mm~~
-- ~~`temp` in °C~~
-- ~~`relhum` as a percentage~~
-- ~~`wind` in kph~~
-
-## ERA5 FFDI slicing
-
-
+# ERA5 FFDI slicing
 
 ```{r}
 #| label: setup
@@ -202,29 +187,27 @@ Let's do a seasonal take on this:
 #| label: vis-frequency-seasonal
 
 ffdi_fireregions_tidy |>
-  filter(between(dt, as_date("1970-01-01"), as_date("2020-01-01"))) |>
+  filter(between(dt, as_date("1970-07-01"), as_date("2020-06-30"))) |>
   arrange(dt) |>
   mutate(
     month = factor(month.abb[month(dt)], levels = month.abb),
     year = year(dt),
     decade = factor(paste0(floor(year / 10) * 10, "s")),
-    then_or_now = case_match(year,
-      1970:1994 ~ "1970_1994",
-      1995:2020 ~ "1995_2019")) |>
+    then_or_now =
+      if_else(dt < as_date("1995-07-01"), "1970_1995", "1995_2020")) |>
   # calculate days over 90th percentile
   group_by(DIST_NO, DIST_NAME, slug) |>
   mutate(pct_90 = quantile(value, 0.9)) |>
   ungroup() |>
   group_by(DIST_NO, DIST_NAME, slug, month, then_or_now) |>
   summarise(
-    n_gte_90 = sum(value > pct_90, na.rm = TRUE),
-    p_gte_90 = n_gte_90 / n()) |>
+    n_gte_90 = sum(value > pct_90, na.rm = TRUE)) |>
   ungroup() |>
-  glimpse() |>
   pivot_wider(
     id_cols = c(DIST_NO, DIST_NAME, slug, month),
     names_from = then_or_now,
-    values_from = c(n_gte_90, p_gte_90)) |>
+    names_prefix = "n_",
+    values_from = n_gte_90) |>
   write_csv(here("data", "ffdi-firegions-seasonal-thenandnow.csv")) ->
 seasonal_highdanger_days
 
