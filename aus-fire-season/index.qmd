@@ -1,5 +1,6 @@
 ---
-title: Untitled
+title: "Bushfire season: then and now"
+subtitle: "Proportion of days in top 10% of fire danger"
 format:
   360-embed-html: default
 360embed:
@@ -47,43 +48,49 @@ filteredData = seasons
 ```
 
 ```{ojs}
-Inputs.table(filteredData)
-```
-
-```{ojs}
 //| label: plot
 Plot = import("https://esm.run/@observablehq/plot")
 
 Plot.plot({
   marks: [
-    // Plot.dot(filteredData, {
-    //   x: "month",
-    //   y: "p_gte_90_1970_1994",
-    //   fill: "gold",
-    //   // tip: true
-    // }),
-    // Plot.dot(filteredData, {
-    //   x: "month",
-    //   y: "p_gte_90_1995_2019",
-    //   fill: "red",
-    //   // tip: true
-    // }),
+    Plot.dot(filteredData, {
+      x: "month",
+      y: "p_gte_90_1970_1994",
+      fill: "gold",
+      r: 6
+    }),
+    Plot.dot(filteredData, {
+      x: "month",
+      y: "p_gte_90_1995_2019",
+      fill: "firebrick",
+      r: 6
+    }),
     Plot.arrow(filteredData, {
       x: "month",
-      y1: "p_gte_90_1995_2019",
+      y1: "p_gte_90_1970_1994",
       y2: "p_gte_90_1995_2019",
-      fill: "black",
-      stroke: "orange",
-      strokeWidth: 2
+      inset: 10,
+      stroke: d => d.p_gte_90_1995_2019 > d.p_gte_90_1970_1994 ?
+        "orange" : "lightblue",
+      // strokeWidth: 2
     })
   ],
   x: {
+    label: null,
     domain: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep",
       "Oct", "Nov", "Dec"]
+  },
+  y: {
+    percent: true,
+    tickFormat: d => d + "%",
+    // grid: true
+  },
+  insetBottom: 10,
+  marginBottom: 30,
+  style: {
+    fontSize: 14
   }
 })
-
-
 ```
 
 {{< include _popup-dialogs.qmd >}}
