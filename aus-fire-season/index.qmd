@@ -1,6 +1,6 @@
 ---
 title: "Bushfire season: then and now"
-subtitle: "Proportion of days in top 10% of fire danger"
+subtitle: "High fire danger days (in the worst 10% of days)"
 format:
   360-embed-html: default
 360embed:
@@ -43,37 +43,86 @@ regionMap = seasons
 viewof regionSelect = Inputs.select(new Map(regionMap))
 
 filteredData = seasons
-  .params({regionSelect: regionSelect})
+  .params({ regionSelect: regionSelect })
   .filter(d => d.slug == regionSelect)
+  .derive({
+      navg_then: d => d.n_1970_1995 / 25,
+      navg_now: d => d.n_1995_2020 / 25,
+  })
 ```
 
 ```{ojs}
 //| label: plot
 Plot = import("https://esm.run/@observablehq/plot")
 
+fullMonths = ({
+  "Jan": "January",
+  "Feb": "February",
+  "Mar": "March",
+  "Apr": "April",
+  "May": "May",
+  "Jun": "June",
+  "Jul": "July",
+  "Aug": "August",
+  "Sep": "September",
+  "Oct": "October",
+  "Nov": "November",
+  "Dec": "December"
+})
+
+Plot.legend({
+  color: {
+    type: "ordinal",
+    domain: ["Then (July 1970 to June 1995)", "Now (July 1995 to June 2020)"],
+    range: ["gold", "firebrick"]
+  },
+  style: {
+    fontSize: 24,
+    fontFamily: "Roboto Condensed"
+  }
+})
+
 Plot.plot({
   marks: [
+    Plot.ruleY([0]),
     Plot.dot(filteredData, {
       x: "month",
-      y: "p_gte_90_1970_1994",
+      y: "navg_then",
       fill: "gold",
       r: 6
     }),
     Plot.dot(filteredData, {
       x: "month",
-      y: "p_gte_90_1995_2019",
+      y: "navg_now",
       fill: "firebrick",
       r: 6
     }),
     Plot.arrow(filteredData, {
       x: "month",
-      y1: "p_gte_90_1970_1994",
-      y2: "p_gte_90_1995_2019",
+      y1: "navg_then",
+      y2: "navg_now",
       inset: 10,
-      stroke: d => d.p_gte_90_1995_2019 > d.p_gte_90_1970_1994 ?
-        "orange" : "lightblue",
-      // strokeWidth: 2
-    })
+      stroke: d => d.navg_now > d.navg_then ? "orange" : "lightblue",
+    }),
+    Plot.tip(filteredData, Plot.pointer({
+      x: "month",
+      y1: "navg_then",
+      y2: "navg_now",
+      channels: {
+        Then: d => `Average ${d3.format("0.1f")(d.navg_then)} ${fullMonths[d.month]} days a year`,
+        Now: d => `Average ${d3.format("0.1f")(d.navg_now)} ${fullMonths[d.month]} days a year`
+      },
+      format: {
+        Then: true,
+        Now: true,
+        x: false,
+        y: false,
+      },
+      lineHeight: 1.5,
+      stroke: "none",
+      fillOpacity: 0.85,
+      pointerSize: 0
+    }))
   ],
   x: {
     label: null,
@@ -81,15 +130,18 @@ Plot.plot({
       "Oct", "Nov", "Dec"]
   },
   y: {
-    percent: true,
-    tickFormat: d => d + "%",
-    // grid: true
+    label: "Average days per year",
+    grid: true
   },
-  insetBottom: 10,
+  insetTop: 15,
+  marginTop: 30,
   marginBottom: 30,
   style: {
-    fontSize: 14
-  }
+    fontSize: 20,
+    fontFamily: "Roboto Condensed"
+  },
+  width: 900,
+    height: 600
 })
 ```
 
