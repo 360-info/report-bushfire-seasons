@@ -61,3 +61,8 @@ header#title-block-header {
   font-family: "JetBrains Mono", monospace;
   white-space: normal;
 }
+
+/* visual effect to distinguish pos. and neg. changes without breaking polygons */
+g[aria-label="area"][fill="orangered"] {
+  mix-blend-mode: exclusion;
+}

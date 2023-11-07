@@ -1,6 +1,6 @@
 ---
 title: "Bushfire season: then and now"
-subtitle: "High fire danger days (in the worst 10% of days)"
+subtitle: "Changes in frequency of high fire danger days (in the worst 10% of days)"
 format:
   360-embed-html: default
 360embed:
@@ -74,7 +74,7 @@ Plot.legend({
   color: {
     type: "ordinal",
     domain: ["Then (July 1970 to June 1995)", "Now (July 1995 to June 2020)"],
-    range: ["gold", "firebrick"]
+    range: ["gold", "orangered"]
   },
   style: {
     fontSize: 24,
@@ -89,25 +89,28 @@ Plot.plot({
       x: "month",
       y: "navg_then",
       fill: "gold",
-      fillOpacity: 0.2
+      fillOpacity: 0.8
     }),
     Plot.areaY(filteredData, {
       x: "month",
       y1: "navg_then",
       y2: "navg_now",
-      fill: "#dd0000",
-      fillOpacity: 0.3
+      // mix-blend-mode: difference or exclusion set in css
+      fill: "orangered",
+      fillOpacity: 0.8
     }),
     Plot.dot(filteredData, {
       x: "month",
       y: "navg_then",
       fill: "gold",
+      stroke: "black",
       r: 6
     }),
     Plot.dot(filteredData, {
       x: "month",
       y: "navg_now",
-      fill: "firebrick",
+      fill: "orangered",
+      stroke: "black",
       r: 6
     }),
     Plot.arrow(filteredData, {
@@ -115,9 +118,19 @@ Plot.plot({
       y1: "navg_then",
       y2: "navg_now",
       inset: 10,
-      stroke: d => d.navg_now > d.navg_then ? "firebrick" : "navy",
+      stroke: "white",
+      strokeOpacity: 0.9,
       strokeWidth: 2
     }),
+    // pointed arrow
+    Plot.arrow(filteredData, Plot.pointerX({
+      x: "month",
+      y1: "navg_then",
+      y2: "navg_now",
+      inset: 10,
+      stroke: "#660000",
+      strokeWidth: 3
+    })),
     Plot.tip(filteredData, Plot.pointer({
       x: "month",
       y1: "navg_then",
