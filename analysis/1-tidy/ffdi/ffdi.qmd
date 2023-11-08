@@ -10,6 +10,12 @@ code-fold: true
 
 # ERA5 FFDI slicing
 
+:::{.callout-important}
+This analysis presently requires that NetCDF files of [Fire danger indices historical data from the Copernicus Emergency Management Service](https://cds.climate.copernicus.eu/cdsapp#!/dataset/cems-fire-historical-v1?tab=form) be present in `data/copernicus-firedanger`.
+
+You can use [Copernicus's API](https://cds.climate.copernicus.eu/api-how-to) to download them automatically, but this isn't presently done in the analysis.
+:::
+
 ```{r}
 #| label: setup
 
@@ -40,10 +46,10 @@ calc_field_avgs <- function(raster_path, boundaries) {
   # calculate mean ffdis, then tidy and join to dates
   boundaries |>
     mutate(avg_ffdi = exact_extract(ffdi_raster, boundaries, fun = "mean")) |>
-    select(DIST_NO, slug, DIST_NAME, STATE_CODE, avg_ffdi) |>
+    select(SAL_CODE21, slug, SAL_NAME21, STE_CODE21, avg_ffdi) |>
     st_drop_geometry() |>
     unnest(avg_ffdi) |>
-    pivot_longer(-c(DIST_NO, slug, DIST_NAME, STATE_CODE)) |>
+    pivot_longer(-c(SAL_CODE21, slug, SAL_NAME21, STE_CODE21)) |>
     mutate(name = str_remove(name, "mean.")) |>
     filter(str_detect(name, "fdimrk")) |>
     left_join(layer_dts, join_by(name), relationship = "many-to-one")
@@ -52,18 +58,39 @@ calc_field_avgs <- function(raster_path, boundaries) {
 ```
 
 ```{r}
+#| label: download
+
+if (!file.exists(here("data", "suburbs", "SAL_2021_AUST_GDA2020.shp"))) {
+  suburbs_url <- paste0(
+    "https://www.abs.gov.au/statistics/standards/",
+    "australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/",
+    "access-and-downloads/digital-boundary-files/",
+    "SAL_2021_AUST_GDA2020_SHP.zip"
+  )
+
+  download.file(suburbs_url, here("data", "suburbs.zip"))
+  unzip(here("data", "suburbs.zip"), exdir = here("data", "suburbs"))
+}
+
+```
+
+```{r}
 #| label: run-files
 
-here("data", "aus-firedistricts", "IDM00007.shp") |>
+here("data", "suburbs", "SAL_2021_AUST_GDA2020.shp") |>
   read_sf() |>
-  mutate(slug = janitor::make_clean_names(DIST_NAME)) ->
-fire_regions
+  mutate(slug = janitor::make_clean_names(SAL_NAME21)) ->
+suburbs
 
+# remove empty regions ({exactextractr} won't work on empty ones)
+suburbs <- filter(suburbs, !st_is_empty(suburbs))
+
+# TODO - would be nice if we used the cppernicus api to download these!
 # calculate ffdi across all the fire regions for each netcdf
 here("data", "copernicus-firedanger", "australia") |>
   list.files(pattern = glob2rx("*.nc"), full.names = TRUE) |>
   tibble(path = _) |>
-  mutate(ffdi_df = map(path, calc_field_avgs, fire_regions)) ->
+  mutate(ffdi_df = map(path, calc_field_avgs, suburbs)) ->
 ffdi_fireregions
 
 # unnest and write out to disk
@@ -82,7 +109,7 @@ Let's do some preliminary analysis of a sample area:
 #| label: visualise
 
 ffdi_fireregions_tidy |>
-  filter(DIST_NAME == "New England") |>
+  filter(SAL_NAME21 == "New England") |>
   filter(dt < as_date("2023-07-01")) |>
   # filter(month(dt) %in% c(10:12, 1:3)) |>
   mutate(
@@ -117,7 +144,7 @@ ffdi_fireregions_tidy |>
 #| label: vis-season
 
 ffdi_fireregions_tidy |>
-  filter(DIST_NAME == "New England") |>
+  filter(SAL_NAME21 == "New England") |>
   mutate(
     year = year(dt),
     season = ymd(paste("2022", month(dt), mday(dt), sep = "-"))) |>
@@ -159,16 +186,16 @@ What about frequency? The [2022 State of the Climate](http://www.bom.gov.au/stat
 #| label: vis-frequency
 
 ffdi_fireregions_tidy |>
-  filter(DIST_NAME == "New England") |>
+  filter(SAL_NAME21 == "New England") |>
   mutate(
     dt_mod = dt - months(6),
     year_mod = year(dt_mod)) |>
-  group_by(DIST_NAME) |>
+  group_by(SAL_NAME21) |>
   mutate(
     pct_90 = quantile(value, 0.9),
     gte_90 = value > pct_90) |>
   filter(gte_90) |>
-  group_by(DIST_NAME, year_mod) |>
+  group_by(SAL_NAME21, year_mod) |>
   summarise(ndays_gte_90pct = n()) |>
   ungroup() |>
   ggplot() +
@@ -196,15 +223,15 @@ ffdi_fireregions_tidy |>
     then_or_now =
       if_else(dt < as_date("1995-07-01"), "1970_1995", "1995_2020")) |>
   # calculate days over 90th percentile
-  group_by(DIST_NO, DIST_NAME, slug) |>
+  group_by(SAL_CODE21, SAL_NAME21, slug) |>
   mutate(pct_90 = quantile(value, 0.9)) |>
   ungroup() |>
-  group_by(DIST_NO, DIST_NAME, slug, month, then_or_now) |>
+  group_by(SAL_CODE21, SAL_NAME21, slug, month, then_or_now) |>
   summarise(
     n_gte_90 = sum(value > pct_90, na.rm = TRUE)) |>
   ungroup() |>
   pivot_wider(
-    id_cols = c(DIST_NO, DIST_NAME, slug, month),
+    id_cols = c(SAL_CODE21, SAL_NAME21, slug, month),
     names_from = then_or_now,
     names_prefix = "n_",
     values_from = n_gte_90) |>
@@ -212,7 +239,7 @@ ffdi_fireregions_tidy |>
 seasonal_highdanger_days
 
 # test the graphic out for new england
-ggplot(filter(seasonal_highdanger_days, DIST_NAME == "New England")) +
+ggplot(filter(seasonal_highdanger_days, SAL_NAME21 == "New England")) +
   aes(x = month) +
   geom_point(
     aes(y = p_gte_90_1970_1994),
