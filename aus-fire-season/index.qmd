@@ -84,53 +84,92 @@ Plot.legend({
 
 Plot.plot({
   marks: [
+    // patterns: stripes up (for more risk now) or down (for less risk)
+    // () => svg`<defs>
+    //   <pattern id="stripes-more" x="0" y="0" width="20" height="20">
+    //     <rect width="20" height="20" fill="orange" />
+    //     <line stroke="red" x1="0" y1="0" x2="10" y2="10"/>
+    //     <line stroke="red" x1="10" y1="10" x2="20" y2="0"/>
+    //   </pattern>
+    // </defs>`,
+    // () => svg`<defs>
+    //   <pattern id="stripes-less" x="0" y="0" width="20" height="20">
+    //     <rect width="20" height="20" fill="lightblue" />
+    //     <line stroke="blue" x1="0" y1="10" x2="10" y2="0"/>
+    //     <line stroke="blue" x1="10" y1="0" x2="20" y2="10"/>
+    //   </pattern>
+    // </defs>`,
+    () => svg`
+      <linearGradient id="stripes-more" gradientTransform="rotate(90)">
+        <stop offset="15%" stop-color="red" />
+        <stop offset="25%" stop-color="orangered" />
+        <stop offset="85%" stop-color="gold" />
+      </linearGradient>`,
+    () => svg`
+      <linearGradient id="stripes-less" gradientTransform="rotate(90)">
+        <stop offset="15%" stop-color="gold" />
+        <stop offset="75%" stop-color="orangered" />
+        <stop offset="100%" stop-color="red" />
+      </linearGradient>`,
     Plot.ruleY([0]),
-    Plot.areaY(filteredData, {
-      x: "month",
-      y: "navg_then",
-      fill: "gold",
-      fillOpacity: 0.8
-    }),
-    Plot.areaY(filteredData, {
+    // Plot.areaY(filteredData, {
+    //   x: "month",
+    //   y: "navg_then",
+    //   fill: "gold",
+    //   fillOpacity: 0.8
+    // }),
+    // Plot.areaY(filteredData, {
+    //   x: "month",
+    //   y1: "navg_then",
+    //   y2: "navg_now",
+    //   // mix-blend-mode: difference or exclusion set in css
+    //   fill: "orangered",
+    //   fillOpacity: 0.8
+    // }),
+    Plot.barY(filteredData, {
       x: "month",
       y1: "navg_then",
       y2: "navg_now",
-      // mix-blend-mode: difference or exclusion set in css
-      fill: "orangered",
-      fillOpacity: 0.8
+      // fill: d => d.navg_now > d.navg_then ? "firebrick": "green"
+      fill: d => d.navg_now > d.navg_then ?
+        "url(#stripes-more)" :
+        "url(#stripes-less)",
+      fillOpacity: 0.9
+      // fill: "url(#stripes-up)"
     }),
     Plot.dot(filteredData, {
       x: "month",
       y: "navg_then",
       fill: "gold",
       stroke: "black",
-      r: 6
+      r: 9
     }),
     Plot.dot(filteredData, {
       x: "month",
       y: "navg_now",
       fill: "orangered",
       stroke: "black",
-      r: 6
+      r: 9
     }),
     Plot.arrow(filteredData, {
       x: "month",
       y1: "navg_then",
       y2: "navg_now",
-      inset: 10,
-      stroke: "white",
-      strokeOpacity: 0.9,
-      strokeWidth: 2
+      inset: 20,
+      stroke: "black",
+      // strokeOpacity: 0.9,
+      strokeWidth: 1
+      // strokeDashArray: "dot"
     }),
-    // pointed arrow
-    Plot.arrow(filteredData, Plot.pointerX({
-      x: "month",
-      y1: "navg_then",
-      y2: "navg_now",
-      inset: 10,
-      stroke: "#660000",
-      strokeWidth: 3
-    })),
+    // // pointed arrow
+    // Plot.arrow(filteredData, Plot.pointerX({
+    //   x: "month",
+    //   y1: "navg_then",
+    //   y2: "navg_now",
+    //   inset: 10,
+    //   stroke: "#660000",
+    //   strokeWidth: 3
+    // })),
     Plot.tip(filteredData, Plot.pointer({
       x: "month",
       y1: "navg_then",
@@ -155,7 +194,8 @@ Plot.plot({
     label: null,
     domain: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep",
       "Oct", "Nov", "Dec"],
-    padding: 0
+    // padding: 0
+    padding: 0.71
   },
   y: {
     label: "Average days per year",
