@@ -1,15 +1,16 @@
 ---
-title: "Bushfire season: then and now"
+title: "High fire danger days: then and now"
 subtitle: "Changes in frequency of high fire danger days (in the worst 10% of days)"
 format:
   360-embed-html: default
 360embed:
   before: |
-    &lt;iframe allow=&quot;fullscreen&quot; allowfullscreen=&quot;true&quot; src=&quot;
-  # uncomment and modify this line for production
-  # url: https://feb2023.360info-heatmaps-narclim.pages.dev/news/
+    &lt;div style=&quot;aspect-ratio: 20 / 19; width: 100%; min-height: 500px;&quot;&gt;
+    &lt;iframe allow=&quot;fullscreen; clipboard-write self https://bushfire-seasons.360visuals.org&quot; allowfullscreen=&quot;true&quot; src=&quot;
+  url: https://bushfire-seasons.360visuals.org/aus-fire-season/
   after: |
-    &quot; title=&quot;Interactive: future heat&quot; style=&quot;width:100%; height:500px; border:none; background-color: white;&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
+    &quot; title=&quot;Interactive: the changing fire season areas&quot; style=&quot;width:100%; height:100%; position: absolute; top: 0; left: 0; border:none; background-color: white;&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
 ---
 
 {{< include _popup-buttons.qmd >}}
@@ -74,7 +75,7 @@ Plot.legend({
   color: {
     type: "ordinal",
     domain: ["Then (July 1970 to June 1995)", "Now (July 1995 to June 2020)"],
-    range: ["gold", "orangered"]
+    range: ["rgba(247, 184, 12, 0.25)", "orangered"]
   },
   style: {
     fontSize: 24,
@@ -85,62 +86,32 @@ Plot.legend({
 Plot.plot({
   marks: [
     // patterns: stripes up (for more risk now) or down (for less risk)
-    // () => svg`<defs>
-    //   <pattern id="stripes-more" x="0" y="0" width="20" height="20">
-    //     <rect width="20" height="20" fill="orange" />
-    //     <line stroke="red" x1="0" y1="0" x2="10" y2="10"/>
-    //     <line stroke="red" x1="10" y1="10" x2="20" y2="0"/>
-    //   </pattern>
-    // </defs>`,
-    // () => svg`<defs>
-    //   <pattern id="stripes-less" x="0" y="0" width="20" height="20">
-    //     <rect width="20" height="20" fill="lightblue" />
-    //     <line stroke="blue" x1="0" y1="10" x2="10" y2="0"/>
-    //     <line stroke="blue" x1="10" y1="0" x2="20" y2="10"/>
-    //   </pattern>
-    // </defs>`,
     () => svg`
       <linearGradient id="stripes-more" gradientTransform="rotate(90)">
         <stop offset="15%" stop-color="red" />
         <stop offset="25%" stop-color="orangered" />
-        <stop offset="85%" stop-color="gold" />
+        <stop offset="85%" stop-color="rgba(247, 184, 12, 0.25)" />
       </linearGradient>`,
     () => svg`
       <linearGradient id="stripes-less" gradientTransform="rotate(90)">
-        <stop offset="15%" stop-color="gold" />
+        <stop offset="15%" stop-color="rgba(247, 184, 12, 0.25)" />
         <stop offset="75%" stop-color="orangered" />
         <stop offset="100%" stop-color="red" />
       </linearGradient>`,
     Plot.ruleY([0]),
-    // Plot.areaY(filteredData, {
-    //   x: "month",
-    //   y: "navg_then",
-    //   fill: "gold",
-    //   fillOpacity: 0.8
-    // }),
-    // Plot.areaY(filteredData, {
-    //   x: "month",
-    //   y1: "navg_then",
-    //   y2: "navg_now",
-    //   // mix-blend-mode: difference or exclusion set in css
-    //   fill: "orangered",
-    //   fillOpacity: 0.8
-    // }),
     Plot.barY(filteredData, {
       x: "month",
       y1: "navg_then",
       y2: "navg_now",
-      // fill: d => d.navg_now > d.navg_then ? "firebrick": "green"
       fill: d => d.navg_now > d.navg_then ?
         "url(#stripes-more)" :
         "url(#stripes-less)",
       fillOpacity: 0.9
-      // fill: "url(#stripes-up)"
     }),
     Plot.dot(filteredData, {
       x: "month",
       y: "navg_then",
-      fill: "gold",
+      fill: "rgba(247, 184, 12, 0.25)",
       stroke: "black",
       r: 9
     }),
@@ -157,19 +128,8 @@ Plot.plot({
       y2: "navg_now",
       inset: 20,
       stroke: "black",
-      // strokeOpacity: 0.9,
       strokeWidth: 1
-      // strokeDashArray: "dot"
     }),
-    // // pointed arrow
-    // Plot.arrow(filteredData, Plot.pointerX({
-    //   x: "month",
-    //   y1: "navg_then",
-    //   y2: "navg_now",
-    //   inset: 10,
-    //   stroke: "#660000",
-    //   strokeWidth: 3
-    // })),
     Plot.tip(filteredData, Plot.pointer({
       x: "month",
       y1: "navg_then",
@@ -194,7 +154,6 @@ Plot.plot({
     label: null,
     domain: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep",
       "Oct", "Nov", "Dec"],
-    // padding: 0
     padding: 0.71
   },
   y: {
