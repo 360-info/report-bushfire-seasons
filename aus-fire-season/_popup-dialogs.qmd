@@ -68,7 +68,7 @@ The Forest Fire Danger Index used here evaluates aspects of fire risk based on t
 
 The historical fire risk data in this chart comes from a global dataset called ERA5, published by the [Copernicus Emergency Management Service](https://cds.climate.copernicus.eu/cdsapp#!/dataset/cems-fire-historical-v1?tab=form).
 
-Fire Weather District boundaries are available from the [Bureau of Meteorology](http://bom.gov.au) under its default terms of use.
+Local Government Area boundaries are provided by the [Australian Bureau of Statistics](https://abs.gov.au).
 ::::
 
 :::::

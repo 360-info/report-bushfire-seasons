@@ -66,3 +66,23 @@ header#title-block-header {
 g[aria-label="area"][fill="orangered"] {
   mix-blend-mode: exclusion;
 }
+
+
+.area-search {
+  margin-bottom: 2em;
+}
+
+.area-search .observablehq span {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.area-search label {
+  color: grey;
+  text-transform: uppercase;
+}
+
+.area-search input {
+  font-family: "Roboto Condensed";
+  font-size: 110%;
+}
