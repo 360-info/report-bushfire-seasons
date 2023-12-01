@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.468">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>The changing fire season</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script type="module" src="../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="_extensions/360-info/360-embed/embed.css">
+<link rel="stylesheet" href="_extensions/360-info/360-embed/modal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+
+<header id="title-block-header">
+<h1 class="title">The changing fire season</h1>
+<p class="subtitle">Many parts of Australia see more high fire danger days in an average year <span style="background-color: orangered; color: white; padding: 0.1em 0.3em; border-radius: 10px;"><strong>now</strong></span> than they did in the <span style="background-color: rgba(247, 184, 12, 0.25); padding: 0.1em 0.3em; border-radius: 10px;"><strong>1970s, 80s and early 90s</strong></span>.</p>
+
+</header>
+
+
+<div class="modalpanel">
+<div class="modalpanelitems">
+<!-- check https://icons.getbootstrap.com for icons! -->
+
+<a href="#" data-micromodal-trigger="modal-useremix" aria-label="Share dialog" role="button" tabindex="0">
+  <i class="bi bi-share-fill"></i>
+</a>
+
+<a href="#" data-micromodal-trigger="modal-about" aria-label="More information" role="button" tabindex="0">
+  <i class="bi bi-info-circle-fill"></i>
+</a>
+
+<a id="fullscreenButton" aria-label="Fullscreen" role="button" href="#" tabindex="0">
+  <span class="fsoff">
+    <i class="bi bi-arrows-fullscreen"></i>
+  </span>
+</a>
+
+<!-- full screen button script -->
+<script>
+  window.addEventListener("load", () => {
+    document.querySelector("#fullscreenButton").addEventListener("click", e => {
+      e.preventDefault();
+      console.log("FS button clicked!");
+
+      var fsBtn = document.querySelector("#fullscreenButton");
+
+      if (fsBtn.classList.contains("fsmode")) {
+        // fullscreen is on: disable it
+        document.exitFullscreen();
+        fsBtn.classList.remove("fsmode")
+      } else {
+        // fullscreen is off: enable it
+        var rootEl = document.documentElement;
+
+        var requestMethod =
+          rootEl.requestFullScreen ||
+          rootEl.webkitRequestFullScreen ||
+          rootEl.mozRequestFullScreen ||
+          rootEl.msRequestFullScreen;
+
+          if (requestMethod) {
+            requestMethod.call(rootEl);
+            fsBtn.classList.add("fsmode");
+          } else {
+            alert("Fullscreen mode isn't supported on this browser.")
+          }
+      }
+    });
+  })
+</script>
+</div>
+<!-- if there's room here, put credits on two lines:
+  * Editor names, 360info (hint: put &shy; in the middle of long names!)
+  * Data: ORG
+  (if there isn't room, put it in the ABOUT dialog) -->
+<p>James Goldie, 360info</p>
+<p>Data: Copernicus</p>
+</div>
+<!-- finally, here's the EDITOR SHARE button. it's a quick way to copy the
+     embed code for editors and will only appear if ?edshare=true is in the
+     url (that way it'll appear on the newswire but not subsequent shares) -->
+<div id="edshare">
+  <i id="edshare-icon" class="bi bi-clipboard2-plus-fill"></i>
+  <div>
+    <h4 id="edshare-title" class="anchored">GET THIS CHART</h4>
+    <p id="edshare-description">Click to copy this into your story</p>
+  </div>
+</div>
+<!-- editor share banner: enable if ?edshare is in the url -->
+<script>
+  window.addEventListener("load", () => {
+    pageURL = new URL(window.location.href);
+    edshare = pageURL.searchParams.get("edshare");
+    
+    edshareBtn = document.querySelector("#edshare");
+    if (edshare === null) {
+      edshareBtn.style.display = "none";
+    } else {
+    
+      edshareBtn.classList.add("ready");
+    
+      edshareBtn.addEventListener("click", () => {
+
+        // copy the embed code to the clipboard
+        navigator.clipboard.writeText(
+          `<div style="aspect-ratio: 20 / 19; width: 100%; min-height: 500px;"> <iframe allow="fullscreen; clipboard-write self https://bushfire-seasons.360visuals.org" allowfullscreen="true" src="https://bushfire-seasons.360visuals.org/aus-fire-season/" title="Interactive: the changing fire season areas" style="width:100%; height:100%; position: absolute; top: 0; left: 0; border:none; background-color: white;" scrolling="no"></iframe> </div>`);
+
+        // update button styles and content
+        edshareBtn.classList.remove("ready");
+        edshareBtn.classList.add("clicked");
+
+        edshareIcon = document.querySelector("#edshare-icon");
+        edshareIcon.removeAttribute("class");
+        edshareIcon.classList.add("bi");
+        edshareIcon.classList.add("bi-check");
+
+        edshareTitle = document.querySelector("#edshare-title");
+        edshareTitle.innerText = "COPIED!";
+
+        edshareDescription = document.querySelector("#edshare-description");
+        edshareDescription.innerHTML =
+          `Paste this interactive with the <i class="bi bi-code-square"></i> Embed button in your story editor.</br></br>
+          
+          Please remember to <strong>attribute 360info and our data sources.</strong>`
+
+        // button exit animation
+        setTimeout(() => {  edshareBtn.classList.add("done"); }, 5000);
+        setTimeout(() => {  edshareBtn.style.display = "none"; }, 7000);
+      });
+    }
+  });
+</script>
+<div id="load-data" class="cell">
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="20" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 19;"><span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { aq<span class="op">,</span> op } <span class="im">from</span> <span class="st">"@uwdata/arquero"</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>seasons <span class="op">=</span> aq<span class="op">.</span><span class="fu">loadCSV</span>(<span class="st">"/data/ffdi-firegions-seasonal-thenandnow.csv"</span><span class="op">,</span> {</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="dt">parse</span><span class="op">:</span> {</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="dt">DIST_NO</span><span class="op">:</span> <span class="bu">Number</span><span class="op">,</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="dt">DIST_NAME</span><span class="op">:</span> <span class="bu">String</span><span class="op">,</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="dt">slug</span><span class="op">:</span> <span class="bu">String</span><span class="op">,</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="dt">month</span><span class="op">:</span> <span class="bu">String</span><span class="op">,</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="dt">n_gte_90_1970_1994</span><span class="op">:</span> <span class="bu">Number</span><span class="op">,</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="dt">n_gte_90_1995_2019</span><span class="op">:</span> <span class="bu">Number</span><span class="op">,</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="dt">p_gte_90_1970_1994</span><span class="op">:</span> <span class="bu">Number</span><span class="op">,</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="dt">p_gte_90_1995_2019</span><span class="op">:</span> <span class="bu">Number</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="load-data-1">
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div id="load-data-2">
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div id="pick-region" class="cell">
+<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="38" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 37;"><span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>regionMap <span class="op">=</span> seasons</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">select</span>(<span class="st">"DIST_NAME"</span><span class="op">,</span> <span class="st">"slug"</span>)</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">dedupe</span>(<span class="st">"DIST_NAME"</span><span class="op">,</span> <span class="st">"slug"</span>)</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">orderby</span>(<span class="st">"DIST_NAME"</span>)</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">derive</span>({ <span class="dt">map</span><span class="op">:</span> d <span class="kw">=&gt;</span> [d<span class="op">.</span><span class="at">DIST_NAME</span><span class="op">,</span> d<span class="op">.</span><span class="at">slug</span>]})</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">array</span>(<span class="st">"map"</span>)</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>viewof regionSelect <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(<span class="kw">new</span> <span class="bu">Map</span>(regionMap))</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>filteredData <span class="op">=</span> seasons</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">params</span>({ <span class="dt">regionSelect</span><span class="op">:</span> regionSelect })</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">filter</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">slug</span> <span class="op">==</span> regionSelect)</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">derive</span>({</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>      <span class="dt">navg_then</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">n_1970_1995</span> <span class="op">/</span> <span class="dv">25</span><span class="op">,</span></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>      <span class="dt">navg_now</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">n_1995_2020</span> <span class="op">/</span> <span class="dv">25</span><span class="op">,</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>  })</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="pick-region-1">
+<div id="ojs-cell-2-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div id="pick-region-2">
+<div id="ojs-cell-2-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div id="pick-region-3">
+<div id="ojs-cell-2-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div id="plot" class="cell">
+<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="57" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 56;"><span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>Plot <span class="op">=</span> <span class="im">import</span>(<span class="st">"https://esm.run/@observablehq/plot"</span>)</span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>fullMonths <span class="op">=</span> ({</span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Jan"</span><span class="op">:</span> <span class="st">"January"</span><span class="op">,</span></span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Feb"</span><span class="op">:</span> <span class="st">"February"</span><span class="op">,</span></span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Mar"</span><span class="op">:</span> <span class="st">"March"</span><span class="op">,</span></span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Apr"</span><span class="op">:</span> <span class="st">"April"</span><span class="op">,</span></span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>  <span class="st">"May"</span><span class="op">:</span> <span class="st">"May"</span><span class="op">,</span></span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Jun"</span><span class="op">:</span> <span class="st">"June"</span><span class="op">,</span></span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Jul"</span><span class="op">:</span> <span class="st">"July"</span><span class="op">,</span></span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Aug"</span><span class="op">:</span> <span class="st">"August"</span><span class="op">,</span></span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Sep"</span><span class="op">:</span> <span class="st">"September"</span><span class="op">,</span></span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Oct"</span><span class="op">:</span> <span class="st">"October"</span><span class="op">,</span></span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Nov"</span><span class="op">:</span> <span class="st">"November"</span><span class="op">,</span></span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Dec"</span><span class="op">:</span> <span class="st">"December"</span></span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>    <span class="co">// patterns: stripes up (for more risk now) or down (for less risk)</span></span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>    () <span class="kw">=&gt;</span> <span class="fu">svg</span><span class="vs">`</span></span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;linearGradient id="stripes-more" gradientTransform="rotate(90)"&gt;</span></span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;stop offset="15%" stop-color="red" /&gt;</span></span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;stop offset="25%" stop-color="orangered" /&gt;</span></span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;stop offset="85%" stop-color="rgba(247, 184, 12, 0.25)" /&gt;</span></span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;/linearGradient&gt;`</span><span class="op">,</span></span>
+<span id="cb3-83"><a href="#cb3-83" aria-hidden="true" tabindex="-1"></a>    () <span class="kw">=&gt;</span> <span class="fu">svg</span><span class="vs">`</span></span>
+<span id="cb3-84"><a href="#cb3-84" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;linearGradient id="stripes-less" gradientTransform="rotate(90)"&gt;</span></span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;stop offset="15%" stop-color="rgba(247, 184, 12, 0.25)" /&gt;</span></span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;stop offset="75%" stop-color="orangered" /&gt;</span></span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a><span class="vs">        &lt;stop offset="100%" stop-color="red" /&gt;</span></span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;/linearGradient&gt;`</span><span class="op">,</span></span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">ruleY</span>([<span class="dv">0</span>])<span class="op">,</span></span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">barY</span>(filteredData<span class="op">,</span> {</span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"month"</span><span class="op">,</span></span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y1</span><span class="op">:</span> <span class="st">"navg_then"</span><span class="op">,</span></span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y2</span><span class="op">:</span> <span class="st">"navg_now"</span><span class="op">,</span></span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fill</span><span class="op">:</span> d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">navg_now</span> <span class="op">&gt;</span> d<span class="op">.</span><span class="at">navg_then</span> <span class="op">?</span></span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>        <span class="st">"url(#stripes-more)"</span> <span class="op">:</span></span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>        <span class="st">"url(#stripes-less)"</span><span class="op">,</span></span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.9</span></span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">dot</span>(filteredData<span class="op">,</span> {</span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"month"</span><span class="op">,</span></span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"navg_then"</span><span class="op">,</span></span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fill</span><span class="op">:</span> <span class="st">"rgba(247, 184, 12, 0.25)"</span><span class="op">,</span></span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a>      <span class="dt">stroke</span><span class="op">:</span> <span class="st">"black"</span><span class="op">,</span></span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a>      <span class="dt">r</span><span class="op">:</span> <span class="dv">9</span></span>
+<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
+<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">dot</span>(filteredData<span class="op">,</span> {</span>
+<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"month"</span><span class="op">,</span></span>
+<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y</span><span class="op">:</span> <span class="st">"navg_now"</span><span class="op">,</span></span>
+<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fill</span><span class="op">:</span> <span class="st">"orangered"</span><span class="op">,</span></span>
+<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>      <span class="dt">stroke</span><span class="op">:</span> <span class="st">"black"</span><span class="op">,</span></span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>      <span class="dt">r</span><span class="op">:</span> <span class="dv">9</span></span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">arrow</span>(filteredData<span class="op">,</span> {</span>
+<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"month"</span><span class="op">,</span></span>
+<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y1</span><span class="op">:</span> <span class="st">"navg_then"</span><span class="op">,</span></span>
+<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y2</span><span class="op">:</span> <span class="st">"navg_now"</span><span class="op">,</span></span>
+<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a>      <span class="dt">inset</span><span class="op">:</span> <span class="dv">20</span><span class="op">,</span></span>
+<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a>      <span class="dt">stroke</span><span class="op">:</span> <span class="st">"black"</span><span class="op">,</span></span>
+<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a>      <span class="dt">strokeWidth</span><span class="op">:</span> <span class="dv">1</span></span>
+<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a>    })<span class="op">,</span></span>
+<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">tip</span>(filteredData<span class="op">,</span> Plot<span class="op">.</span><span class="fu">pointer</span>({</span>
+<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a>      <span class="dt">x</span><span class="op">:</span> <span class="st">"month"</span><span class="op">,</span></span>
+<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y1</span><span class="op">:</span> <span class="st">"navg_then"</span><span class="op">,</span></span>
+<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a>      <span class="dt">y2</span><span class="op">:</span> <span class="st">"navg_now"</span><span class="op">,</span></span>
+<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a>      <span class="dt">channels</span><span class="op">:</span> {</span>
+<span id="cb3-126"><a href="#cb3-126" aria-hidden="true" tabindex="-1"></a>        <span class="dt">Then</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="vs">`Average </span><span class="sc">${</span>d3<span class="op">.</span><span class="fu">format</span>(<span class="st">"0.1f"</span>)(d<span class="op">.</span><span class="at">navg_then</span>)<span class="sc">}</span><span class="vs"> </span><span class="sc">${</span>fullMonths[d<span class="op">.</span><span class="at">month</span>]<span class="sc">}</span><span class="vs"> days a year`</span><span class="op">,</span></span>
+<span id="cb3-127"><a href="#cb3-127" aria-hidden="true" tabindex="-1"></a>        <span class="dt">Now</span><span class="op">:</span> d <span class="kw">=&gt;</span> <span class="vs">`Average </span><span class="sc">${</span>d3<span class="op">.</span><span class="fu">format</span>(<span class="st">"0.1f"</span>)(d<span class="op">.</span><span class="at">navg_now</span>)<span class="sc">}</span><span class="vs"> </span><span class="sc">${</span>fullMonths[d<span class="op">.</span><span class="at">month</span>]<span class="sc">}</span><span class="vs"> days a year`</span></span>
+<span id="cb3-128"><a href="#cb3-128" aria-hidden="true" tabindex="-1"></a>      }<span class="op">,</span></span>
+<span id="cb3-129"><a href="#cb3-129" aria-hidden="true" tabindex="-1"></a>      <span class="dt">format</span><span class="op">:</span> {</span>
+<span id="cb3-130"><a href="#cb3-130" aria-hidden="true" tabindex="-1"></a>        <span class="dt">Then</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb3-131"><a href="#cb3-131" aria-hidden="true" tabindex="-1"></a>        <span class="dt">Now</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb3-132"><a href="#cb3-132" aria-hidden="true" tabindex="-1"></a>        <span class="dt">x</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb3-133"><a href="#cb3-133" aria-hidden="true" tabindex="-1"></a>        <span class="dt">y</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb3-134"><a href="#cb3-134" aria-hidden="true" tabindex="-1"></a>      }<span class="op">,</span></span>
+<span id="cb3-135"><a href="#cb3-135" aria-hidden="true" tabindex="-1"></a>      <span class="dt">lineHeight</span><span class="op">:</span> <span class="fl">1.5</span><span class="op">,</span></span>
+<span id="cb3-136"><a href="#cb3-136" aria-hidden="true" tabindex="-1"></a>      <span class="dt">stroke</span><span class="op">:</span> <span class="st">"none"</span><span class="op">,</span></span>
+<span id="cb3-137"><a href="#cb3-137" aria-hidden="true" tabindex="-1"></a>      <span class="dt">fillOpacity</span><span class="op">:</span> <span class="fl">0.85</span><span class="op">,</span></span>
+<span id="cb3-138"><a href="#cb3-138" aria-hidden="true" tabindex="-1"></a>      <span class="dt">pointerSize</span><span class="op">:</span> <span class="dv">0</span></span>
+<span id="cb3-139"><a href="#cb3-139" aria-hidden="true" tabindex="-1"></a>    }))</span>
+<span id="cb3-140"><a href="#cb3-140" aria-hidden="true" tabindex="-1"></a>  ]<span class="op">,</span></span>
+<span id="cb3-141"><a href="#cb3-141" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb3-142"><a href="#cb3-142" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="kw">null</span><span class="op">,</span></span>
+<span id="cb3-143"><a href="#cb3-143" aria-hidden="true" tabindex="-1"></a>    <span class="dt">domain</span><span class="op">:</span> [<span class="st">"Jan"</span><span class="op">,</span> <span class="st">"Feb"</span><span class="op">,</span> <span class="st">"Mar"</span><span class="op">,</span> <span class="st">"Apr"</span><span class="op">,</span> <span class="st">"May"</span><span class="op">,</span> <span class="st">"Jun"</span><span class="op">,</span> <span class="st">"Jul"</span><span class="op">,</span> <span class="st">"Aug"</span><span class="op">,</span> <span class="st">"Sep"</span><span class="op">,</span></span>
+<span id="cb3-144"><a href="#cb3-144" aria-hidden="true" tabindex="-1"></a>      <span class="st">"Oct"</span><span class="op">,</span> <span class="st">"Nov"</span><span class="op">,</span> <span class="st">"Dec"</span>]<span class="op">,</span></span>
+<span id="cb3-145"><a href="#cb3-145" aria-hidden="true" tabindex="-1"></a>    <span class="dt">padding</span><span class="op">:</span> <span class="fl">0.71</span></span>
+<span id="cb3-146"><a href="#cb3-146" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb3-147"><a href="#cb3-147" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> {</span>
+<span id="cb3-148"><a href="#cb3-148" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span> <span class="st">"Average days per year"</span><span class="op">,</span></span>
+<span id="cb3-149"><a href="#cb3-149" aria-hidden="true" tabindex="-1"></a>    <span class="dt">grid</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb3-150"><a href="#cb3-150" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb3-151"><a href="#cb3-151" aria-hidden="true" tabindex="-1"></a>  <span class="dt">insetTop</span><span class="op">:</span> <span class="dv">15</span><span class="op">,</span></span>
+<span id="cb3-152"><a href="#cb3-152" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marginTop</span><span class="op">:</span> <span class="dv">30</span><span class="op">,</span></span>
+<span id="cb3-153"><a href="#cb3-153" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">30</span><span class="op">,</span></span>
+<span id="cb3-154"><a href="#cb3-154" aria-hidden="true" tabindex="-1"></a>  <span class="dt">style</span><span class="op">:</span> {</span>
+<span id="cb3-155"><a href="#cb3-155" aria-hidden="true" tabindex="-1"></a>    <span class="dt">fontSize</span><span class="op">:</span> <span class="dv">20</span><span class="op">,</span></span>
+<span id="cb3-156"><a href="#cb3-156" aria-hidden="true" tabindex="-1"></a>    <span class="dt">fontFamily</span><span class="op">:</span> <span class="st">"Roboto Condensed"</span></span>
+<span id="cb3-157"><a href="#cb3-157" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb3-158"><a href="#cb3-158" aria-hidden="true" tabindex="-1"></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">900</span><span class="op">,</span></span>
+<span id="cb3-159"><a href="#cb3-159" aria-hidden="true" tabindex="-1"></a>    <span class="dt">height</span><span class="op">:</span> <span class="dv">600</span></span>
+<span id="cb3-160"><a href="#cb3-160" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="plot-1">
+<div id="ojs-cell-3-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div id="plot-2">
+<div id="ojs-cell-3-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div id="plot-3">
+<div id="ojs-cell-3-3" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+<!-- initialise miromodal.js -->
+<div class="cell" data-include="false">
+<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="1" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>micro <span class="op">=</span> <span class="pp">require</span>(<span class="st">"micromodal@0.4.10"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>micro<span class="op">.</span><span class="fu">init</span>({</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">awaitOpenAnimation</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">awaitCloseAnimation</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-4-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display hidden">
+<div>
+<div id="ojs-cell-4-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+<div id="modal-useremix" class="modal micromodal-slide" aria-hidden="true">
+<div class="modal__overlay" tabindex="-1" data-micromodal-close="true">
+<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-useremix-title">
+<button class="modal__close" aria-label="Close modal" data-micromodal-close="">
+</button>
+<div id="modal-useremix-content">
+<h2 id="use-remix" class="anchored">Use + Remix</h2>
+<p>These charts, as well as the analyses that underpin them, are available under a <a href="https://creativecommons.org/licenses/by/4.0"><strong>Creative Commons Attribution 4.0 licence</strong></a>.</p>
+<p>Please acknowledge <a href="https://360info.org">360info</a> and our data sources when you use these charts and data.</p>
+<h4 id="embed-this-chart-in-your-article" class="anchored">Embed this chart in your article</h4>
+<p>Copy and paste the following code:</p>
+<div class="embedcode">
+<pre><code>&lt;div style="aspect-ratio: 20 / 19; width: 100%; min-height: 500px;"&gt; &lt;iframe allow="fullscreen; clipboard-write self https://bushfire-seasons.360visuals.org" allowfullscreen="true" src="https://bushfire-seasons.360visuals.org/aus-fire-season/" title="Interactive: the changing fire season areas" style="width:100%; height:100%; position: absolute; top: 0; left: 0; border:none; background-color: white;" scrolling="no"&gt;&lt;/iframe&gt; &lt;/div&gt;</code></pre>
+</div>
+<p>This content is subject to <a href="https://newshub.360info.org/page/terms">360info’s Terms of Use</a>.</p>
+<h4 id="get-the-data-and-code" class="anchored">Get the data and code</h4>
+<p>Visit the <a href="https://github.com/360-info/report-template/tree/main/data">GitHub repository</a> to:</p>
+<ul>
+<li><a href="https://github.com/360-info/report-template/tree/main/data"><strong>Download the data</strong></a></li>
+<li><a href="https://github.com/360-info/report-template"><strong>Recreate or remix the chart</strong></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- notes dialog -->
+<div id="modal-about" class="modal micromodal-slide" aria-hidden="true">
+<div class="modal__overlay" tabindex="-1" data-micromodal-close="true">
+<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-about-title">
+<button class="modal__close" aria-label="Close modal" data-micromodal-close="">
+</button>
+<header>
+<h2 id="modal-about-title" class="anchored">About</h2>
+</header>
+<div id="modal-about-content">
+<p>This chart shows how frequent severe fire weather has typically been at different times of the year in the [<strong>1970s, 80s and early 90s</strong>]{style="background-color: rgba(247, 184, 12, 0.25); padding: 0.1em 0.3em; border-radius: 10px;"} compared to the [<strong>late 1990s, 2000s and 2010s</strong>]{style="background-color: orangered; color: white; padding: 0.1em 0.3em; border-radius: 10px;"}.</p>
+<p>In months where the red dot is higher than the yellow one, severe fire weather has become more frequent.</p>
+<p>The Forest Fire Danger Index used here evaluates aspects of fire risk based on the weather and climate: temperature, humidity, wind and drought. It doesn’t take into account other factors like the types or amount of local vegetation.</p>
+<p>The historical fire risk data in this chart comes from a global dataset called ERA5, published by the <a href="https://cds.climate.copernicus.eu/cdsapp#!/dataset/cems-fire-historical-v1?tab=form">Copernicus Emergency Management Service</a>.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<script type="ojs-module-contents">
+{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"import { aq, op } from \"@uwdata/arquero\"\nseasons = aq.loadCSV(\"/data/ffdi-firegions-seasonal-thenandnow.csv\", {\n  parse: {\n    DIST_NO: Number,\n    DIST_NAME: String,\n    slug: String,\n    month: String,\n    n_gte_90_1970_1994: Number,\n    n_gte_90_1995_2019: Number,\n    p_gte_90_1970_1994: Number,\n    p_gte_90_1995_2019: Number\n  }\n})\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"\nregionMap = seasons\n  .select(\"DIST_NAME\", \"slug\")\n  .dedupe(\"DIST_NAME\", \"slug\")\n  .orderby(\"DIST_NAME\")\n  .derive({ map: d => [d.DIST_NAME, d.slug]})\n  .array(\"map\")\nviewof regionSelect = Inputs.select(new Map(regionMap))\n\nfilteredData = seasons\n  .params({ regionSelect: regionSelect })\n  .filter(d => d.slug == regionSelect)\n  .derive({\n      navg_then: d => d.n_1970_1995 / 25,\n      navg_now: d => d.n_1995_2020 / 25,\n  })\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"Plot = import(\"https://esm.run/@observablehq/plot\")\n\nfullMonths = ({\n  \"Jan\": \"January\",\n  \"Feb\": \"February\",\n  \"Mar\": \"March\",\n  \"Apr\": \"April\",\n  \"May\": \"May\",\n  \"Jun\": \"June\",\n  \"Jul\": \"July\",\n  \"Aug\": \"August\",\n  \"Sep\": \"September\",\n  \"Oct\": \"October\",\n  \"Nov\": \"November\",\n  \"Dec\": \"December\"\n})\n\nPlot.plot({\n  marks: [\n    // patterns: stripes up (for more risk now) or down (for less risk)\n    () => svg`\n      <linearGradient id=\"stripes-more\" gradientTransform=\"rotate(90)\">\n        <stop offset=\"15%\" stop-color=\"red\" />\n        <stop offset=\"25%\" stop-color=\"orangered\" />\n        <stop offset=\"85%\" stop-color=\"rgba(247, 184, 12, 0.25)\" />\n      </linearGradient>`,\n    () => svg`\n      <linearGradient id=\"stripes-less\" gradientTransform=\"rotate(90)\">\n        <stop offset=\"15%\" stop-color=\"rgba(247, 184, 12, 0.25)\" />\n        <stop offset=\"75%\" stop-color=\"orangered\" />\n        <stop offset=\"100%\" stop-color=\"red\" />\n      </linearGradient>`,\n    Plot.ruleY([0]),\n    Plot.barY(filteredData, {\n      x: \"month\",\n      y1: \"navg_then\",\n      y2: \"navg_now\",\n      fill: d => d.navg_now > d.navg_then ?\n        \"url(#stripes-more)\" :\n        \"url(#stripes-less)\",\n      fillOpacity: 0.9\n    }),\n    Plot.dot(filteredData, {\n      x: \"month\",\n      y: \"navg_then\",\n      fill: \"rgba(247, 184, 12, 0.25)\",\n      stroke: \"black\",\n      r: 9\n    }),\n    Plot.dot(filteredData, {\n      x: \"month\",\n      y: \"navg_now\",\n      fill: \"orangered\",\n      stroke: \"black\",\n      r: 9\n    }),\n    Plot.arrow(filteredData, {\n      x: \"month\",\n      y1: \"navg_then\",\n      y2: \"navg_now\",\n      inset: 20,\n      stroke: \"black\",\n      strokeWidth: 1\n    }),\n    Plot.tip(filteredData, Plot.pointer({\n      x: \"month\",\n      y1: \"navg_then\",\n      y2: \"navg_now\",\n      channels: {\n        Then: d => `Average ${d3.format(\"0.1f\")(d.navg_then)} ${fullMonths[d.month]} days a year`,\n        Now: d => `Average ${d3.format(\"0.1f\")(d.navg_now)} ${fullMonths[d.month]} days a year`\n      },\n      format: {\n        Then: true,\n        Now: true,\n        x: false,\n        y: false,\n      },\n      lineHeight: 1.5,\n      stroke: \"none\",\n      fillOpacity: 0.85,\n      pointerSize: 0\n    }))\n  ],\n  x: {\n    label: null,\n    domain: [\"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\", \"Jun\", \"Jul\", \"Aug\", \"Sep\",\n      \"Oct\", \"Nov\", \"Dec\"],\n    padding: 0.71\n  },\n  y: {\n    label: \"Average days per year\",\n    grid: true\n  },\n  insetTop: 15,\n  marginTop: 30,\n  marginBottom: 30,\n  style: {\n    fontSize: 20,\n    fontFamily: \"Roboto Condensed\"\n  },\n  width: 900,\n    height: 600\n})\n"},{"methodName":"interpret","cellName":"ojs-cell-4","inline":false,"source":"micro = require(\"micromodal@0.4.10\")\nmicro.init({\n  awaitOpenAnimation: true,\n  awaitCloseAnimation: true\n});\n"},{"methodName":"interpretQuiet","source":"shinyInput('regionSelect')"}]}
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../aus-fire-season";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+  tabsets.forEach(function(tabset) {
+    const tabby = new Tabby('#' + tabset.id);
+  });
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'light-border',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    const typesetMath = (el) => {
+      if (window.MathJax) {
+        // MathJax Typeset
+        window.MathJax.typeset([el]);
+      } else if (window.katex) {
+        // KaTeX Render
+        var mathElements = el.getElementsByClassName("math");
+        var macros = [];
+        for (var i = 0; i < mathElements.length; i++) {
+          var texText = mathElements[i].firstChild;
+          if (mathElements[i].tagName == "SPAN") {
+            window.katex.render(texText.data, mathElements[i], {
+              displayMode: mathElements[i].classList.contains('display'),
+              throwOnError: false,
+              macros: macros,
+              fleqn: false
+            });
+          }
+        }
+      }
+    }
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        for (let i = 0; i < 2; i++) {
+          container.appendChild(note.children[i].cloneNode(true));
+        }
+        typesetMath(container);
+        return container.innerHTML
+      } else {
+        typesetMath(note);
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      typesetMath(note);
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+
+
+
+
+</body></html>

@@ -1,0 +1,1657 @@
+DIST_NO,DIST_NAME,slug,month,n_1970_1995,n_1995_2020
+1,Adelaide Metropolitan,adelaide_metropolitan,Jan,163,225
+1,Adelaide Metropolitan,adelaide_metropolitan,Feb,192,209
+1,Adelaide Metropolitan,adelaide_metropolitan,Mar,140,155
+1,Adelaide Metropolitan,adelaide_metropolitan,Apr,78,83
+1,Adelaide Metropolitan,adelaide_metropolitan,May,7,15
+1,Adelaide Metropolitan,adelaide_metropolitan,Jun,0,0
+1,Adelaide Metropolitan,adelaide_metropolitan,Jul,0,0
+1,Adelaide Metropolitan,adelaide_metropolitan,Aug,1,2
+1,Adelaide Metropolitan,adelaide_metropolitan,Sep,4,9
+1,Adelaide Metropolitan,adelaide_metropolitan,Oct,34,55
+1,Adelaide Metropolitan,adelaide_metropolitan,Nov,76,96
+1,Adelaide Metropolitan,adelaide_metropolitan,Dec,136,147
+1,Darwin and Adelaide River,darwin_and_adelaide_river,Jan,0,0
+1,Darwin and Adelaide River,darwin_and_adelaide_river,Feb,0,0
+1,Darwin and Adelaide River,darwin_and_adelaide_river,Mar,0,0
+1,Darwin and Adelaide River,darwin_and_adelaide_river,Apr,4,3
+1,Darwin and Adelaide River,darwin_and_adelaide_river,May,42,33
+1,Darwin and Adelaide River,darwin_and_adelaide_river,Jun,102,74
+1,Darwin and Adelaide River,darwin_and_adelaide_river,Jul,196,152
+1,Darwin and Adelaide River,darwin_and_adelaide_river,Aug,277,292
+1,Darwin and Adelaide River,darwin_and_adelaide_river,Sep,228,198
+1,Darwin and Adelaide River,darwin_and_adelaide_river,Oct,117,101
+1,Darwin and Adelaide River,darwin_and_adelaide_river,Nov,7,1
+1,Darwin and Adelaide River,darwin_and_adelaide_river,Dec,0,0
+1,Far North Coast,far_north_coast,Jan,63,70
+1,Far North Coast,far_north_coast,Feb,20,35
+1,Far North Coast,far_north_coast,Mar,16,18
+1,Far North Coast,far_north_coast,Apr,30,8
+1,Far North Coast,far_north_coast,May,8,11
+1,Far North Coast,far_north_coast,Jun,1,5
+1,Far North Coast,far_north_coast,Jul,6,21
+1,Far North Coast,far_north_coast,Aug,62,88
+1,Far North Coast,far_north_coast,Sep,197,186
+1,Far North Coast,far_north_coast,Oct,210,209
+1,Far North Coast,far_north_coast,Nov,172,147
+1,Far North Coast,far_north_coast,Dec,141,103
+1,Furneaux Islands,furneaux_islands,Jan,173,184
+1,Furneaux Islands,furneaux_islands,Feb,150,151
+1,Furneaux Islands,furneaux_islands,Mar,107,140
+1,Furneaux Islands,furneaux_islands,Apr,62,83
+1,Furneaux Islands,furneaux_islands,May,23,31
+1,Furneaux Islands,furneaux_islands,Jun,15,13
+1,Furneaux Islands,furneaux_islands,Jul,11,12
+1,Furneaux Islands,furneaux_islands,Aug,19,12
+1,Furneaux Islands,furneaux_islands,Sep,24,29
+1,Furneaux Islands,furneaux_islands,Oct,51,66
+1,Furneaux Islands,furneaux_islands,Nov,82,93
+1,Furneaux Islands,furneaux_islands,Dec,125,171
+1,Mallee,mallee,Jan,164,262
+1,Mallee,mallee,Feb,142,192
+1,Mallee,mallee,Mar,74,115
+1,Mallee,mallee,Apr,23,39
+1,Mallee,mallee,May,0,1
+1,Mallee,mallee,Jun,0,0
+1,Mallee,mallee,Jul,0,0
+1,Mallee,mallee,Aug,6,2
+1,Mallee,mallee,Sep,11,43
+1,Mallee,mallee,Oct,48,104
+1,Mallee,mallee,Nov,84,146
+1,Mallee,mallee,Dec,148,223
+1,North Kimberley,north_kimberley,Jan,0,0
+1,North Kimberley,north_kimberley,Feb,0,0
+1,North Kimberley,north_kimberley,Mar,0,0
+1,North Kimberley,north_kimberley,Apr,22,18
+1,North Kimberley,north_kimberley,May,43,69
+1,North Kimberley,north_kimberley,Jun,41,55
+1,North Kimberley,north_kimberley,Jul,96,90
+1,North Kimberley,north_kimberley,Aug,195,255
+1,North Kimberley,north_kimberley,Sep,229,223
+1,North Kimberley,north_kimberley,Oct,191,181
+1,North Kimberley,north_kimberley,Nov,55,52
+1,North Kimberley,north_kimberley,Dec,7,5
+1,Peninsula,peninsula,Jan,0,1
+1,Peninsula,peninsula,Feb,0,0
+1,Peninsula,peninsula,Mar,0,0
+1,Peninsula,peninsula,Apr,0,0
+1,Peninsula,peninsula,May,0,1
+1,Peninsula,peninsula,Jun,1,1
+1,Peninsula,peninsula,Jul,4,2
+1,Peninsula,peninsula,Aug,26,58
+1,Peninsula,peninsula,Sep,198,313
+1,Peninsula,peninsula,Oct,340,402
+1,Peninsula,peninsula,Nov,133,275
+1,Peninsula,peninsula,Dec,16,56
+2,Derby Coast,derby_coast,Jan,0,0
+2,Derby Coast,derby_coast,Feb,1,0
+2,Derby Coast,derby_coast,Mar,1,0
+2,Derby Coast,derby_coast,Apr,29,12
+2,Derby Coast,derby_coast,May,60,82
+2,Derby Coast,derby_coast,Jun,27,34
+2,Derby Coast,derby_coast,Jul,75,68
+2,Derby Coast,derby_coast,Aug,169,222
+2,Derby Coast,derby_coast,Sep,226,232
+2,Derby Coast,derby_coast,Oct,220,154
+2,Derby Coast,derby_coast,Nov,105,77
+2,Derby Coast,derby_coast,Dec,20,13
+2,Gulf Country,gulf_country,Jan,24,10
+2,Gulf Country,gulf_country,Feb,8,5
+2,Gulf Country,gulf_country,Mar,7,5
+2,Gulf Country,gulf_country,Apr,5,17
+2,Gulf Country,gulf_country,May,8,30
+2,Gulf Country,gulf_country,Jun,3,13
+2,Gulf Country,gulf_country,Jul,14,17
+2,Gulf Country,gulf_country,Aug,65,115
+2,Gulf Country,gulf_country,Sep,239,271
+2,Gulf Country,gulf_country,Oct,249,290
+2,Gulf Country,gulf_country,Nov,135,159
+2,Gulf Country,gulf_country,Dec,55,83
+2,North Coast,north_coast,Jan,94,108
+2,North Coast,north_coast,Feb,41,50
+2,North Coast,north_coast,Mar,22,23
+2,North Coast,north_coast,Apr,20,8
+2,North Coast,north_coast,May,3,2
+2,North Coast,north_coast,Jun,0,2
+2,North Coast,north_coast,Jul,7,2
+2,North Coast,north_coast,Aug,51,62
+2,North Coast,north_coast,Sep,174,157
+2,North Coast,north_coast,Oct,209,190
+2,North Coast,north_coast,Nov,159,141
+2,North Coast,north_coast,Dec,182,120
+2,North East,north_east,Jan,217,297
+2,North East,north_east,Feb,186,157
+2,North East,north_east,Mar,84,117
+2,North East,north_east,Apr,12,24
+2,North East,north_east,May,2,4
+2,North East,north_east,Jun,0,0
+2,North East,north_east,Jul,0,0
+2,North East,north_east,Aug,0,2
+2,North East,north_east,Sep,9,12
+2,North East,north_east,Oct,42,55
+2,North East,north_east,Nov,103,106
+2,North East,north_east,Dec,172,226
+2,Northern Fire Protection Area,northern_fire_protection_area,Jan,0,0
+2,Northern Fire Protection Area,northern_fire_protection_area,Feb,0,0
+2,Northern Fire Protection Area,northern_fire_protection_area,Mar,0,0
+2,Northern Fire Protection Area,northern_fire_protection_area,Apr,5,3
+2,Northern Fire Protection Area,northern_fire_protection_area,May,43,40
+2,Northern Fire Protection Area,northern_fire_protection_area,Jun,81,63
+2,Northern Fire Protection Area,northern_fire_protection_area,Jul,169,117
+2,Northern Fire Protection Area,northern_fire_protection_area,Aug,277,286
+2,Northern Fire Protection Area,northern_fire_protection_area,Sep,260,212
+2,Northern Fire Protection Area,northern_fire_protection_area,Oct,137,113
+2,Northern Fire Protection Area,northern_fire_protection_area,Nov,13,8
+2,Northern Fire Protection Area,northern_fire_protection_area,Dec,0,0
+2,Wimmera,wimmera,Jan,169,289
+2,Wimmera,wimmera,Feb,184,225
+2,Wimmera,wimmera,Mar,112,151
+2,Wimmera,wimmera,Apr,34,58
+2,Wimmera,wimmera,May,0,7
+2,Wimmera,wimmera,Jun,0,0
+2,Wimmera,wimmera,Jul,0,0
+2,Wimmera,wimmera,Aug,1,0
+2,Wimmera,wimmera,Sep,4,8
+2,Wimmera,wimmera,Oct,21,72
+2,Wimmera,wimmera,Nov,60,101
+2,Wimmera,wimmera,Dec,131,200
+2,Yorke Peninsula,yorke_peninsula,Jan,167,197
+2,Yorke Peninsula,yorke_peninsula,Feb,167,157
+2,Yorke Peninsula,yorke_peninsula,Mar,121,118
+2,Yorke Peninsula,yorke_peninsula,Apr,68,67
+2,Yorke Peninsula,yorke_peninsula,May,7,15
+2,Yorke Peninsula,yorke_peninsula,Jun,0,0
+2,Yorke Peninsula,yorke_peninsula,Jul,0,0
+2,Yorke Peninsula,yorke_peninsula,Aug,8,5
+2,Yorke Peninsula,yorke_peninsula,Sep,18,19
+2,Yorke Peninsula,yorke_peninsula,Oct,78,85
+2,Yorke Peninsula,yorke_peninsula,Nov,111,107
+2,Yorke Peninsula,yorke_peninsula,Dec,158,154
+3,Broome Coast,broome_coast,Jan,17,18
+3,Broome Coast,broome_coast,Feb,24,9
+3,Broome Coast,broome_coast,Mar,22,8
+3,Broome Coast,broome_coast,Apr,87,77
+3,Broome Coast,broome_coast,May,68,96
+3,Broome Coast,broome_coast,Jun,5,9
+3,Broome Coast,broome_coast,Jul,19,16
+3,Broome Coast,broome_coast,Aug,95,118
+3,Broome Coast,broome_coast,Sep,200,189
+3,Broome Coast,broome_coast,Oct,232,168
+3,Broome Coast,broome_coast,Nov,147,105
+3,Broome Coast,broome_coast,Dec,58,40
+3,Daly South,daly_south,Jan,0,0
+3,Daly South,daly_south,Feb,0,0
+3,Daly South,daly_south,Mar,1,0
+3,Daly South,daly_south,Apr,18,9
+3,Daly South,daly_south,May,58,59
+3,Daly South,daly_south,Jun,87,81
+3,Daly South,daly_south,Jul,182,122
+3,Daly South,daly_south,Aug,272,287
+3,Daly South,daly_south,Sep,223,195
+3,Daly South,daly_south,Oct,110,97
+3,Daly South,daly_south,Nov,11,14
+3,Daly South,daly_south,Dec,1,0
+3,East Coast,east_coast,Jan,205,278
+3,East Coast,east_coast,Feb,171,141
+3,East Coast,east_coast,Mar,74,107
+3,East Coast,east_coast,Apr,22,27
+3,East Coast,east_coast,May,1,2
+3,East Coast,east_coast,Jun,0,0
+3,East Coast,east_coast,Jul,0,0
+3,East Coast,east_coast,Aug,0,1
+3,East Coast,east_coast,Sep,13,30
+3,East Coast,east_coast,Oct,56,90
+3,East Coast,east_coast,Nov,112,114
+3,East Coast,east_coast,Dec,158,225
+3,Greater Hunter,greater_hunter,Jan,122,178
+3,Greater Hunter,greater_hunter,Feb,69,88
+3,Greater Hunter,greater_hunter,Mar,60,43
+3,Greater Hunter,greater_hunter,Apr,31,29
+3,Greater Hunter,greater_hunter,May,3,4
+3,Greater Hunter,greater_hunter,Jun,0,1
+3,Greater Hunter,greater_hunter,Jul,0,4
+3,Greater Hunter,greater_hunter,Aug,9,19
+3,Greater Hunter,greater_hunter,Sep,84,93
+3,Greater Hunter,greater_hunter,Oct,145,149
+3,Greater Hunter,greater_hunter,Nov,140,153
+3,Greater Hunter,greater_hunter,Dec,232,171
+3,Kangaroo Island,kangaroo_island,Jan,166,185
+3,Kangaroo Island,kangaroo_island,Feb,198,166
+3,Kangaroo Island,kangaroo_island,Mar,139,149
+3,Kangaroo Island,kangaroo_island,Apr,84,84
+3,Kangaroo Island,kangaroo_island,May,18,20
+3,Kangaroo Island,kangaroo_island,Jun,0,0
+3,Kangaroo Island,kangaroo_island,Jul,0,0
+3,Kangaroo Island,kangaroo_island,Aug,3,3
+3,Kangaroo Island,kangaroo_island,Sep,13,11
+3,Kangaroo Island,kangaroo_island,Oct,57,60
+3,Kangaroo Island,kangaroo_island,Nov,94,92
+3,Kangaroo Island,kangaroo_island,Dec,152,133
+3,Northern Country,northern_country,Jan,154,340
+3,Northern Country,northern_country,Feb,137,249
+3,Northern Country,northern_country,Mar,73,173
+3,Northern Country,northern_country,Apr,12,42
+3,Northern Country,northern_country,May,0,1
+3,Northern Country,northern_country,Jun,0,0
+3,Northern Country,northern_country,Jul,0,0
+3,Northern Country,northern_country,Aug,1,0
+3,Northern Country,northern_country,Sep,0,10
+3,Northern Country,northern_country,Oct,14,64
+3,Northern Country,northern_country,Nov,64,130
+3,Northern Country,northern_country,Dec,129,234
+3,Northern Goldfields and Upper Flinders,northern_goldfields_and_upper_flinders,Jan,43,23
+3,Northern Goldfields and Upper Flinders,northern_goldfields_and_upper_flinders,Feb,10,6
+3,Northern Goldfields and Upper Flinders,northern_goldfields_and_upper_flinders,Mar,6,4
+3,Northern Goldfields and Upper Flinders,northern_goldfields_and_upper_flinders,Apr,1,8
+3,Northern Goldfields and Upper Flinders,northern_goldfields_and_upper_flinders,May,0,4
+3,Northern Goldfields and Upper Flinders,northern_goldfields_and_upper_flinders,Jun,0,2
+3,Northern Goldfields and Upper Flinders,northern_goldfields_and_upper_flinders,Jul,2,0
+3,Northern Goldfields and Upper Flinders,northern_goldfields_and_upper_flinders,Aug,19,31
+3,Northern Goldfields and Upper Flinders,northern_goldfields_and_upper_flinders,Sep,147,231
+3,Northern Goldfields and Upper Flinders,northern_goldfields_and_upper_flinders,Oct,271,320
+3,Northern Goldfields and Upper Flinders,northern_goldfields_and_upper_flinders,Nov,187,251
+3,Northern Goldfields and Upper Flinders,northern_goldfields_and_upper_flinders,Dec,109,152
+4,Central North,central_north,Jan,260,350
+4,Central North,central_north,Feb,207,153
+4,Central North,central_north,Mar,92,110
+4,Central North,central_north,Apr,8,9
+4,Central North,central_north,May,0,0
+4,Central North,central_north,Jun,0,0
+4,Central North,central_north,Jul,0,0
+4,Central North,central_north,Aug,0,1
+4,Central North,central_north,Sep,2,0
+4,Central North,central_north,Oct,27,19
+4,Central North,central_north,Nov,72,91
+4,Central North,central_north,Dec,189,237
+4,Greater Sydney Region,greater_sydney_region,Jan,116,145
+4,Greater Sydney Region,greater_sydney_region,Feb,62,67
+4,Greater Sydney Region,greater_sydney_region,Mar,45,36
+4,Greater Sydney Region,greater_sydney_region,Apr,23,34
+4,Greater Sydney Region,greater_sydney_region,May,5,8
+4,Greater Sydney Region,greater_sydney_region,Jun,0,1
+4,Greater Sydney Region,greater_sydney_region,Jul,2,10
+4,Greater Sydney Region,greater_sydney_region,Aug,26,42
+4,Greater Sydney Region,greater_sydney_region,Sep,114,122
+4,Greater Sydney Region,greater_sydney_region,Oct,169,172
+4,Greater Sydney Region,greater_sydney_region,Nov,130,151
+4,Greater Sydney Region,greater_sydney_region,Dec,194,153
+4,Kimberley Inland,kimberley_inland,Jan,38,19
+4,Kimberley Inland,kimberley_inland,Feb,19,11
+4,Kimberley Inland,kimberley_inland,Mar,27,16
+4,Kimberley Inland,kimberley_inland,Apr,49,57
+4,Kimberley Inland,kimberley_inland,May,15,30
+4,Kimberley Inland,kimberley_inland,Jun,1,1
+4,Kimberley Inland,kimberley_inland,Jul,3,1
+4,Kimberley Inland,kimberley_inland,Aug,37,61
+4,Kimberley Inland,kimberley_inland,Sep,202,230
+4,Kimberley Inland,kimberley_inland,Oct,298,274
+4,Kimberley Inland,kimberley_inland,Nov,170,138
+4,Kimberley Inland,kimberley_inland,Dec,73,57
+4,North East,north_east_2,Jan,223,310
+4,North East,north_east_2,Feb,173,226
+4,North East,north_east_2,Mar,91,157
+4,North East,north_east_2,Apr,13,23
+4,North East,north_east_2,May,0,0
+4,North East,north_east_2,Jun,0,0
+4,North East,north_east_2,Jul,0,0
+4,North East,north_east_2,Aug,0,0
+4,North East,north_east_2,Sep,0,2
+4,North East,north_east_2,Oct,6,32
+4,North East,north_east_2,Nov,68,105
+4,North East,north_east_2,Dec,186,212
+4,North Tropical Coast and Tablelands,north_tropical_coast_and_tablelands,Jan,19,14
+4,North Tropical Coast and Tablelands,north_tropical_coast_and_tablelands,Feb,9,1
+4,North Tropical Coast and Tablelands,north_tropical_coast_and_tablelands,Mar,0,0
+4,North Tropical Coast and Tablelands,north_tropical_coast_and_tablelands,Apr,3,5
+4,North Tropical Coast and Tablelands,north_tropical_coast_and_tablelands,May,2,5
+4,North Tropical Coast and Tablelands,north_tropical_coast_and_tablelands,Jun,4,6
+4,North Tropical Coast and Tablelands,north_tropical_coast_and_tablelands,Jul,7,18
+4,North Tropical Coast and Tablelands,north_tropical_coast_and_tablelands,Aug,46,58
+4,North Tropical Coast and Tablelands,north_tropical_coast_and_tablelands,Sep,158,225
+4,North Tropical Coast and Tablelands,north_tropical_coast_and_tablelands,Oct,318,296
+4,North Tropical Coast and Tablelands,north_tropical_coast_and_tablelands,Nov,189,239
+4,North Tropical Coast and Tablelands,north_tropical_coast_and_tablelands,Dec,82,123
+4,Tiwi,tiwi,Jan,0,0
+4,Tiwi,tiwi,Feb,0,0
+4,Tiwi,tiwi,Mar,0,0
+4,Tiwi,tiwi,Apr,5,4
+4,Tiwi,tiwi,May,34,51
+4,Tiwi,tiwi,Jun,108,78
+4,Tiwi,tiwi,Jul,195,184
+4,Tiwi,tiwi,Aug,250,286
+4,Tiwi,tiwi,Sep,211,184
+4,Tiwi,tiwi,Oct,119,93
+4,Tiwi,tiwi,Nov,17,8
+4,Tiwi,tiwi,Dec,0,0
+4,Upper South East,upper_south_east,Jan,147,253
+4,Upper South East,upper_south_east,Feb,154,218
+4,Upper South East,upper_south_east,Mar,121,169
+4,Upper South East,upper_south_east,Apr,58,90
+4,Upper South East,upper_south_east,May,5,14
+4,Upper South East,upper_south_east,Jun,0,0
+4,Upper South East,upper_south_east,Jul,0,0
+4,Upper South East,upper_south_east,Aug,1,2
+4,Upper South East,upper_south_east,Sep,5,16
+4,Upper South East,upper_south_east,Oct,30,78
+4,Upper South East,upper_south_east,Nov,59,106
+4,Upper South East,upper_south_east,Dec,122,179
+5,Arnhem West,arnhem_west,Jan,0,0
+5,Arnhem West,arnhem_west,Feb,0,0
+5,Arnhem West,arnhem_west,Mar,0,0
+5,Arnhem West,arnhem_west,Apr,0,2
+5,Arnhem West,arnhem_west,May,2,18
+5,Arnhem West,arnhem_west,Jun,24,22
+5,Arnhem West,arnhem_west,Jul,62,67
+5,Arnhem West,arnhem_west,Aug,209,253
+5,Arnhem West,arnhem_west,Sep,301,303
+5,Arnhem West,arnhem_west,Oct,248,205
+5,Arnhem West,arnhem_west,Nov,42,59
+5,Arnhem West,arnhem_west,Dec,1,9
+5,Central Pilbara,central_pilbara,Jan,127,123
+5,Central Pilbara,central_pilbara,Feb,104,80
+5,Central Pilbara,central_pilbara,Mar,89,31
+5,Central Pilbara,central_pilbara,Apr,34,23
+5,Central Pilbara,central_pilbara,May,6,2
+5,Central Pilbara,central_pilbara,Jun,0,0
+5,Central Pilbara,central_pilbara,Jul,0,0
+5,Central Pilbara,central_pilbara,Aug,2,2
+5,Central Pilbara,central_pilbara,Sep,50,52
+5,Central Pilbara,central_pilbara,Oct,180,186
+5,Central Pilbara,central_pilbara,Nov,214,177
+5,Central Pilbara,central_pilbara,Dec,190,155
+5,East Gippsland,east_gippsland,Jan,191,226
+5,East Gippsland,east_gippsland,Feb,159,153
+5,East Gippsland,east_gippsland,Mar,88,111
+5,East Gippsland,east_gippsland,Apr,23,19
+5,East Gippsland,east_gippsland,May,3,4
+5,East Gippsland,east_gippsland,Jun,0,0
+5,East Gippsland,east_gippsland,Jul,0,0
+5,East Gippsland,east_gippsland,Aug,4,2
+5,East Gippsland,east_gippsland,Sep,24,41
+5,East Gippsland,east_gippsland,Oct,80,111
+5,East Gippsland,east_gippsland,Nov,100,140
+5,East Gippsland,east_gippsland,Dec,169,179
+5,Herbert and Lower Burdekin,herbert_and_lower_burdekin,Jan,50,32
+5,Herbert and Lower Burdekin,herbert_and_lower_burdekin,Feb,15,13
+5,Herbert and Lower Burdekin,herbert_and_lower_burdekin,Mar,9,4
+5,Herbert and Lower Burdekin,herbert_and_lower_burdekin,Apr,11,11
+5,Herbert and Lower Burdekin,herbert_and_lower_burdekin,May,4,15
+5,Herbert and Lower Burdekin,herbert_and_lower_burdekin,Jun,4,11
+5,Herbert and Lower Burdekin,herbert_and_lower_burdekin,Jul,17,29
+5,Herbert and Lower Burdekin,herbert_and_lower_burdekin,Aug,54,63
+5,Herbert and Lower Burdekin,herbert_and_lower_burdekin,Sep,151,170
+5,Herbert and Lower Burdekin,herbert_and_lower_burdekin,Oct,262,221
+5,Herbert and Lower Burdekin,herbert_and_lower_burdekin,Nov,190,215
+5,Herbert and Lower Burdekin,herbert_and_lower_burdekin,Dec,131,145
+5,Illawarra/Shoalhaven,illawarra_shoalhaven,Jan,135,154
+5,Illawarra/Shoalhaven,illawarra_shoalhaven,Feb,84,82
+5,Illawarra/Shoalhaven,illawarra_shoalhaven,Mar,56,47
+5,Illawarra/Shoalhaven,illawarra_shoalhaven,Apr,24,30
+5,Illawarra/Shoalhaven,illawarra_shoalhaven,May,2,5
+5,Illawarra/Shoalhaven,illawarra_shoalhaven,Jun,0,2
+5,Illawarra/Shoalhaven,illawarra_shoalhaven,Jul,2,5
+5,Illawarra/Shoalhaven,illawarra_shoalhaven,Aug,15,27
+5,Illawarra/Shoalhaven,illawarra_shoalhaven,Sep,74,99
+5,Illawarra/Shoalhaven,illawarra_shoalhaven,Oct,154,186
+5,Illawarra/Shoalhaven,illawarra_shoalhaven,Nov,128,146
+5,Illawarra/Shoalhaven,illawarra_shoalhaven,Dec,199,171
+5,Lower South East,lower_south_east,Jan,157,260
+5,Lower South East,lower_south_east,Feb,188,225
+5,Lower South East,lower_south_east,Mar,140,190
+5,Lower South East,lower_south_east,Apr,58,94
+5,Lower South East,lower_south_east,May,8,16
+5,Lower South East,lower_south_east,Jun,0,0
+5,Lower South East,lower_south_east,Jul,0,0
+5,Lower South East,lower_south_east,Aug,0,0
+5,Lower South East,lower_south_east,Sep,2,5
+5,Lower South East,lower_south_east,Oct,19,44
+5,Lower South East,lower_south_east,Nov,49,86
+5,Lower South East,lower_south_east,Dec,122,164
+5,Midlands,midlands,Jan,240,329
+5,Midlands,midlands,Feb,207,149
+5,Midlands,midlands,Mar,73,108
+5,Midlands,midlands,Apr,11,19
+5,Midlands,midlands,May,0,1
+5,Midlands,midlands,Jun,0,0
+5,Midlands,midlands,Jul,0,0
+5,Midlands,midlands,Aug,0,0
+5,Midlands,midlands,Sep,4,6
+5,Midlands,midlands,Oct,37,54
+5,Midlands,midlands,Nov,86,112
+5,Midlands,midlands,Dec,167,224
+6,Arnhem East,arnhem_east,Jan,2,0
+6,Arnhem East,arnhem_east,Feb,0,0
+6,Arnhem East,arnhem_east,Mar,0,0
+6,Arnhem East,arnhem_east,Apr,0,1
+6,Arnhem East,arnhem_east,May,0,1
+6,Arnhem East,arnhem_east,Jun,10,1
+6,Arnhem East,arnhem_east,Jul,24,21
+6,Arnhem East,arnhem_east,Aug,152,196
+6,Arnhem East,arnhem_east,Sep,290,284
+6,Arnhem East,arnhem_east,Oct,325,265
+6,Arnhem East,arnhem_east,Nov,90,120
+6,Arnhem East,arnhem_east,Dec,7,38
+6,Central Coast and Whitsundays,central_coast_and_whitsundays,Jan,53,47
+6,Central Coast and Whitsundays,central_coast_and_whitsundays,Feb,11,8
+6,Central Coast and Whitsundays,central_coast_and_whitsundays,Mar,15,7
+6,Central Coast and Whitsundays,central_coast_and_whitsundays,Apr,15,12
+6,Central Coast and Whitsundays,central_coast_and_whitsundays,May,7,19
+6,Central Coast and Whitsundays,central_coast_and_whitsundays,Jun,10,14
+6,Central Coast and Whitsundays,central_coast_and_whitsundays,Jul,19,29
+6,Central Coast and Whitsundays,central_coast_and_whitsundays,Aug,53,56
+6,Central Coast and Whitsundays,central_coast_and_whitsundays,Sep,149,157
+6,Central Coast and Whitsundays,central_coast_and_whitsundays,Oct,230,210
+6,Central Coast and Whitsundays,central_coast_and_whitsundays,Nov,195,234
+6,Central Coast and Whitsundays,central_coast_and_whitsundays,Dec,116,161
+6,Far South Coast,far_south_coast,Jan,133,151
+6,Far South Coast,far_south_coast,Feb,108,84
+6,Far South Coast,far_south_coast,Mar,54,56
+6,Far South Coast,far_south_coast,Apr,27,29
+6,Far South Coast,far_south_coast,May,5,5
+6,Far South Coast,far_south_coast,Jun,1,5
+6,Far South Coast,far_south_coast,Jul,4,8
+6,Far South Coast,far_south_coast,Aug,35,56
+6,Far South Coast,far_south_coast,Sep,100,136
+6,Far South Coast,far_south_coast,Oct,157,160
+6,Far South Coast,far_south_coast,Nov,117,135
+6,Far South Coast,far_south_coast,Dec,129,132
+6,Hedland,hedland,Jan,59,62
+6,Hedland,hedland,Feb,68,43
+6,Hedland,hedland,Mar,84,35
+6,Hedland,hedland,Apr,79,51
+6,Hedland,hedland,May,26,30
+6,Hedland,hedland,Jun,2,1
+6,Hedland,hedland,Jul,2,0
+6,Hedland,hedland,Aug,17,12
+6,Hedland,hedland,Sep,96,79
+6,Hedland,hedland,Oct,216,206
+6,Hedland,hedland,Nov,207,186
+6,Hedland,hedland,Dec,157,109
+6,Riverland,riverland,Jan,148,206
+6,Riverland,riverland,Feb,132,135
+6,Riverland,riverland,Mar,76,97
+6,Riverland,riverland,Apr,32,39
+6,Riverland,riverland,May,2,2
+6,Riverland,riverland,Jun,0,0
+6,Riverland,riverland,Jul,2,1
+6,Riverland,riverland,Aug,13,9
+6,Riverland,riverland,Sep,42,63
+6,Riverland,riverland,Oct,82,132
+6,Riverland,riverland,Nov,107,146
+6,Riverland,riverland,Dec,169,192
+6,South East,south_east,Jan,173,288
+6,South East,south_east,Feb,183,178
+6,South East,south_east,Mar,70,122
+6,South East,south_east,Apr,32,43
+6,South East,south_east,May,1,10
+6,South East,south_east,Jun,0,1
+6,South East,south_east,Jul,1,0
+6,South East,south_east,Aug,5,6
+6,South East,south_east,Sep,25,40
+6,South East,south_east,Oct,63,84
+6,South East,south_east,Nov,78,127
+6,South East,south_east,Dec,137,160
+6,West and South Gippsland,west_and_south_gippsland,Jan,187,229
+6,West and South Gippsland,west_and_south_gippsland,Feb,159,165
+6,West and South Gippsland,west_and_south_gippsland,Mar,87,142
+6,West and South Gippsland,west_and_south_gippsland,Apr,25,43
+6,West and South Gippsland,west_and_south_gippsland,May,3,4
+6,West and South Gippsland,west_and_south_gippsland,Jun,0,0
+6,West and South Gippsland,west_and_south_gippsland,Jul,0,1
+6,West and South Gippsland,west_and_south_gippsland,Aug,5,1
+6,West and South Gippsland,west_and_south_gippsland,Sep,20,38
+6,West and South Gippsland,west_and_south_gippsland,Oct,62,95
+6,West and South Gippsland,west_and_south_gippsland,Nov,95,134
+6,West and South Gippsland,west_and_south_gippsland,Dec,154,178
+7,Burrup,burrup,Jan,85,73
+7,Burrup,burrup,Feb,73,48
+7,Burrup,burrup,Mar,75,44
+7,Burrup,burrup,Apr,72,55
+7,Burrup,burrup,May,30,44
+7,Burrup,burrup,Jun,2,2
+7,Burrup,burrup,Jul,4,3
+7,Burrup,burrup,Aug,25,19
+7,Burrup,burrup,Sep,68,60
+7,Burrup,burrup,Oct,197,167
+7,Burrup,burrup,Nov,203,175
+7,Burrup,burrup,Dec,182,121
+7,Capricornia,capricornia,Jan,48,71
+7,Capricornia,capricornia,Feb,25,42
+7,Capricornia,capricornia,Mar,28,28
+7,Capricornia,capricornia,Apr,38,32
+7,Capricornia,capricornia,May,15,33
+7,Capricornia,capricornia,Jun,15,6
+7,Capricornia,capricornia,Jul,28,13
+7,Capricornia,capricornia,Aug,57,75
+7,Capricornia,capricornia,Sep,150,138
+7,Capricornia,capricornia,Oct,185,199
+7,Capricornia,capricornia,Nov,174,170
+7,Capricornia,capricornia,Dec,111,146
+7,Central,central,Jan,170,231
+7,Central,central,Feb,168,192
+7,Central,central,Mar,105,173
+7,Central,central,Apr,44,71
+7,Central,central,May,2,7
+7,Central,central,Jun,0,0
+7,Central,central,Jul,0,0
+7,Central,central,Aug,2,0
+7,Central,central,Sep,9,21
+7,Central,central,Oct,41,75
+7,Central,central,Nov,83,110
+7,Central,central,Dec,136,187
+7,Katherine Fire Protection Zone,katherine_fire_protection_zone,Jan,1,2
+7,Katherine Fire Protection Zone,katherine_fire_protection_zone,Feb,0,0
+7,Katherine Fire Protection Zone,katherine_fire_protection_zone,Mar,2,0
+7,Katherine Fire Protection Zone,katherine_fire_protection_zone,Apr,5,6
+7,Katherine Fire Protection Zone,katherine_fire_protection_zone,May,24,40
+7,Katherine Fire Protection Zone,katherine_fire_protection_zone,Jun,39,41
+7,Katherine Fire Protection Zone,katherine_fire_protection_zone,Jul,76,52
+7,Katherine Fire Protection Zone,katherine_fire_protection_zone,Aug,183,209
+7,Katherine Fire Protection Zone,katherine_fire_protection_zone,Sep,308,270
+7,Katherine Fire Protection Zone,katherine_fire_protection_zone,Oct,246,190
+7,Katherine Fire Protection Zone,katherine_fire_protection_zone,Nov,64,52
+7,Katherine Fire Protection Zone,katherine_fire_protection_zone,Dec,7,10
+7,Monaro Alpine,monaro_alpine,Jan,205,233
+7,Monaro Alpine,monaro_alpine,Feb,139,128
+7,Monaro Alpine,monaro_alpine,Mar,65,89
+7,Monaro Alpine,monaro_alpine,Apr,20,28
+7,Monaro Alpine,monaro_alpine,May,1,0
+7,Monaro Alpine,monaro_alpine,Jun,0,1
+7,Monaro Alpine,monaro_alpine,Jul,0,0
+7,Monaro Alpine,monaro_alpine,Aug,1,3
+7,Monaro Alpine,monaro_alpine,Sep,20,37
+7,Monaro Alpine,monaro_alpine,Oct,76,110
+7,Monaro Alpine,monaro_alpine,Nov,115,150
+7,Monaro Alpine,monaro_alpine,Dec,207,199
+7,Murraylands,murraylands,Jan,138,235
+7,Murraylands,murraylands,Feb,144,165
+7,Murraylands,murraylands,Mar,97,125
+7,Murraylands,murraylands,Apr,42,60
+7,Murraylands,murraylands,May,3,7
+7,Murraylands,murraylands,Jun,0,0
+7,Murraylands,murraylands,Jul,1,0
+7,Murraylands,murraylands,Aug,10,5
+7,Murraylands,murraylands,Sep,15,35
+7,Murraylands,murraylands,Oct,61,113
+7,Murraylands,murraylands,Nov,87,142
+7,Murraylands,murraylands,Dec,144,198
+7,Upper Derwent Valley,upper_derwent_valley,Jan,197,284
+7,Upper Derwent Valley,upper_derwent_valley,Feb,198,184
+7,Upper Derwent Valley,upper_derwent_valley,Mar,94,115
+7,Upper Derwent Valley,upper_derwent_valley,Apr,29,33
+7,Upper Derwent Valley,upper_derwent_valley,May,1,2
+7,Upper Derwent Valley,upper_derwent_valley,Jun,0,0
+7,Upper Derwent Valley,upper_derwent_valley,Jul,0,0
+7,Upper Derwent Valley,upper_derwent_valley,Aug,2,3
+7,Upper Derwent Valley,upper_derwent_valley,Sep,19,28
+7,Upper Derwent Valley,upper_derwent_valley,Oct,66,69
+7,Upper Derwent Valley,upper_derwent_valley,Nov,77,112
+7,Upper Derwent Valley,upper_derwent_valley,Dec,141,173
+8,Ashburton Inland,ashburton_inland,Jan,183,155
+8,Ashburton Inland,ashburton_inland,Feb,133,90
+8,Ashburton Inland,ashburton_inland,Mar,90,35
+8,Ashburton Inland,ashburton_inland,Apr,35,13
+8,Ashburton Inland,ashburton_inland,May,4,5
+8,Ashburton Inland,ashburton_inland,Jun,0,1
+8,Ashburton Inland,ashburton_inland,Jul,0,0
+8,Ashburton Inland,ashburton_inland,Aug,1,2
+8,Ashburton Inland,ashburton_inland,Sep,22,20
+8,Ashburton Inland,ashburton_inland,Oct,118,142
+8,Ashburton Inland,ashburton_inland,Nov,177,169
+8,Ashburton Inland,ashburton_inland,Dec,238,194
+8,Australian Capital Territory,australian_capital_territory,Jan,223,251
+8,Australian Capital Territory,australian_capital_territory,Feb,132,141
+8,Australian Capital Territory,australian_capital_territory,Mar,75,96
+8,Australian Capital Territory,australian_capital_territory,Apr,17,30
+8,Australian Capital Territory,australian_capital_territory,May,1,1
+8,Australian Capital Territory,australian_capital_territory,Jun,0,0
+8,Australian Capital Territory,australian_capital_territory,Jul,0,0
+8,Australian Capital Territory,australian_capital_territory,Aug,0,0
+8,Australian Capital Territory,australian_capital_territory,Sep,11,13
+8,Australian Capital Territory,australian_capital_territory,Oct,47,90
+8,Australian Capital Territory,australian_capital_territory,Nov,99,145
+8,Australian Capital Territory,australian_capital_territory,Dec,232,223
+8,Carpentaria West,carpentaria_west,Jan,17,5
+8,Carpentaria West,carpentaria_west,Feb,0,3
+8,Carpentaria West,carpentaria_west,Mar,7,2
+8,Carpentaria West,carpentaria_west,Apr,13,8
+8,Carpentaria West,carpentaria_west,May,8,22
+8,Carpentaria West,carpentaria_west,Jun,9,8
+8,Carpentaria West,carpentaria_west,Jul,24,25
+8,Carpentaria West,carpentaria_west,Aug,105,155
+8,Carpentaria West,carpentaria_west,Sep,272,299
+8,Carpentaria West,carpentaria_west,Oct,255,266
+8,Carpentaria West,carpentaria_west,Nov,104,119
+8,Carpentaria West,carpentaria_west,Dec,41,60
+8,Central Highlands and Coalfields,central_highlands_and_coalfields,Jan,64,96
+8,Central Highlands and Coalfields,central_highlands_and_coalfields,Feb,21,37
+8,Central Highlands and Coalfields,central_highlands_and_coalfields,Mar,24,14
+8,Central Highlands and Coalfields,central_highlands_and_coalfields,Apr,15,24
+8,Central Highlands and Coalfields,central_highlands_and_coalfields,May,1,7
+8,Central Highlands and Coalfields,central_highlands_and_coalfields,Jun,1,0
+8,Central Highlands and Coalfields,central_highlands_and_coalfields,Jul,5,1
+8,Central Highlands and Coalfields,central_highlands_and_coalfields,Aug,28,32
+8,Central Highlands and Coalfields,central_highlands_and_coalfields,Sep,107,162
+8,Central Highlands and Coalfields,central_highlands_and_coalfields,Oct,203,230
+8,Central Highlands and Coalfields,central_highlands_and_coalfields,Nov,186,227
+8,Central Highlands and Coalfields,central_highlands_and_coalfields,Dec,142,200
+8,Central Plateau,central_plateau,Jan,210,284
+8,Central Plateau,central_plateau,Feb,193,162
+8,Central Plateau,central_plateau,Mar,90,96
+8,Central Plateau,central_plateau,Apr,19,22
+8,Central Plateau,central_plateau,May,5,3
+8,Central Plateau,central_plateau,Jun,0,0
+8,Central Plateau,central_plateau,Jul,0,0
+8,Central Plateau,central_plateau,Aug,0,1
+8,Central Plateau,central_plateau,Sep,11,5
+8,Central Plateau,central_plateau,Oct,55,59
+8,Central Plateau,central_plateau,Nov,97,144
+8,Central Plateau,central_plateau,Dec,166,205
+8,Mid North,mid_north,Jan,156,220
+8,Mid North,mid_north,Feb,155,163
+8,Mid North,mid_north,Mar,99,129
+8,Mid North,mid_north,Apr,56,67
+8,Mid North,mid_north,May,6,12
+8,Mid North,mid_north,Jun,0,0
+8,Mid North,mid_north,Jul,1,1
+8,Mid North,mid_north,Aug,10,3
+8,Mid North,mid_north,Sep,21,26
+8,Mid North,mid_north,Oct,57,90
+8,Mid North,mid_north,Nov,97,120
+8,Mid North,mid_north,Dec,159,179
+8,North Central,north_central,Jan,179,318
+8,North Central,north_central,Feb,171,255
+8,North Central,north_central,Mar,88,192
+8,North Central,north_central,Apr,17,36
+8,North Central,north_central,May,0,1
+8,North Central,north_central,Jun,0,0
+8,North Central,north_central,Jul,0,0
+8,North Central,north_central,Aug,0,0
+8,North Central,north_central,Sep,0,4
+8,North Central,north_central,Oct,16,42
+8,North Central,north_central,Nov,63,99
+8,North Central,north_central,Dec,135,211
+9,Ashburton Coast,ashburton_coast,Jan,170,139
+9,Ashburton Coast,ashburton_coast,Feb,102,73
+9,Ashburton Coast,ashburton_coast,Mar,93,58
+9,Ashburton Coast,ashburton_coast,Apr,56,36
+9,Ashburton Coast,ashburton_coast,May,15,18
+9,Ashburton Coast,ashburton_coast,Jun,0,1
+9,Ashburton Coast,ashburton_coast,Jul,1,0
+9,Ashburton Coast,ashburton_coast,Aug,14,5
+9,Ashburton Coast,ashburton_coast,Sep,35,44
+9,Ashburton Coast,ashburton_coast,Oct,129,137
+9,Ashburton Coast,ashburton_coast,Nov,169,127
+9,Ashburton Coast,ashburton_coast,Dec,226,179
+9,Carpentaria East,carpentaria_east,Jan,29,7
+9,Carpentaria East,carpentaria_east,Feb,3,1
+9,Carpentaria East,carpentaria_east,Mar,6,7
+9,Carpentaria East,carpentaria_east,Apr,13,18
+9,Carpentaria East,carpentaria_east,May,15,42
+9,Carpentaria East,carpentaria_east,Jun,11,14
+9,Carpentaria East,carpentaria_east,Jul,30,39
+9,Carpentaria East,carpentaria_east,Aug,113,176
+9,Carpentaria East,carpentaria_east,Sep,276,277
+9,Carpentaria East,carpentaria_east,Oct,232,215
+9,Carpentaria East,carpentaria_east,Nov,98,116
+9,Carpentaria East,carpentaria_east,Dec,38,51
+9,Central West,central_west,Jan,110,89
+9,Central West,central_west,Feb,29,41
+9,Central West,central_west,Mar,9,16
+9,Central West,central_west,Apr,2,5
+9,Central West,central_west,May,0,1
+9,Central West,central_west,Jun,0,0
+9,Central West,central_west,Jul,0,1
+9,Central West,central_west,Aug,9,13
+9,Central West,central_west,Sep,74,129
+9,Central West,central_west,Oct,194,233
+9,Central West,central_west,Nov,209,228
+9,Central West,central_west,Dec,205,230
+9,Flinders,flinders,Jan,145,267
+9,Flinders,flinders,Feb,99,154
+9,Flinders,flinders,Mar,48,94
+9,Flinders,flinders,Apr,13,34
+9,Flinders,flinders,May,2,1
+9,Flinders,flinders,Jun,0,0
+9,Flinders,flinders,Jul,0,1
+9,Flinders,flinders,Aug,8,9
+9,Flinders,flinders,Sep,31,75
+9,Flinders,flinders,Oct,75,126
+9,Flinders,flinders,Nov,97,167
+9,Flinders,flinders,Dec,165,216
+9,South West,south_west,Jan,168,242
+9,South West,south_west,Feb,199,229
+9,South West,south_west,Mar,144,190
+9,South West,south_west,Apr,48,75
+9,South West,south_west,May,3,8
+9,South West,south_west,Jun,0,0
+9,South West,south_west,Jul,0,0
+9,South West,south_west,Aug,1,0
+9,South West,south_west,Sep,4,4
+9,South West,south_west,Oct,26,46
+9,South West,south_west,Nov,55,95
+9,South West,south_west,Dec,120,170
+9,Southern Ranges,southern_ranges,Jan,210,242
+9,Southern Ranges,southern_ranges,Feb,121,137
+9,Southern Ranges,southern_ranges,Mar,86,87
+9,Southern Ranges,southern_ranges,Apr,28,39
+9,Southern Ranges,southern_ranges,May,1,1
+9,Southern Ranges,southern_ranges,Jun,0,0
+9,Southern Ranges,southern_ranges,Jul,0,0
+9,Southern Ranges,southern_ranges,Aug,2,0
+9,Southern Ranges,southern_ranges,Sep,14,27
+9,Southern Ranges,southern_ranges,Oct,56,99
+9,Southern Ranges,southern_ranges,Nov,94,132
+9,Southern Ranges,southern_ranges,Dec,233,218
+9,Western,western,Jan,160,212
+9,Western,western,Feb,170,156
+9,Western,western,Mar,95,95
+9,Western,western,Apr,38,34
+9,Western,western,May,3,5
+9,Western,western,Jun,0,0
+9,Western,western,Jul,1,1
+9,Western,western,Aug,9,6
+9,Western,western,Sep,40,46
+9,Western,western,Oct,83,99
+9,Western,western,Nov,115,143
+9,Western,western,Dec,151,165
+10,Central Ranges,central_ranges,Jan,168,255
+10,Central Ranges,central_ranges,Feb,93,136
+10,Central Ranges,central_ranges,Mar,93,74
+10,Central Ranges,central_ranges,Apr,27,36
+10,Central Ranges,central_ranges,May,2,3
+10,Central Ranges,central_ranges,Jun,0,0
+10,Central Ranges,central_ranges,Jul,0,0
+10,Central Ranges,central_ranges,Aug,2,1
+10,Central Ranges,central_ranges,Sep,17,34
+10,Central Ranges,central_ranges,Oct,68,106
+10,Central Ranges,central_ranges,Nov,100,150
+10,Central Ranges,central_ranges,Dec,241,221
+10,Exmouth Gulf Coast,exmouth_gulf_coast,Jan,187,139
+10,Exmouth Gulf Coast,exmouth_gulf_coast,Feb,126,81
+10,Exmouth Gulf Coast,exmouth_gulf_coast,Mar,112,82
+10,Exmouth Gulf Coast,exmouth_gulf_coast,Apr,57,49
+10,Exmouth Gulf Coast,exmouth_gulf_coast,May,20,21
+10,Exmouth Gulf Coast,exmouth_gulf_coast,Jun,0,0
+10,Exmouth Gulf Coast,exmouth_gulf_coast,Jul,2,0
+10,Exmouth Gulf Coast,exmouth_gulf_coast,Aug,11,4
+10,Exmouth Gulf Coast,exmouth_gulf_coast,Sep,40,43
+10,Exmouth Gulf Coast,exmouth_gulf_coast,Oct,114,115
+10,Exmouth Gulf Coast,exmouth_gulf_coast,Nov,138,120
+10,Exmouth Gulf Coast,exmouth_gulf_coast,Dec,210,156
+10,Gregory North West,gregory_north_west,Jan,8,4
+10,Gregory North West,gregory_north_west,Feb,0,3
+10,Gregory North West,gregory_north_west,Mar,7,5
+10,Gregory North West,gregory_north_west,Apr,54,55
+10,Gregory North West,gregory_north_west,May,51,98
+10,Gregory North West,gregory_north_west,Jun,34,44
+10,Gregory North West,gregory_north_west,Jul,64,67
+10,Gregory North West,gregory_north_west,Aug,175,222
+10,Gregory North West,gregory_north_west,Sep,250,222
+10,Gregory North West,gregory_north_west,Oct,154,157
+10,Gregory North West,gregory_north_west,Nov,59,64
+10,Gregory North West,gregory_north_west,Dec,10,20
+10,North West,north_west,Jan,119,69
+10,North West,north_west,Feb,35,38
+10,North West,north_west,Mar,25,33
+10,North West,north_west,Apr,8,13
+10,North West,north_west,May,1,1
+10,North West,north_west,Jun,0,1
+10,North West,north_west,Jul,0,0
+10,North West,north_west,Aug,8,12
+10,North West,north_west,Sep,89,148
+10,North West,north_west,Oct,186,265
+10,North West,north_west,Nov,201,228
+10,North West,north_west,Dec,186,161
+10,North West Coast,north_west_coast,Jan,243,326
+10,North West Coast,north_west_coast,Feb,227,172
+10,North West Coast,north_west_coast,Mar,111,93
+10,North West Coast,north_west_coast,Apr,11,7
+10,North West Coast,north_west_coast,May,0,0
+10,North West Coast,north_west_coast,Jun,0,0
+10,North West Coast,north_west_coast,Jul,0,0
+10,North West Coast,north_west_coast,Aug,0,0
+10,North West Coast,north_west_coast,Sep,4,2
+10,North West Coast,north_west_coast,Oct,27,24
+10,North West Coast,north_west_coast,Nov,80,103
+10,North West Coast,north_west_coast,Dec,194,203
+10,West Coast,west_coast,Jan,129,160
+10,West Coast,west_coast,Feb,120,112
+10,West Coast,west_coast,Mar,83,99
+10,West Coast,west_coast,Apr,50,54
+10,West Coast,west_coast,May,8,12
+10,West Coast,west_coast,Jun,0,0
+10,West Coast,west_coast,Jul,3,0
+10,West Coast,west_coast,Aug,16,17
+10,West Coast,west_coast,Sep,58,76
+10,West Coast,west_coast,Oct,120,142
+10,West Coast,west_coast,Nov,137,135
+10,West Coast,west_coast,Dec,144,152
+11,Channel Country,channel_country,Jan,169,176
+11,Channel Country,channel_country,Feb,41,105
+11,Channel Country,channel_country,Mar,12,38
+11,Channel Country,channel_country,Apr,1,5
+11,Channel Country,channel_country,May,0,0
+11,Channel Country,channel_country,Jun,0,1
+11,Channel Country,channel_country,Jul,0,0
+11,Channel Country,channel_country,Aug,4,15
+11,Channel Country,channel_country,Sep,35,91
+11,Channel Country,channel_country,Oct,114,181
+11,Channel Country,channel_country,Nov,144,222
+11,Channel Country,channel_country,Dec,229,244
+11,Eastern Eyre Peninsula,eastern_eyre_peninsula,Jan,153,182
+11,Eastern Eyre Peninsula,eastern_eyre_peninsula,Feb,128,133
+11,Eastern Eyre Peninsula,eastern_eyre_peninsula,Mar,84,103
+11,Eastern Eyre Peninsula,eastern_eyre_peninsula,Apr,36,55
+11,Eastern Eyre Peninsula,eastern_eyre_peninsula,May,3,7
+11,Eastern Eyre Peninsula,eastern_eyre_peninsula,Jun,0,0
+11,Eastern Eyre Peninsula,eastern_eyre_peninsula,Jul,1,0
+11,Eastern Eyre Peninsula,eastern_eyre_peninsula,Aug,15,9
+11,Eastern Eyre Peninsula,eastern_eyre_peninsula,Sep,46,62
+11,Eastern Eyre Peninsula,eastern_eyre_peninsula,Oct,99,141
+11,Eastern Eyre Peninsula,eastern_eyre_peninsula,Nov,117,143
+11,Eastern Eyre Peninsula,eastern_eyre_peninsula,Dec,153,157
+11,Gregory South East,gregory_south_east,Jan,26,15
+11,Gregory South East,gregory_south_east,Feb,2,6
+11,Gregory South East,gregory_south_east,Mar,23,10
+11,Gregory South East,gregory_south_east,Apr,35,43
+11,Gregory South East,gregory_south_east,May,16,25
+11,Gregory South East,gregory_south_east,Jun,4,5
+11,Gregory South East,gregory_south_east,Jul,14,11
+11,Gregory South East,gregory_south_east,Aug,90,115
+11,Gregory South East,gregory_south_east,Sep,283,269
+11,Gregory South East,gregory_south_east,Oct,232,258
+11,Gregory South East,gregory_south_east,Nov,119,122
+11,Gregory South East,gregory_south_east,Dec,45,59
+11,King Island,king_island,Jan,201,193
+11,King Island,king_island,Feb,210,165
+11,King Island,king_island,Mar,138,143
+11,King Island,king_island,Apr,66,63
+11,King Island,king_island,May,20,18
+11,King Island,king_island,Jun,3,6
+11,King Island,king_island,Jul,3,11
+11,King Island,king_island,Aug,11,14
+11,King Island,king_island,Sep,20,33
+11,King Island,king_island,Oct,32,65
+11,King Island,king_island,Nov,81,77
+11,King Island,king_island,Dec,124,130
+11,New England,new_england,Jan,107,130
+11,New England,new_england,Feb,42,72
+11,New England,new_england,Mar,48,50
+11,New England,new_england,Apr,40,20
+11,New England,new_england,May,7,10
+11,New England,new_england,Jun,0,1
+11,New England,new_england,Jul,4,5
+11,New England,new_england,Aug,18,41
+11,New England,new_england,Sep,104,144
+11,New England,new_england,Oct,169,185
+11,New England,new_england,Nov,160,144
+11,New England,new_england,Dec,195,131
+11,North Interior,north_interior,Jan,128,104
+11,North Interior,north_interior,Feb,83,95
+11,North Interior,north_interior,Mar,82,31
+11,North Interior,north_interior,Apr,18,10
+11,North Interior,north_interior,May,4,2
+11,North Interior,north_interior,Jun,0,0
+11,North Interior,north_interior,Jul,0,0
+11,North Interior,north_interior,Aug,0,1
+11,North Interior,north_interior,Sep,61,60
+11,North Interior,north_interior,Oct,221,245
+11,North Interior,north_interior,Nov,224,191
+11,North Interior,north_interior,Dec,156,111
+12,Barkly North,barkly_north,Jan,65,35
+12,Barkly North,barkly_north,Feb,17,26
+12,Barkly North,barkly_north,Mar,37,34
+12,Barkly North,barkly_north,Apr,20,42
+12,Barkly North,barkly_north,May,7,10
+12,Barkly North,barkly_north,Jun,1,0
+12,Barkly North,barkly_north,Jul,2,1
+12,Barkly North,barkly_north,Aug,22,40
+12,Barkly North,barkly_north,Sep,189,241
+12,Barkly North,barkly_north,Oct,234,277
+12,Barkly North,barkly_north,Nov,159,187
+12,Barkly North,barkly_north,Dec,94,87
+12,Gascoyne Coast,gascoyne_coast,Jan,218,182
+12,Gascoyne Coast,gascoyne_coast,Feb,193,144
+12,Gascoyne Coast,gascoyne_coast,Mar,114,85
+12,Gascoyne Coast,gascoyne_coast,Apr,40,31
+12,Gascoyne Coast,gascoyne_coast,May,8,13
+12,Gascoyne Coast,gascoyne_coast,Jun,0,1
+12,Gascoyne Coast,gascoyne_coast,Jul,0,0
+12,Gascoyne Coast,gascoyne_coast,Aug,3,2
+12,Gascoyne Coast,gascoyne_coast,Sep,32,17
+12,Gascoyne Coast,gascoyne_coast,Oct,82,76
+12,Gascoyne Coast,gascoyne_coast,Nov,102,124
+12,Gascoyne Coast,gascoyne_coast,Dec,182,178
+12,Lower Eyre Peninsula,lower_eyre_peninsula,Jan,140,163
+12,Lower Eyre Peninsula,lower_eyre_peninsula,Feb,148,135
+12,Lower Eyre Peninsula,lower_eyre_peninsula,Mar,111,116
+12,Lower Eyre Peninsula,lower_eyre_peninsula,Apr,97,96
+12,Lower Eyre Peninsula,lower_eyre_peninsula,May,36,33
+12,Lower Eyre Peninsula,lower_eyre_peninsula,Jun,1,1
+12,Lower Eyre Peninsula,lower_eyre_peninsula,Jul,2,0
+12,Lower Eyre Peninsula,lower_eyre_peninsula,Aug,15,3
+12,Lower Eyre Peninsula,lower_eyre_peninsula,Sep,31,29
+12,Lower Eyre Peninsula,lower_eyre_peninsula,Oct,87,91
+12,Lower Eyre Peninsula,lower_eyre_peninsula,Nov,115,111
+12,Lower Eyre Peninsula,lower_eyre_peninsula,Dec,133,133
+12,Maranoa and Warrego,maranoa_and_warrego,Jan,139,185
+12,Maranoa and Warrego,maranoa_and_warrego,Feb,41,89
+12,Maranoa and Warrego,maranoa_and_warrego,Mar,34,42
+12,Maranoa and Warrego,maranoa_and_warrego,Apr,6,9
+12,Maranoa and Warrego,maranoa_and_warrego,May,0,0
+12,Maranoa and Warrego,maranoa_and_warrego,Jun,0,0
+12,Maranoa and Warrego,maranoa_and_warrego,Jul,0,1
+12,Maranoa and Warrego,maranoa_and_warrego,Aug,4,17
+12,Maranoa and Warrego,maranoa_and_warrego,Sep,35,101
+12,Maranoa and Warrego,maranoa_and_warrego,Oct,96,198
+12,Maranoa and Warrego,maranoa_and_warrego,Nov,151,213
+12,Maranoa and Warrego,maranoa_and_warrego,Dec,225,241
+12,Northern Slopes,northern_slopes,Jan,141,185
+12,Northern Slopes,northern_slopes,Feb,64,122
+12,Northern Slopes,northern_slopes,Mar,91,61
+12,Northern Slopes,northern_slopes,Apr,59,17
+12,Northern Slopes,northern_slopes,May,4,3
+12,Northern Slopes,northern_slopes,Jun,0,0
+12,Northern Slopes,northern_slopes,Jul,0,3
+12,Northern Slopes,northern_slopes,Aug,8,18
+12,Northern Slopes,northern_slopes,Sep,56,77
+12,Northern Slopes,northern_slopes,Oct,107,125
+12,Northern Slopes,northern_slopes,Nov,152,149
+12,Northern Slopes,northern_slopes,Dec,230,155
+13,Barkly South,barkly_south,Jan,150,87
+13,Barkly South,barkly_south,Feb,67,68
+13,Barkly South,barkly_south,Mar,69,70
+13,Barkly South,barkly_south,Apr,15,25
+13,Barkly South,barkly_south,May,1,1
+13,Barkly South,barkly_south,Jun,0,0
+13,Barkly South,barkly_south,Jul,0,0
+13,Barkly South,barkly_south,Aug,4,3
+13,Barkly South,barkly_south,Sep,65,112
+13,Barkly South,barkly_south,Oct,175,251
+13,Barkly South,barkly_south,Nov,168,205
+13,Barkly South,barkly_south,Dec,164,127
+13,Darling Downs and Granite Belt,darling_downs_and_granite_belt,Jan,115,171
+13,Darling Downs and Granite Belt,darling_downs_and_granite_belt,Feb,39,98
+13,Darling Downs and Granite Belt,darling_downs_and_granite_belt,Mar,74,61
+13,Darling Downs and Granite Belt,darling_downs_and_granite_belt,Apr,44,22
+13,Darling Downs and Granite Belt,darling_downs_and_granite_belt,May,3,7
+13,Darling Downs and Granite Belt,darling_downs_and_granite_belt,Jun,0,0
+13,Darling Downs and Granite Belt,darling_downs_and_granite_belt,Jul,1,2
+13,Darling Downs and Granite Belt,darling_downs_and_granite_belt,Aug,8,38
+13,Darling Downs and Granite Belt,darling_downs_and_granite_belt,Sep,73,123
+13,Darling Downs and Granite Belt,darling_downs_and_granite_belt,Oct,121,174
+13,Darling Downs and Granite Belt,darling_downs_and_granite_belt,Nov,146,175
+13,Darling Downs and Granite Belt,darling_downs_and_granite_belt,Dec,160,172
+13,Gascoyne Inland,gascoyne_inland,Jan,241,210
+13,Gascoyne Inland,gascoyne_inland,Feb,193,144
+13,Gascoyne Inland,gascoyne_inland,Mar,111,61
+13,Gascoyne Inland,gascoyne_inland,Apr,30,20
+13,Gascoyne Inland,gascoyne_inland,May,2,3
+13,Gascoyne Inland,gascoyne_inland,Jun,0,0
+13,Gascoyne Inland,gascoyne_inland,Jul,0,0
+13,Gascoyne Inland,gascoyne_inland,Aug,0,0
+13,Gascoyne Inland,gascoyne_inland,Sep,20,11
+13,Gascoyne Inland,gascoyne_inland,Oct,73,67
+13,Gascoyne Inland,gascoyne_inland,Nov,116,151
+13,Gascoyne Inland,gascoyne_inland,Dec,189,185
+13,North West Pastoral,north_west_pastoral,Jan,147,190
+13,North West Pastoral,north_west_pastoral,Feb,87,114
+13,North West Pastoral,north_west_pastoral,Mar,43,85
+13,North West Pastoral,north_west_pastoral,Apr,16,23
+13,North West Pastoral,north_west_pastoral,May,1,1
+13,North West Pastoral,north_west_pastoral,Jun,0,0
+13,North West Pastoral,north_west_pastoral,Jul,1,0
+13,North West Pastoral,north_west_pastoral,Aug,5,10
+13,North West Pastoral,north_west_pastoral,Sep,57,96
+13,North West Pastoral,north_west_pastoral,Oct,112,177
+13,North West Pastoral,north_west_pastoral,Nov,137,171
+13,North West Pastoral,north_west_pastoral,Dec,164,190
+13,North Western,north_western,Jan,145,227
+13,North Western,north_western,Feb,53,117
+13,North Western,north_western,Mar,71,58
+13,North Western,north_western,Apr,23,14
+13,North Western,north_western,May,0,2
+13,North Western,north_western,Jun,0,0
+13,North Western,north_western,Jul,0,0
+13,North Western,north_western,Aug,2,9
+13,North Western,north_western,Sep,34,79
+13,North Western,north_western,Oct,70,140
+13,North Western,north_western,Nov,119,195
+13,North Western,north_western,Dec,231,238
+14,Alice Springs Fire Protection Zone,alice_springs_fire_protection_zone,Jan,171,176
+14,Alice Springs Fire Protection Zone,alice_springs_fire_protection_zone,Feb,93,109
+14,Alice Springs Fire Protection Zone,alice_springs_fire_protection_zone,Mar,54,56
+14,Alice Springs Fire Protection Zone,alice_springs_fire_protection_zone,Apr,3,8
+14,Alice Springs Fire Protection Zone,alice_springs_fire_protection_zone,May,1,1
+14,Alice Springs Fire Protection Zone,alice_springs_fire_protection_zone,Jun,0,0
+14,Alice Springs Fire Protection Zone,alice_springs_fire_protection_zone,Jul,1,2
+14,Alice Springs Fire Protection Zone,alice_springs_fire_protection_zone,Aug,9,19
+14,Alice Springs Fire Protection Zone,alice_springs_fire_protection_zone,Sep,40,96
+14,Alice Springs Fire Protection Zone,alice_springs_fire_protection_zone,Oct,132,172
+14,Alice Springs Fire Protection Zone,alice_springs_fire_protection_zone,Nov,143,175
+14,Alice Springs Fire Protection Zone,alice_springs_fire_protection_zone,Dec,181,185
+14,North East Pastoral,north_east_pastoral,Jan,150,257
+14,North East Pastoral,north_east_pastoral,Feb,74,138
+14,North East Pastoral,north_east_pastoral,Mar,25,62
+14,North East Pastoral,north_east_pastoral,Apr,3,7
+14,North East Pastoral,north_east_pastoral,May,1,0
+14,North East Pastoral,north_east_pastoral,Jun,0,0
+14,North East Pastoral,north_east_pastoral,Jul,0,1
+14,North East Pastoral,north_east_pastoral,Aug,4,8
+14,North East Pastoral,north_east_pastoral,Sep,32,84
+14,North East Pastoral,north_east_pastoral,Oct,92,150
+14,North East Pastoral,north_east_pastoral,Nov,133,174
+14,North East Pastoral,north_east_pastoral,Dec,198,234
+14,Upper Central West Plains,upper_central_west_plains,Jan,158,264
+14,Upper Central West Plains,upper_central_west_plains,Feb,56,160
+14,Upper Central West Plains,upper_central_west_plains,Mar,45,87
+14,Upper Central West Plains,upper_central_west_plains,Apr,7,23
+14,Upper Central West Plains,upper_central_west_plains,May,0,2
+14,Upper Central West Plains,upper_central_west_plains,Jun,0,0
+14,Upper Central West Plains,upper_central_west_plains,Jul,0,1
+14,Upper Central West Plains,upper_central_west_plains,Aug,1,6
+14,Upper Central West Plains,upper_central_west_plains,Sep,10,67
+14,Upper Central West Plains,upper_central_west_plains,Oct,48,131
+14,Upper Central West Plains,upper_central_west_plains,Nov,76,192
+14,Upper Central West Plains,upper_central_west_plains,Dec,215,278
+14,Wide Bay and Burnett,wide_bay_and_burnett,Jan,51,85
+14,Wide Bay and Burnett,wide_bay_and_burnett,Feb,16,50
+14,Wide Bay and Burnett,wide_bay_and_burnett,Mar,31,31
+14,Wide Bay and Burnett,wide_bay_and_burnett,Apr,26,25
+14,Wide Bay and Burnett,wide_bay_and_burnett,May,15,32
+14,Wide Bay and Burnett,wide_bay_and_burnett,Jun,10,5
+14,Wide Bay and Burnett,wide_bay_and_burnett,Jul,16,13
+14,Wide Bay and Burnett,wide_bay_and_burnett,Aug,55,79
+14,Wide Bay and Burnett,wide_bay_and_burnett,Sep,156,170
+14,Wide Bay and Burnett,wide_bay_and_burnett,Oct,211,222
+14,Wide Bay and Burnett,wide_bay_and_burnett,Nov,154,151
+14,Wide Bay and Burnett,wide_bay_and_burnett,Dec,111,112
+14,Yalgar,yalgar,Jan,233,223
+14,Yalgar,yalgar,Feb,145,125
+14,Yalgar,yalgar,Mar,98,54
+14,Yalgar,yalgar,Apr,23,13
+14,Yalgar,yalgar,May,1,2
+14,Yalgar,yalgar,Jun,0,0
+14,Yalgar,yalgar,Jul,0,0
+14,Yalgar,yalgar,Aug,0,0
+14,Yalgar,yalgar,Sep,25,22
+14,Yalgar,yalgar,Oct,95,105
+14,Yalgar,yalgar,Nov,135,165
+14,Yalgar,yalgar,Dec,190,173
+15,Lower Central West Plains,lower_central_west_plains,Jan,178,294
+15,Lower Central West Plains,lower_central_west_plains,Feb,93,190
+15,Lower Central West Plains,lower_central_west_plains,Mar,64,110
+15,Lower Central West Plains,lower_central_west_plains,Apr,7,32
+15,Lower Central West Plains,lower_central_west_plains,May,0,1
+15,Lower Central West Plains,lower_central_west_plains,Jun,0,0
+15,Lower Central West Plains,lower_central_west_plains,Jul,0,0
+15,Lower Central West Plains,lower_central_west_plains,Aug,0,1
+15,Lower Central West Plains,lower_central_west_plains,Sep,4,35
+15,Lower Central West Plains,lower_central_west_plains,Oct,36,107
+15,Lower Central West Plains,lower_central_west_plains,Nov,71,163
+15,Lower Central West Plains,lower_central_west_plains,Dec,207,234
+15,Mount Lofty Ranges,mount_lofty_ranges,Jan,153,209
+15,Mount Lofty Ranges,mount_lofty_ranges,Feb,171,192
+15,Mount Lofty Ranges,mount_lofty_ranges,Mar,131,145
+15,Mount Lofty Ranges,mount_lofty_ranges,Apr,79,88
+15,Mount Lofty Ranges,mount_lofty_ranges,May,10,15
+15,Mount Lofty Ranges,mount_lofty_ranges,Jun,0,0
+15,Mount Lofty Ranges,mount_lofty_ranges,Jul,0,0
+15,Mount Lofty Ranges,mount_lofty_ranges,Aug,4,2
+15,Mount Lofty Ranges,mount_lofty_ranges,Sep,7,15
+15,Mount Lofty Ranges,mount_lofty_ranges,Oct,41,70
+15,Mount Lofty Ranges,mount_lofty_ranges,Nov,86,115
+15,Mount Lofty Ranges,mount_lofty_ranges,Dec,141,153
+15,North Goldfields,north_goldfields,Jan,211,218
+15,North Goldfields,north_goldfields,Feb,105,126
+15,North Goldfields,north_goldfields,Mar,84,51
+15,North Goldfields,north_goldfields,Apr,25,14
+15,North Goldfields,north_goldfields,May,4,6
+15,North Goldfields,north_goldfields,Jun,0,0
+15,North Goldfields,north_goldfields,Jul,0,0
+15,North Goldfields,north_goldfields,Aug,5,8
+15,North Goldfields,north_goldfields,Sep,43,34
+15,North Goldfields,north_goldfields,Oct,105,132
+15,North Goldfields,north_goldfields,Nov,134,148
+15,North Goldfields,north_goldfields,Dec,198,176
+15,Simpson West,simpson_west,Jan,175,185
+15,Simpson West,simpson_west,Feb,82,92
+15,Simpson West,simpson_west,Mar,42,52
+15,Simpson West,simpson_west,Apr,2,5
+15,Simpson West,simpson_west,May,0,1
+15,Simpson West,simpson_west,Jun,0,0
+15,Simpson West,simpson_west,Jul,0,2
+15,Simpson West,simpson_west,Aug,6,12
+15,Simpson West,simpson_west,Sep,35,88
+15,Simpson West,simpson_west,Oct,129,189
+15,Simpson West,simpson_west,Nov,154,177
+15,Simpson West,simpson_west,Dec,203,196
+15,Southeast Coast,southeast_coast,Jan,54,68
+15,Southeast Coast,southeast_coast,Feb,15,39
+15,Southeast Coast,southeast_coast,Mar,24,21
+15,Southeast Coast,southeast_coast,Apr,35,26
+15,Southeast Coast,southeast_coast,May,23,34
+15,Southeast Coast,southeast_coast,Jun,9,11
+15,Southeast Coast,southeast_coast,Jul,10,35
+15,Southeast Coast,southeast_coast,Aug,67,100
+15,Southeast Coast,southeast_coast,Sep,177,181
+15,Southeast Coast,southeast_coast,Oct,205,181
+15,Southeast Coast,southeast_coast,Nov,141,142
+15,Southeast Coast,southeast_coast,Dec,123,106
+16,Simpson East,simpson_east,Jan,175,171
+16,Simpson East,simpson_east,Feb,65,91
+16,Simpson East,simpson_east,Mar,30,51
+16,Simpson East,simpson_east,Apr,1,5
+16,Simpson East,simpson_east,May,1,0
+16,Simpson East,simpson_east,Jun,0,0
+16,Simpson East,simpson_east,Jul,1,1
+16,Simpson East,simpson_east,Aug,7,9
+16,Simpson East,simpson_east,Sep,48,101
+16,Simpson East,simpson_east,Oct,131,171
+16,Simpson East,simpson_east,Nov,145,188
+16,Simpson East,simpson_east,Dec,227,208
+16,South Goldfields,south_goldfields,Jan,194,184
+16,South Goldfields,south_goldfields,Feb,127,122
+16,South Goldfields,south_goldfields,Mar,86,77
+16,South Goldfields,south_goldfields,Apr,52,34
+16,South Goldfields,south_goldfields,May,12,11
+16,South Goldfields,south_goldfields,Jun,1,0
+16,South Goldfields,south_goldfields,Jul,2,0
+16,South Goldfields,south_goldfields,Aug,8,19
+16,South Goldfields,south_goldfields,Sep,45,36
+16,South Goldfields,south_goldfields,Oct,107,110
+16,South Goldfields,south_goldfields,Nov,124,133
+16,South Goldfields,south_goldfields,Dec,175,168
+16,Southern Slopes,southern_slopes,Jan,215,298
+16,Southern Slopes,southern_slopes,Feb,135,202
+16,Southern Slopes,southern_slopes,Mar,93,139
+16,Southern Slopes,southern_slopes,Apr,19,39
+16,Southern Slopes,southern_slopes,May,0,0
+16,Southern Slopes,southern_slopes,Jun,0,0
+16,Southern Slopes,southern_slopes,Jul,0,0
+16,Southern Slopes,southern_slopes,Aug,0,0
+16,Southern Slopes,southern_slopes,Sep,1,5
+16,Southern Slopes,southern_slopes,Oct,16,51
+16,Southern Slopes,southern_slopes,Nov,61,112
+16,Southern Slopes,southern_slopes,Dec,221,220
+17,Eastern Riverina,eastern_riverina,Jan,200,326
+17,Eastern Riverina,eastern_riverina,Feb,140,241
+17,Eastern Riverina,eastern_riverina,Mar,92,151
+17,Eastern Riverina,eastern_riverina,Apr,16,36
+17,Eastern Riverina,eastern_riverina,May,0,1
+17,Eastern Riverina,eastern_riverina,Jun,0,0
+17,Eastern Riverina,eastern_riverina,Jul,0,0
+17,Eastern Riverina,eastern_riverina,Aug,0,0
+17,Eastern Riverina,eastern_riverina,Sep,0,4
+17,Eastern Riverina,eastern_riverina,Oct,8,46
+17,Eastern Riverina,eastern_riverina,Nov,56,116
+17,Eastern Riverina,eastern_riverina,Dec,176,218
+17,Lasseter West,lasseter_west,Jan,190,139
+17,Lasseter West,lasseter_west,Feb,98,114
+17,Lasseter West,lasseter_west,Mar,64,67
+17,Lasseter West,lasseter_west,Apr,5,9
+17,Lasseter West,lasseter_west,May,1,0
+17,Lasseter West,lasseter_west,Jun,0,0
+17,Lasseter West,lasseter_west,Jul,0,0
+17,Lasseter West,lasseter_west,Aug,2,12
+17,Lasseter West,lasseter_west,Sep,45,75
+17,Lasseter West,lasseter_west,Oct,142,187
+17,Lasseter West,lasseter_west,Nov,161,161
+17,Lasseter West,lasseter_west,Dec,186,169
+17,West Interior,west_interior,Jan,219,184
+17,West Interior,west_interior,Feb,125,116
+17,West Interior,west_interior,Mar,79,45
+17,West Interior,west_interior,Apr,16,8
+17,West Interior,west_interior,May,2,1
+17,West Interior,west_interior,Jun,0,0
+17,West Interior,west_interior,Jul,0,0
+17,West Interior,west_interior,Aug,3,1
+17,West Interior,west_interior,Sep,36,46
+17,West Interior,west_interior,Oct,117,141
+17,West Interior,west_interior,Nov,172,159
+17,West Interior,west_interior,Dec,196,161
+18,Central Interior,central_interior,Jan,172,157
+18,Central Interior,central_interior,Feb,99,121
+18,Central Interior,central_interior,Mar,63,69
+18,Central Interior,central_interior,Apr,12,11
+18,Central Interior,central_interior,May,1,3
+18,Central Interior,central_interior,Jun,0,0
+18,Central Interior,central_interior,Jul,0,0
+18,Central Interior,central_interior,Aug,4,4
+18,Central Interior,central_interior,Sep,60,85
+18,Central Interior,central_interior,Oct,141,188
+18,Central Interior,central_interior,Nov,162,160
+18,Central Interior,central_interior,Dec,163,152
+18,Lasseter East,lasseter_east,Jan,175,188
+18,Lasseter East,lasseter_east,Feb,99,114
+18,Lasseter East,lasseter_east,Mar,47,63
+18,Lasseter East,lasseter_east,Apr,7,4
+18,Lasseter East,lasseter_east,May,1,0
+18,Lasseter East,lasseter_east,Jun,0,0
+18,Lasseter East,lasseter_east,Jul,0,0
+18,Lasseter East,lasseter_east,Aug,10,15
+18,Lasseter East,lasseter_east,Sep,45,79
+18,Lasseter East,lasseter_east,Oct,127,170
+18,Lasseter East,lasseter_east,Nov,150,149
+18,Lasseter East,lasseter_east,Dec,194,190
+18,Southern Riverina,southern_riverina,Jan,170,315
+18,Southern Riverina,southern_riverina,Feb,125,207
+18,Southern Riverina,southern_riverina,Mar,67,136
+18,Southern Riverina,southern_riverina,Apr,12,26
+18,Southern Riverina,southern_riverina,May,0,1
+18,Southern Riverina,southern_riverina,Jun,0,0
+18,Southern Riverina,southern_riverina,Jul,0,0
+18,Southern Riverina,southern_riverina,Aug,2,0
+18,Southern Riverina,southern_riverina,Sep,3,24
+18,Southern Riverina,southern_riverina,Oct,23,94
+18,Southern Riverina,southern_riverina,Nov,73,152
+18,Southern Riverina,southern_riverina,Dec,157,240
+19,Northern Riverina,northern_riverina,Jan,173,306
+19,Northern Riverina,northern_riverina,Feb,107,193
+19,Northern Riverina,northern_riverina,Mar,65,113
+19,Northern Riverina,northern_riverina,Apr,7,28
+19,Northern Riverina,northern_riverina,May,0,1
+19,Northern Riverina,northern_riverina,Jun,0,0
+19,Northern Riverina,northern_riverina,Jul,0,0
+19,Northern Riverina,northern_riverina,Aug,1,4
+19,Northern Riverina,northern_riverina,Sep,8,46
+19,Northern Riverina,northern_riverina,Oct,39,107
+19,Northern Riverina,northern_riverina,Nov,75,159
+19,Northern Riverina,northern_riverina,Dec,163,232
+19,South Interior,south_interior,Jan,151,173
+19,South Interior,south_interior,Feb,92,130
+19,South Interior,south_interior,Mar,62,74
+19,South Interior,south_interior,Apr,27,16
+19,South Interior,south_interior,May,4,3
+19,South Interior,south_interior,Jun,0,0
+19,South Interior,south_interior,Jul,2,1
+19,South Interior,south_interior,Aug,12,21
+19,South Interior,south_interior,Sep,62,93
+19,South Interior,south_interior,Oct,126,173
+19,South Interior,south_interior,Nov,122,162
+19,South Interior,south_interior,Dec,146,175
+19,Tanami North,tanami_north,Jan,91,51
+19,Tanami North,tanami_north,Feb,45,46
+19,Tanami North,tanami_north,Mar,66,56
+19,Tanami North,tanami_north,Apr,27,49
+19,Tanami North,tanami_north,May,3,6
+19,Tanami North,tanami_north,Jun,0,0
+19,Tanami North,tanami_north,Jul,0,1
+19,Tanami North,tanami_north,Aug,6,12
+19,Tanami North,tanami_north,Sep,124,157
+19,Tanami North,tanami_north,Oct,255,284
+19,Tanami North,tanami_north,Nov,160,182
+19,Tanami North,tanami_north,Dec,105,101
+20,Eucla,eucla,Jan,154,130
+20,Eucla,eucla,Feb,112,88
+20,Eucla,eucla,Mar,80,61
+20,Eucla,eucla,Apr,62,36
+20,Eucla,eucla,May,20,14
+20,Eucla,eucla,Jun,0,1
+20,Eucla,eucla,Jul,6,4
+20,Eucla,eucla,Aug,27,37
+20,Eucla,eucla,Sep,84,84
+20,Eucla,eucla,Oct,135,139
+20,Eucla,eucla,Nov,131,128
+20,Eucla,eucla,Dec,158,136
+20,South Western,south_western,Jan,150,280
+20,South Western,south_western,Feb,119,161
+20,South Western,south_western,Mar,47,94
+20,South Western,south_western,Apr,9,27
+20,South Western,south_western,May,0,1
+20,South Western,south_western,Jun,0,0
+20,South Western,south_western,Jul,0,1
+20,South Western,south_western,Aug,6,6
+20,South Western,south_western,Sep,23,62
+20,South Western,south_western,Oct,61,120
+20,South Western,south_western,Nov,96,158
+20,South Western,south_western,Dec,178,228
+20,Tanami South,tanami_south,Jan,169,107
+20,Tanami South,tanami_south,Feb,93,87
+20,Tanami South,tanami_south,Mar,70,56
+20,Tanami South,tanami_south,Apr,13,12
+20,Tanami South,tanami_south,May,0,0
+20,Tanami South,tanami_south,Jun,0,0
+20,Tanami South,tanami_south,Jul,0,0
+20,Tanami South,tanami_south,Aug,3,7
+20,Tanami South,tanami_south,Sep,52,97
+20,Tanami South,tanami_south,Oct,193,231
+20,Tanami South,tanami_south,Nov,153,191
+20,Tanami South,tanami_south,Dec,153,140
+21,Far Western,far_western,Jan,157,265
+21,Far Western,far_western,Feb,74,167
+21,Far Western,far_western,Mar,29,69
+21,Far Western,far_western,Apr,1,12
+21,Far Western,far_western,May,0,1
+21,Far Western,far_western,Jun,0,0
+21,Far Western,far_western,Jul,0,0
+21,Far Western,far_western,Aug,2,13
+21,Far Western,far_western,Sep,24,71
+21,Far Western,far_western,Oct,70,132
+21,Far Western,far_western,Nov,99,176
+21,Far Western,far_western,Dec,197,268
+21,Midwest Coast,midwest_coast,Jan,224,180
+21,Midwest Coast,midwest_coast,Feb,201,147
+21,Midwest Coast,midwest_coast,Mar,134,121
+21,Midwest Coast,midwest_coast,Apr,45,44
+21,Midwest Coast,midwest_coast,May,11,18
+21,Midwest Coast,midwest_coast,Jun,0,4
+21,Midwest Coast,midwest_coast,Jul,0,0
+21,Midwest Coast,midwest_coast,Aug,0,1
+21,Midwest Coast,midwest_coast,Sep,17,8
+21,Midwest Coast,midwest_coast,Oct,58,56
+21,Midwest Coast,midwest_coast,Nov,96,133
+21,Midwest Coast,midwest_coast,Dec,159,170
+22,Midwest Inland,midwest_inland,Jan,272,208
+22,Midwest Inland,midwest_inland,Feb,192,128
+22,Midwest Inland,midwest_inland,Mar,115,75
+22,Midwest Inland,midwest_inland,Apr,26,26
+22,Midwest Inland,midwest_inland,May,2,3
+22,Midwest Inland,midwest_inland,Jun,0,1
+22,Midwest Inland,midwest_inland,Jul,0,0
+22,Midwest Inland,midwest_inland,Aug,1,0
+22,Midwest Inland,midwest_inland,Sep,23,8
+22,Midwest Inland,midwest_inland,Oct,64,61
+22,Midwest Inland,midwest_inland,Nov,107,145
+22,Midwest Inland,midwest_inland,Dec,187,183
+23,Lesueur,lesueur,Jan,259,215
+23,Lesueur,lesueur,Feb,241,156
+23,Lesueur,lesueur,Mar,168,129
+23,Lesueur,lesueur,Apr,48,50
+23,Lesueur,lesueur,May,15,23
+23,Lesueur,lesueur,Jun,0,7
+23,Lesueur,lesueur,Jul,0,0
+23,Lesueur,lesueur,Aug,0,0
+23,Lesueur,lesueur,Sep,0,3
+23,Lesueur,lesueur,Oct,18,30
+23,Lesueur,lesueur,Nov,59,105
+23,Lesueur,lesueur,Dec,138,163
+24,Yarra Yarra,yarra_yarra,Jan,292,212
+24,Yarra Yarra,yarra_yarra,Feb,218,122
+24,Yarra Yarra,yarra_yarra,Mar,161,90
+24,Yarra Yarra,yarra_yarra,Apr,47,34
+24,Yarra Yarra,yarra_yarra,May,9,11
+24,Yarra Yarra,yarra_yarra,Jun,1,1
+24,Yarra Yarra,yarra_yarra,Jul,0,0
+24,Yarra Yarra,yarra_yarra,Aug,0,0
+24,Yarra Yarra,yarra_yarra,Sep,1,4
+24,Yarra Yarra,yarra_yarra,Oct,44,32
+24,Yarra Yarra,yarra_yarra,Nov,87,116
+24,Yarra Yarra,yarra_yarra,Dec,183,162
+25,Swan Coastal North,swan_coastal_north,Jan,259,206
+25,Swan Coastal North,swan_coastal_north,Feb,260,190
+25,Swan Coastal North,swan_coastal_north,Mar,202,146
+25,Swan Coastal North,swan_coastal_north,Apr,69,66
+25,Swan Coastal North,swan_coastal_north,May,22,29
+25,Swan Coastal North,swan_coastal_north,Jun,1,6
+25,Swan Coastal North,swan_coastal_north,Jul,0,0
+25,Swan Coastal North,swan_coastal_north,Aug,0,0
+25,Swan Coastal North,swan_coastal_north,Sep,0,0
+25,Swan Coastal North,swan_coastal_north,Oct,12,12
+25,Swan Coastal North,swan_coastal_north,Nov,45,51
+25,Swan Coastal North,swan_coastal_north,Dec,110,141
+26,Swan Inland North,swan_inland_north,Jan,302,214
+26,Swan Inland North,swan_inland_north,Feb,266,165
+26,Swan Inland North,swan_inland_north,Mar,193,114
+26,Swan Inland North,swan_inland_north,Apr,61,48
+26,Swan Inland North,swan_inland_north,May,12,13
+26,Swan Inland North,swan_inland_north,Jun,1,1
+26,Swan Inland North,swan_inland_north,Jul,0,0
+26,Swan Inland North,swan_inland_north,Aug,0,0
+26,Swan Inland North,swan_inland_north,Sep,0,1
+26,Swan Inland North,swan_inland_north,Oct,12,18
+26,Swan Inland North,swan_inland_north,Nov,54,58
+26,Swan Inland North,swan_inland_north,Dec,148,146
+27,Swan Coastal South,swan_coastal_south,Jan,289,193
+27,Swan Coastal South,swan_coastal_south,Feb,302,208
+27,Swan Coastal South,swan_coastal_south,Mar,222,138
+27,Swan Coastal South,swan_coastal_south,Apr,68,57
+27,Swan Coastal South,swan_coastal_south,May,18,21
+27,Swan Coastal South,swan_coastal_south,Jun,0,2
+27,Swan Coastal South,swan_coastal_south,Jul,0,0
+27,Swan Coastal South,swan_coastal_south,Aug,0,0
+27,Swan Coastal South,swan_coastal_south,Sep,0,0
+27,Swan Coastal South,swan_coastal_south,Oct,7,5
+27,Swan Coastal South,swan_coastal_south,Nov,38,40
+27,Swan Coastal South,swan_coastal_south,Dec,110,109
+28,Swan Inland South,swan_inland_south,Jan,315,202
+28,Swan Inland South,swan_inland_south,Feb,305,195
+28,Swan Inland South,swan_inland_south,Mar,222,120
+28,Swan Inland South,swan_inland_south,Apr,60,48
+28,Swan Inland South,swan_inland_south,May,14,8
+28,Swan Inland South,swan_inland_south,Jun,0,2
+28,Swan Inland South,swan_inland_south,Jul,0,0
+28,Swan Inland South,swan_inland_south,Aug,0,0
+28,Swan Inland South,swan_inland_south,Sep,0,0
+28,Swan Inland South,swan_inland_south,Oct,5,5
+28,Swan Inland South,swan_inland_south,Nov,42,41
+28,Swan Inland South,swan_inland_south,Dec,132,111
+29,Geographe,geographe,Jan,298,162
+29,Geographe,geographe,Feb,351,210
+29,Geographe,geographe,Mar,258,146
+29,Geographe,geographe,Apr,73,53
+29,Geographe,geographe,May,18,14
+29,Geographe,geographe,Jun,1,2
+29,Geographe,geographe,Jul,0,0
+29,Geographe,geographe,Aug,0,0
+29,Geographe,geographe,Sep,0,0
+29,Geographe,geographe,Oct,1,1
+29,Geographe,geographe,Nov,21,30
+29,Geographe,geographe,Dec,92,96
+30,Capes,capes,Jan,272,178
+30,Capes,capes,Feb,336,201
+30,Capes,capes,Mar,266,170
+30,Capes,capes,Apr,77,57
+30,Capes,capes,May,17,12
+30,Capes,capes,Jun,1,2
+30,Capes,capes,Jul,0,0
+30,Capes,capes,Aug,0,0
+30,Capes,capes,Sep,0,0
+30,Capes,capes,Oct,0,0
+30,Capes,capes,Nov,24,27
+30,Capes,capes,Dec,95,92
+31,Brockman,brockman,Jan,322,175
+31,Brockman,brockman,Feb,323,190
+31,Brockman,brockman,Mar,243,117
+31,Brockman,brockman,Apr,69,48
+31,Brockman,brockman,May,15,10
+31,Brockman,brockman,Jun,0,2
+31,Brockman,brockman,Jul,0,0
+31,Brockman,brockman,Aug,0,0
+31,Brockman,brockman,Sep,0,0
+31,Brockman,brockman,Oct,1,3
+31,Brockman,brockman,Nov,31,36
+31,Brockman,brockman,Dec,134,108
+32,Blackwood,blackwood,Jan,297,178
+32,Blackwood,blackwood,Feb,310,158
+32,Blackwood,blackwood,Mar,258,125
+32,Blackwood,blackwood,Apr,79,52
+32,Blackwood,blackwood,May,22,9
+32,Blackwood,blackwood,Jun,2,2
+32,Blackwood,blackwood,Jul,0,0
+32,Blackwood,blackwood,Aug,0,0
+32,Blackwood,blackwood,Sep,0,0
+32,Blackwood,blackwood,Oct,5,7
+32,Blackwood,blackwood,Nov,39,44
+32,Blackwood,blackwood,Dec,139,101
+33,Southern Forests,southern_forests,Jan,272,174
+33,Southern Forests,southern_forests,Feb,316,175
+33,Southern Forests,southern_forests,Mar,256,137
+33,Southern Forests,southern_forests,Apr,83,63
+33,Southern Forests,southern_forests,May,26,22
+33,Southern Forests,southern_forests,Jun,2,3
+33,Southern Forests,southern_forests,Jul,0,0
+33,Southern Forests,southern_forests,Aug,0,0
+33,Southern Forests,southern_forests,Sep,0,2
+33,Southern Forests,southern_forests,Oct,5,9
+33,Southern Forests,southern_forests,Nov,37,42
+33,Southern Forests,southern_forests,Dec,112,91
+34,Mortlock,mortlock,Jan,262,214
+34,Mortlock,mortlock,Feb,164,121
+34,Mortlock,mortlock,Mar,113,80
+34,Mortlock,mortlock,Apr,40,33
+34,Mortlock,mortlock,May,4,5
+34,Mortlock,mortlock,Jun,1,1
+34,Mortlock,mortlock,Jul,1,0
+34,Mortlock,mortlock,Aug,0,0
+34,Mortlock,mortlock,Sep,22,11
+34,Mortlock,mortlock,Oct,67,58
+34,Mortlock,mortlock,Nov,110,150
+34,Mortlock,mortlock,Dec,195,175
+35,Karroun,karroun,Jan,228,208
+35,Karroun,karroun,Feb,138,136
+35,Karroun,karroun,Mar,91,81
+35,Karroun,karroun,Apr,44,35
+35,Karroun,karroun,May,4,5
+35,Karroun,karroun,Jun,1,0
+35,Karroun,karroun,Jul,1,0
+35,Karroun,karroun,Aug,4,7
+35,Karroun,karroun,Sep,32,23
+35,Karroun,karroun,Oct,83,77
+35,Karroun,karroun,Nov,115,154
+35,Karroun,karroun,Dec,185,175
+36,Avon,avon,Jan,273,218
+36,Avon,avon,Feb,199,133
+36,Avon,avon,Mar,143,95
+36,Avon,avon,Apr,47,37
+36,Avon,avon,May,7,10
+36,Avon,avon,Jun,2,1
+36,Avon,avon,Jul,0,0
+36,Avon,avon,Aug,0,0
+36,Avon,avon,Sep,2,2
+36,Avon,avon,Oct,40,41
+36,Avon,avon,Nov,93,120
+36,Avon,avon,Dec,197,167
+37,Lockwood,lockwood,Jan,242,199
+37,Lockwood,lockwood,Feb,167,135
+37,Lockwood,lockwood,Mar,110,91
+37,Lockwood,lockwood,Apr,44,38
+37,Lockwood,lockwood,May,7,9
+37,Lockwood,lockwood,Jun,1,1
+37,Lockwood,lockwood,Jul,0,0
+37,Lockwood,lockwood,Aug,0,0
+37,Lockwood,lockwood,Sep,11,15
+37,Lockwood,lockwood,Oct,68,60
+37,Lockwood,lockwood,Nov,111,148
+37,Lockwood,lockwood,Dec,189,181
+38,Arthur,arthur,Jan,289,202
+38,Arthur,arthur,Feb,237,145
+38,Arthur,arthur,Mar,183,111
+38,Arthur,arthur,Apr,62,52
+38,Arthur,arthur,May,15,10
+38,Arthur,arthur,Jun,3,1
+38,Arthur,arthur,Jul,0,0
+38,Arthur,arthur,Aug,0,0
+38,Arthur,arthur,Sep,0,0
+38,Arthur,arthur,Oct,14,20
+38,Arthur,arthur,Nov,74,82
+38,Arthur,arthur,Dec,176,151
+39,Roe,roe,Jan,236,192
+39,Roe,roe,Feb,182,133
+39,Roe,roe,Mar,133,101
+39,Roe,roe,Apr,54,45
+39,Roe,roe,May,9,13
+39,Roe,roe,Jun,1,1
+39,Roe,roe,Jul,1,0
+39,Roe,roe,Aug,0,0
+39,Roe,roe,Sep,9,10
+39,Roe,roe,Oct,55,62
+39,Roe,roe,Nov,104,134
+39,Roe,roe,Dec,181,171
+40,Lakes,lakes,Jan,218,196
+40,Lakes,lakes,Feb,180,136
+40,Lakes,lakes,Mar,134,110
+40,Lakes,lakes,Apr,60,56
+40,Lakes,lakes,May,16,15
+40,Lakes,lakes,Jun,3,3
+40,Lakes,lakes,Jul,1,0
+40,Lakes,lakes,Aug,0,1
+40,Lakes,lakes,Sep,6,11
+40,Lakes,lakes,Oct,61,57
+40,Lakes,lakes,Nov,99,130
+40,Lakes,lakes,Dec,180,154
+41,Stirling North,stirling_north,Jan,232,185
+41,Stirling North,stirling_north,Feb,209,137
+41,Stirling North,stirling_north,Mar,161,117
+41,Stirling North,stirling_north,Apr,72,70
+41,Stirling North,stirling_north,May,24,19
+41,Stirling North,stirling_north,Jun,3,5
+41,Stirling North,stirling_north,Jul,1,0
+41,Stirling North,stirling_north,Aug,2,0
+41,Stirling North,stirling_north,Sep,7,3
+41,Stirling North,stirling_north,Oct,37,38
+41,Stirling North,stirling_north,Nov,85,100
+41,Stirling North,stirling_north,Dec,171,149
+42,Stirling West,stirling_west,Jan,240,173
+42,Stirling West,stirling_west,Feb,261,160
+42,Stirling West,stirling_west,Mar,205,128
+42,Stirling West,stirling_west,Apr,81,63
+42,Stirling West,stirling_west,May,29,19
+42,Stirling West,stirling_west,Jun,3,3
+42,Stirling West,stirling_west,Jul,1,0
+42,Stirling West,stirling_west,Aug,0,0
+42,Stirling West,stirling_west,Sep,0,0
+42,Stirling West,stirling_west,Oct,22,22
+42,Stirling West,stirling_west,Nov,64,77
+42,Stirling West,stirling_west,Dec,153,123
+43,Stirling Coast,stirling_coast,Jan,186,179
+43,Stirling Coast,stirling_coast,Feb,193,158
+43,Stirling Coast,stirling_coast,Mar,180,147
+43,Stirling Coast,stirling_coast,Apr,90,88
+43,Stirling Coast,stirling_coast,May,44,45
+43,Stirling Coast,stirling_coast,Jun,5,11
+43,Stirling Coast,stirling_coast,Jul,2,1
+43,Stirling Coast,stirling_coast,Aug,3,3
+43,Stirling Coast,stirling_coast,Sep,15,9
+43,Stirling Coast,stirling_coast,Oct,41,39
+43,Stirling Coast,stirling_coast,Nov,62,80
+43,Stirling Coast,stirling_coast,Dec,126,120
+44,Fitzgerald Coast,fitzgerald_coast,Jan,171,159
+44,Fitzgerald Coast,fitzgerald_coast,Feb,153,120
+44,Fitzgerald Coast,fitzgerald_coast,Mar,116,107
+44,Fitzgerald Coast,fitzgerald_coast,Apr,74,73
+44,Fitzgerald Coast,fitzgerald_coast,May,36,43
+44,Fitzgerald Coast,fitzgerald_coast,Jun,6,17
+44,Fitzgerald Coast,fitzgerald_coast,Jul,9,4
+44,Fitzgerald Coast,fitzgerald_coast,Aug,10,17
+44,Fitzgerald Coast,fitzgerald_coast,Sep,36,31
+44,Fitzgerald Coast,fitzgerald_coast,Oct,80,82
+44,Fitzgerald Coast,fitzgerald_coast,Nov,104,112
+44,Fitzgerald Coast,fitzgerald_coast,Dec,139,128
+45,Fitzgerald Inland,fitzgerald_inland,Jan,193,166
+45,Fitzgerald Inland,fitzgerald_inland,Feb,174,116
+45,Fitzgerald Inland,fitzgerald_inland,Mar,123,101
+45,Fitzgerald Inland,fitzgerald_inland,Apr,70,58
+45,Fitzgerald Inland,fitzgerald_inland,May,24,28
+45,Fitzgerald Inland,fitzgerald_inland,Jun,7,8
+45,Fitzgerald Inland,fitzgerald_inland,Jul,4,1
+45,Fitzgerald Inland,fitzgerald_inland,Aug,7,8
+45,Fitzgerald Inland,fitzgerald_inland,Sep,31,29
+45,Fitzgerald Inland,fitzgerald_inland,Oct,77,76
+45,Fitzgerald Inland,fitzgerald_inland,Nov,114,115
+45,Fitzgerald Inland,fitzgerald_inland,Dec,154,143
+46,Esperance Coast,esperance_coast,Jan,164,144
+46,Esperance Coast,esperance_coast,Feb,164,109
+46,Esperance Coast,esperance_coast,Mar,106,100
+46,Esperance Coast,esperance_coast,Apr,90,58
+46,Esperance Coast,esperance_coast,May,37,47
+46,Esperance Coast,esperance_coast,Jun,10,13
+46,Esperance Coast,esperance_coast,Jul,7,6
+46,Esperance Coast,esperance_coast,Aug,20,21
+46,Esperance Coast,esperance_coast,Sep,53,34
+46,Esperance Coast,esperance_coast,Oct,84,86
+46,Esperance Coast,esperance_coast,Nov,106,100
+46,Esperance Coast,esperance_coast,Dec,150,118
+47,Esperance Inland,esperance_inland,Jan,181,153
+47,Esperance Inland,esperance_inland,Feb,159,106
+47,Esperance Inland,esperance_inland,Mar,94,80
+47,Esperance Inland,esperance_inland,Apr,68,40
+47,Esperance Inland,esperance_inland,May,19,26
+47,Esperance Inland,esperance_inland,Jun,4,4
+47,Esperance Inland,esperance_inland,Jul,2,2
+47,Esperance Inland,esperance_inland,Aug,15,21
+47,Esperance Inland,esperance_inland,Sep,52,40
+47,Esperance Inland,esperance_inland,Oct,108,97
+47,Esperance Inland,esperance_inland,Nov,123,122
+47,Esperance Inland,esperance_inland,Dec,170,141
