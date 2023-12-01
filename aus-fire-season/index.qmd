@@ -34,18 +34,43 @@ seasons = aq.loadCSV("/data/ffdi-firegions-seasonal-thenandnow.csv", {
 
 ```{ojs}
 //| label: pick-region
+//| classes: area-search
 
-regionMap = seasons
-  .select("DIST_NAME", "slug")
-  .dedupe("DIST_NAME", "slug")
-  .orderby("DIST_NAME")
-  .derive({ map: d => [d.DIST_NAME, d.slug]})
-  .array("map")
-viewof regionSelect = Inputs.select(new Map(regionMap))
+regions = seasons
+  .select("LGA_NAME23", "slug")
+  .dedupe("LGA_NAME23", "slug")
+  .orderby("LGA_NAME23")
+  .column("LGA_NAME23")
+  .data
+
+viewof regionSelect = {
+  const defaultCouncil = "Murrindindi"
+  const menu = html`
+  <label for="region-select">Council</label>
+  <input list="region-list" id="region-select" name="region-select"
+      placeholder="Enter your council area..." value="${defaultCouncil}"/>
+    <datalist id="region-list"">
+      ${regions.map(d => html`<option value="${d}"></option>`)}
+    </datalist>
+    `
+  let results = []
+  menu.value = defaultCouncil
+  menu.onsubmit = (event) => event.preventDefault()
+
+  // update the value of the input when things change
+  menu.onchange = (event) => {
+    const value = event.target.value;
+    menu.value = regions.find(d => d == value) || "";
+    // input.blur(); // removes keyboard focus from the element upon submission
+    menu.dispatchEvent(new CustomEvent("input"));
+  }
+
+  return menu  
+}
 
 filteredData = seasons
   .params({ regionSelect: regionSelect })
-  .filter(d => d.slug == regionSelect)
+  .filter(d => d.LGA_NAME23 == regionSelect)
   .derive({
       navg_then: d => d.n_1970_1995 / 25,
       navg_now: d => d.n_1995_2020 / 25,

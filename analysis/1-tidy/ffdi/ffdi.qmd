@@ -1,6 +1,5 @@
 ---
-title: Untitled
-subtitle: A slightly longer title
+title: Fire risk: then and now
 format:
   360-analysis-html: default
 author: James Goldie
@@ -46,10 +45,11 @@ calc_field_avgs <- function(raster_path, boundaries) {
   # calculate mean ffdis, then tidy and join to dates
   boundaries |>
     mutate(avg_ffdi = exact_extract(ffdi_raster, boundaries, fun = "mean")) |>
-    select(SAL_CODE21, slug, SAL_NAME21, STE_CODE21, avg_ffdi) |>
+    select(LGA_CODE23, slug, LGA_NAME23, STE_CODE21, STE_NAME21, cent_lat,
+      cent_lon, avg_ffdi) |>
     st_drop_geometry() |>
     unnest(avg_ffdi) |>
-    pivot_longer(-c(SAL_CODE21, slug, SAL_NAME21, STE_CODE21)) |>
+    pivot_longer(starts_with("mean.")) |>
     mutate(name = str_remove(name, "mean.")) |>
     filter(str_detect(name, "fdimrk")) |>
     left_join(layer_dts, join_by(name), relationship = "many-to-one")
@@ -60,7 +60,7 @@ calc_field_avgs <- function(raster_path, boundaries) {
 ```{r}
 #| label: download
 
-if (!file.exists(here("data", "suburbs", "SAL_2021_AUST_GDA2020.shp"))) {
+if (!file.exists(here("data", "lgas", "LGA_2023_AUST_GDA2020.shp"))) {
   suburbs_url <- paste0(
     "https://www.abs.gov.au/statistics/standards/",
     "australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/",
@@ -77,20 +77,37 @@ if (!file.exists(here("data", "suburbs", "SAL_2021_AUST_GDA2020.shp"))) {
 ```{r}
 #| label: run-files
 
-here("data", "suburbs", "SAL_2021_AUST_GDA2020.shp") |>
+here("data", "lgas", "LGA_2023_AUST_GDA2020.shp") |>
   read_sf() |>
-  mutate(slug = janitor::make_clean_names(SAL_NAME21)) ->
+  mutate(slug = janitor::make_clean_names(LGA_NAME23)) ->
 suburbs
 
 # remove empty regions ({exactextractr} won't work on empty ones)
 suburbs <- filter(suburbs, !st_is_empty(suburbs))
+
+# Let's also join the centroids in
+suburbs |>
+  st_transform(st_crs(4326)) |>
+  st_centroid(of_largest_polygon = TRUE) |>
+  mutate(centroid = st_coordinates(geometry)) |>
+  mutate(
+      cent_lat = centroid[, "Y"],
+      cent_lon = centroid[, "X"]) |>
+  select(LGA_CODE23, starts_with("cent_")) |>
+  st_drop_geometry() ->
+suburb_centroids
+
+suburbs |>
+  left_join(suburb_centroids, join_by(LGA_CODE23)) |>
+  select(-AUS_CODE21, -AUS_NAME21, -AREASQKM, -LOCI_URI21) ->
+suburbs_joined
 
 # TODO - would be nice if we used the cppernicus api to download these!
 # calculate ffdi across all the fire regions for each netcdf
 here("data", "copernicus-firedanger", "australia") |>
   list.files(pattern = glob2rx("*.nc"), full.names = TRUE) |>
   tibble(path = _) |>
-  mutate(ffdi_df = map(path, calc_field_avgs, suburbs)) ->
+  mutate(ffdi_df = map(path, calc_field_avgs, suburbs_joined)) ->
 ffdi_fireregions
 
 # unnest and write out to disk
@@ -100,7 +117,8 @@ ffdi_fireregions |>
   select(-name) |>
   filter(dt > as_date("1969-06-30")) |>
   write_csv(here("data", "ffdi-fireregions.csv")) ->
-ffdi_fireregions_tidy 
+ffdi_fireregions_tidy
+
 ```
 
 Let's do some preliminary analysis of a sample area:
@@ -109,7 +127,7 @@ Let's do some preliminary analysis of a sample area:
 #| label: visualise
 
 ffdi_fireregions_tidy |>
-  filter(SAL_NAME21 == "New England") |>
+  filter(LGA_NAME23 == "New England") |>
   filter(dt < as_date("2023-07-01")) |>
   # filter(month(dt) %in% c(10:12, 1:3)) |>
   mutate(
@@ -144,7 +162,7 @@ ffdi_fireregions_tidy |>
 #| label: vis-season
 
 ffdi_fireregions_tidy |>
-  filter(SAL_NAME21 == "New England") |>
+  filter(LGA_NAME23 == "New England") |>
   mutate(
     year = year(dt),
     season = ymd(paste("2022", month(dt), mday(dt), sep = "-"))) |>
@@ -186,16 +204,16 @@ What about frequency? The [2022 State of the Climate](http://www.bom.gov.au/stat
 #| label: vis-frequency
 
 ffdi_fireregions_tidy |>
-  filter(SAL_NAME21 == "New England") |>
+  filter(LGA_NAME23 == "New England") |>
   mutate(
     dt_mod = dt - months(6),
     year_mod = year(dt_mod)) |>
-  group_by(SAL_NAME21) |>
+  group_by(LGA_NAME23) |>
   mutate(
     pct_90 = quantile(value, 0.9),
     gte_90 = value > pct_90) |>
   filter(gte_90) |>
-  group_by(SAL_NAME21, year_mod) |>
+  group_by(LGA_NAME23, year_mod) |>
   summarise(ndays_gte_90pct = n()) |>
   ungroup() |>
   ggplot() +
@@ -223,15 +241,15 @@ ffdi_fireregions_tidy |>
     then_or_now =
       if_else(dt < as_date("1995-07-01"), "1970_1995", "1995_2020")) |>
   # calculate days over 90th percentile
-  group_by(SAL_CODE21, SAL_NAME21, slug) |>
-  mutate(pct_90 = quantile(value, 0.9)) |>
+  group_by(LGA_CODE23, LGA_NAME23, STE_NAME21, slug, cent_lat, cent_lon, ) |>
+  mutate(pct_90 = quantile(value, 0.9, na.rm = TRUE)) |>
   ungroup() |>
-  group_by(SAL_CODE21, SAL_NAME21, slug, month, then_or_now) |>
+  group_by(LGA_CODE23, LGA_NAME23, STE_NAME21, slug, cent_lat, cent_lon, month, then_or_now) |>
   summarise(
     n_gte_90 = sum(value > pct_90, na.rm = TRUE)) |>
   ungroup() |>
   pivot_wider(
-    id_cols = c(SAL_CODE21, SAL_NAME21, slug, month),
+    id_cols = c(LGA_CODE23, LGA_NAME23, STE_NAME21, slug, cent_lat, cent_lon, month),
     names_from = then_or_now,
     names_prefix = "n_",
     values_from = n_gte_90) |>
@@ -239,7 +257,7 @@ ffdi_fireregions_tidy |>
 seasonal_highdanger_days
 
 # test the graphic out for new england
-ggplot(filter(seasonal_highdanger_days, SAL_NAME21 == "New England")) +
+ggplot(filter(seasonal_highdanger_days, LGA_NAME23 == "New England")) +
   aes(x = month) +
   geom_point(
     aes(y = p_gte_90_1970_1994),
