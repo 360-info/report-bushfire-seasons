@@ -60,7 +60,15 @@ Visit the [GitHub repository](https://github.com/360-info/report-template/tree/m
 </header>
 
 :::: {#modal-about-content}
-This is a great place to add some more notes on the data!
+This chart shows how frequent severe fire weather has typically been at different times of the year in the [**1970s, 80s and early 90s**]{style=\"background-color: rgba(247, 184, 12, 0.25); padding: 0.1em 0.3em; border-radius: 10px;\"} compared to the [**late 1990s, 2000s and 2010s**]{style=\"background-color: orangered; color: white; padding: 0.1em 0.3em; border-radius: 10px;\"}.
+
+In months where the red dot is higher than the yellow one, severe fire weather has become more frequent.
+
+The Forest Fire Danger Index used here evaluates aspects of fire risk based on the weather and climate: temperature, humidity, wind and drought. It doesn't take into account other factors like the types or amount of local vegetation.
+
+The historical fire risk data in this chart comes from a global dataset called ERA5, published by the [Copernicus Emergency Management Service](https://cds.climate.copernicus.eu/cdsapp#!/dataset/cems-fire-historical-v1?tab=form).
+
+Fire Weather District boundaries are available from the [Bureau of Meteorology](http://bom.gov.au) under its default terms of use.
 ::::
 
 :::::

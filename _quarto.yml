@@ -1,6 +1,11 @@
 project:
   type: website
   output-dir: out
+  resources:
+    - data/ffdi-firegions-seasonal-thenandnow.csv
+  render:
+    - analysis/*/index.qmd
+    - aus-fire-season/index.qmd
   
 # only re-render if the source changes or if we specifically render that file
 execute:

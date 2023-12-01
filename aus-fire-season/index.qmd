@@ -1,6 +1,6 @@
 ---
-title: "High fire danger days: then and now"
-subtitle: "Changes in frequency of high fire danger days (in the worst 10% of days)"
+title: "The changing fire season"
+subtitle: "Many parts of Australia see more high fire danger days in an average year [**now**]{style=\"background-color: orangered; color: white; padding: 0.1em 0.3em; border-radius: 10px;\"} than they did in the [**1970s, 80s and early 90s**]{style=\"background-color: rgba(247, 184, 12, 0.25); padding: 0.1em 0.3em; border-radius: 10px;\"}."
 format:
   360-embed-html: default
 360embed:
@@ -69,18 +69,6 @@ fullMonths = ({
   "Oct": "October",
   "Nov": "November",
   "Dec": "December"
-})
-
-Plot.legend({
-  color: {
-    type: "ordinal",
-    domain: ["Then (July 1970 to June 1995)", "Now (July 1995 to June 2020)"],
-    range: ["rgba(247, 184, 12, 0.25)", "orangered"]
-  },
-  style: {
-    fontSize: 24,
-    fontFamily: "Roboto Condensed"
-  }
 })
 
 Plot.plot({
