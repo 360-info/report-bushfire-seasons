@@ -9,7 +9,7 @@ format:
     &lt;iframe allow=&quot;fullscreen; clipboard-write self https://bushfire-seasons.360visuals.org&quot; allowfullscreen=&quot;true&quot; src=&quot;
   url: https://bushfire-seasons.360visuals.org/aus-fire-season/
   after: |
-    &quot; title=&quot;Interactive: the changing fire season areas&quot; style=&quot;width:100%; height:100%; position: absolute; top: 0; left: 0; border:none; background-color: white;&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
+    &quot; title=&quot;Interactive: the changing fire season areas&quot; style=&quot;width:100%; height:100%; position: relative; top: 0; left: 0; border:none; background-color: white;&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;
     &lt;/div&gt;
 ---
 
