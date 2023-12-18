@@ -4,7 +4,7 @@
 
 Shows the change in the fire season across Australian councils.
 
-[report_graphic_and_link]
+[<img width="696" alt="bushfire-seasons" src="https://github.com/360-info/report-bushfire-seasons/assets/6520659/112db6ea-9409-4f42-a688-d236530053a2">](https://360info.org/interactive-fire-danger-days-are-growing/)
 
 ## ♻️ Use + Remix rights
 
